@@ -3,6 +3,10 @@
 ############################################
 
 #--- Setup ----
+# Set the working directory.
+wdir = "C:\\Users\\Owner\\OneDrive\\Documents\\Academic\\UKC\\CS\\3\\All\\COMP6200 Research Project\\MONOMOC\\monomoc\\credit_example"
+setwd(wdir)
+
 # To run MOC
 # load `iml` and `counterfactuals` like "normal" packages.
 # in the future this would just be library("counterfactuals").
