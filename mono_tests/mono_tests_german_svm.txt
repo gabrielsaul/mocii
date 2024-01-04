@@ -1,0 +1,2396 @@
+[1] "Original CF:"
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1  66 female   1     own        moderate         moderate           931        6     car
+MUT FEATURE: age
+[1] "Increment: "
+[1] 0.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1 66.9 female   1     own        moderate         moderate           931        6     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1 67.8 female   1     own        moderate         moderate           931        6     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1 68.7 female   1     own        moderate         moderate           931        6     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1 69.6 female   1     own        moderate         moderate           931        6     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1 70.5 female   1     own        moderate         moderate           931        6     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1 71.4 female   1     own        moderate         moderate           931        6     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1 72.3 female   1     own        moderate         moderate           931        6     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1 73.2 female   1     own        moderate         moderate           931        6     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1 74.1 female   1     own        moderate         moderate           931        6     car
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1  75 female   1     own        moderate         moderate           931        6     car
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  32 female   1     own        moderate         moderate           931        6  others
+[1] "Original CF:"
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3  66 female   1     own        moderate         moderate           931       11     car
+MUT FEATURE: age
+[1] "Increment: "
+[1] 0.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3 66.9 female   1     own        moderate         moderate           931       11     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3 67.8 female   1     own        moderate         moderate           931       11     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3 68.7 female   1     own        moderate         moderate           931       11     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3 69.6 female   1     own        moderate         moderate           931       11     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3 70.5 female   1     own        moderate         moderate           931       11     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3 71.4 female   1     own        moderate         moderate           931       11     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3 72.3 female   1     own        moderate         moderate           931       11     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3 73.2 female   1     own        moderate         moderate           931       11     car
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3 74.1 female   1     own        moderate         moderate           931       11     car
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3  75 female   1     own        moderate         moderate           931       11     car
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6.1
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3  75 female   1     own        moderate         moderate           931     17.1     car
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3  75 female   1     own        moderate         moderate           931     23.2     car
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3  75 female   1     own        moderate         moderate           931     29.3     car
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3  75 female   1     own        moderate         moderate           931     35.4     car
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3  75 female   1     own        moderate         moderate           931     41.5     car
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3  75 female   1     own        moderate         moderate           931     47.6     car
+!v! MV FOUND, STEPS: #6
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  32 female   1     own        moderate         moderate           961        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1746.3
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  32 female   1     own        moderate         moderate        2707.3        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  32 female   1     own        moderate         moderate        4453.6        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  32 female   1     own        moderate         moderate        6199.9        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  32 female   1     own        moderate         moderate        7946.2        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  32 female   1     own        moderate         moderate        9692.5        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  32 female   1     own        moderate         moderate       11438.8        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  32 female   1     own        moderate         moderate       13185.1        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  32 female   1     own        moderate         moderate       14931.4        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  32 female   1     own        moderate         moderate       16677.7        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+5  32 female   1     own        moderate         moderate           986        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1743.8
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+5  32 female   1     own        moderate         moderate        2729.8        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+5  32 female   1     own        moderate         moderate        4473.6        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+5  32 female   1     own        moderate         moderate        6217.4        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+5  32 female   1     own        moderate         moderate        7961.2        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+5  32 female   1     own        moderate         moderate          9705        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+5  32 female   1     own        moderate         moderate       11448.8        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+5  32 female   1     own        moderate         moderate       13192.6        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+5  32 female   1     own        moderate         moderate       14936.4        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+5  32 female   1     own        moderate         moderate       16680.2        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+5  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+6  32 female   1     own        moderate         moderate          1009        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1741.5
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+6  32 female   1     own        moderate         moderate        2750.5        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+6  32 female   1     own        moderate         moderate          4492        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+6  32 female   1     own        moderate         moderate        6233.5        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+6  32 female   1     own        moderate         moderate          7975        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+6  32 female   1     own        moderate         moderate        9716.5        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+6  32 female   1     own        moderate         moderate         11458        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+6  32 female   1     own        moderate         moderate       13199.5        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+6  32 female   1     own        moderate         moderate         14941        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+6  32 female   1     own        moderate         moderate       16682.5        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+6  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+7  32 female   1     own        moderate         moderate          1083        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1734.1
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+7  32 female   1     own        moderate         moderate        2817.1        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+7  32 female   1     own        moderate         moderate        4551.2        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+7  32 female   1     own        moderate         moderate        6285.3        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+7  32 female   1     own        moderate         moderate        8019.4        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+7  32 female   1     own        moderate         moderate        9753.5        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+7  32 female   1     own        moderate         moderate       11487.6        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+7  32 female   1     own        moderate         moderate       13221.7        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+7  32 female   1     own        moderate         moderate       14955.8        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+7  32 female   1     own        moderate         moderate       16689.9        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+7  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+8  32 female   1     own        moderate         moderate          1088        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1733.6
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+8  32 female   1     own        moderate         moderate        2821.6        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+8  32 female   1     own        moderate         moderate        4555.2        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+8  32 female   1     own        moderate         moderate        6288.8        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+8  32 female   1     own        moderate         moderate        8022.4        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+8  32 female   1     own        moderate         moderate          9756        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+8  32 female   1     own        moderate         moderate       11489.6        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+8  32 female   1     own        moderate         moderate       13223.2        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+8  32 female   1     own        moderate         moderate       14956.8        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+8  32 female   1     own        moderate         moderate       16690.4        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+8  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+9  32 female   1     own        moderate         moderate          1091        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1733.3
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+9  32 female   1     own        moderate         moderate        2824.3        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+9  32 female   1     own        moderate         moderate        4557.6        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+9  32 female   1     own        moderate         moderate        6290.9        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+9  32 female   1     own        moderate         moderate        8024.2        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+9  32 female   1     own        moderate         moderate        9757.5        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+9  32 female   1     own        moderate         moderate       11490.8        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+9  32 female   1     own        moderate         moderate       13224.1        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+9  32 female   1     own        moderate         moderate       14957.4        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+9  32 female   1     own        moderate         moderate       16690.7        6  others
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+9  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+10  32 female   1     own        moderate         moderate          1097        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1732.7
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+10  32 female   1     own        moderate         moderate        2829.7        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+10  32 female   1     own        moderate         moderate        4562.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+10  32 female   1     own        moderate         moderate        6295.1        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+10  32 female   1     own        moderate         moderate        8027.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+10  32 female   1     own        moderate         moderate        9760.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+10  32 female   1     own        moderate         moderate       11493.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+10  32 female   1     own        moderate         moderate       13225.9        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+10  32 female   1     own        moderate         moderate       14958.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+10  32 female   1     own        moderate         moderate       16691.3        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+10  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+11  32 female   1     own        moderate         moderate          1118        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1730.6
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+11  32 female   1     own        moderate         moderate        2848.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+11  32 female   1     own        moderate         moderate        4579.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+11  32 female   1     own        moderate         moderate        6309.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+11  32 female   1     own        moderate         moderate        8040.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+11  32 female   1     own        moderate         moderate          9771        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+11  32 female   1     own        moderate         moderate       11501.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+11  32 female   1     own        moderate         moderate       13232.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+11  32 female   1     own        moderate         moderate       14962.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+11  32 female   1     own        moderate         moderate       16693.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+11  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+12  32 female   1     own        moderate         moderate          1173        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1725.1
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+12  32 female   1     own        moderate         moderate        2898.1        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+12  32 female   1     own        moderate         moderate        4623.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+12  32 female   1     own        moderate         moderate        6348.3        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+12  32 female   1     own        moderate         moderate        8073.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+12  32 female   1     own        moderate         moderate        9798.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+12  32 female   1     own        moderate         moderate       11523.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+12  32 female   1     own        moderate         moderate       13248.7        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+12  32 female   1     own        moderate         moderate       14973.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+12  32 female   1     own        moderate         moderate       16698.9        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+12  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+13  32 female   1     own        moderate         moderate          1192        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1723.2
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+13  32 female   1     own        moderate         moderate        2915.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+13  32 female   1     own        moderate         moderate        4638.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+13  32 female   1     own        moderate         moderate        6361.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+13  32 female   1     own        moderate         moderate        8084.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+13  32 female   1     own        moderate         moderate          9808        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+13  32 female   1     own        moderate         moderate       11531.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+13  32 female   1     own        moderate         moderate       13254.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+13  32 female   1     own        moderate         moderate       14977.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+13  32 female   1     own        moderate         moderate       16700.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+13  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+14  32 female   1     own        moderate         moderate          1225        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1719.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+14  32 female   1     own        moderate         moderate        2944.9        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+14  32 female   1     own        moderate         moderate        4664.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+14  32 female   1     own        moderate         moderate        6384.7        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+14  32 female   1     own        moderate         moderate        8104.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+14  32 female   1     own        moderate         moderate        9824.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+14  32 female   1     own        moderate         moderate       11544.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+14  32 female   1     own        moderate         moderate       13264.3        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+14  32 female   1     own        moderate         moderate       14984.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+14  32 female   1     own        moderate         moderate       16704.1        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+14  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+15  31 female   1     own        moderate         moderate           931        6  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -1.2
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+15 29.8 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+15 28.6 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+15 27.4 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+15 26.2 female   1     own        moderate         moderate           931        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+15  25 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+15 23.8 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+15 22.6 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+15 21.4 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+15 20.2 female   1     own        moderate         moderate           931        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+15  19 female   1     own        moderate         moderate           931        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+16  32 female   1     own        moderate         moderate          1258        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1716.6
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+16  32 female   1     own        moderate         moderate        2974.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+16  32 female   1     own        moderate         moderate        4691.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+16  32 female   1     own        moderate         moderate        6407.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+16  32 female   1     own        moderate         moderate        8124.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+16  32 female   1     own        moderate         moderate          9841        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+16  32 female   1     own        moderate         moderate       11557.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+16  32 female   1     own        moderate         moderate       13274.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+16  32 female   1     own        moderate         moderate       14990.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+16  32 female   1     own        moderate         moderate       16707.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+16  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+17  32 female   1     own        moderate         moderate          1268        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1715.6
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+17  32 female   1     own        moderate         moderate        2983.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+17  32 female   1     own        moderate         moderate        4699.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+17  32 female   1     own        moderate         moderate        6414.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+17  32 female   1     own        moderate         moderate        8130.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+17  32 female   1     own        moderate         moderate          9846        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+17  32 female   1     own        moderate         moderate       11561.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+17  32 female   1     own        moderate         moderate       13277.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+17  32 female   1     own        moderate         moderate       14992.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+17  32 female   1     own        moderate         moderate       16708.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+17  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+18  32 female   1     own        moderate         moderate          1302        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1712.2
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+18  32 female   1     own        moderate         moderate        3014.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+18  32 female   1     own        moderate         moderate        4726.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+18  32 female   1     own        moderate         moderate        6438.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+18  32 female   1     own        moderate         moderate        8150.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+18  32 female   1     own        moderate         moderate          9863        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+18  32 female   1     own        moderate         moderate       11575.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+18  32 female   1     own        moderate         moderate       13287.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+18  32 female   1     own        moderate         moderate       14999.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+18  32 female   1     own        moderate         moderate       16711.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+18  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+19  32 female   1     own        moderate         moderate          1306        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1711.8
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+19  32 female   1     own        moderate         moderate        3017.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+19  32 female   1     own        moderate         moderate        4729.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+19  32 female   1     own        moderate         moderate        6441.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+19  32 female   1     own        moderate         moderate        8153.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+19  32 female   1     own        moderate         moderate          9865        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+19  32 female   1     own        moderate         moderate       11576.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+19  32 female   1     own        moderate         moderate       13288.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+19  32 female   1     own        moderate         moderate       15000.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+19  32 female   1     own        moderate         moderate       16712.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+19  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+20  32 female   1     own        moderate         moderate          1345        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1707.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+20  32 female   1     own        moderate         moderate        3052.9        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+20  32 female   1     own        moderate         moderate        4760.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+20  32 female   1     own        moderate         moderate        6468.7        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+20  32 female   1     own        moderate         moderate        8176.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+20  32 female   1     own        moderate         moderate        9884.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+20  32 female   1     own        moderate         moderate       11592.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+20  32 female   1     own        moderate         moderate       13300.3        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+20  32 female   1     own        moderate         moderate       15008.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+20  32 female   1     own        moderate         moderate       16716.1        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+20  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+21  32 female   1     own        moderate         moderate          1375        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1704.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+21  32 female   1     own        moderate         moderate        3079.9        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+21  32 female   1     own        moderate         moderate        4784.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+21  32 female   1     own        moderate         moderate        6489.7        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+21  32 female   1     own        moderate         moderate        8194.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+21  32 female   1     own        moderate         moderate        9899.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+21  32 female   1     own        moderate         moderate       11604.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+21  32 female   1     own        moderate         moderate       13309.3        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+21  32 female   1     own        moderate         moderate       15014.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+21  32 female   1     own        moderate         moderate       16719.1        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+21  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+22  30 female   1     own        moderate         moderate           931        6  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -1.1
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+22 28.9 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+22 27.8 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+22 26.7 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+22 25.6 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+22 24.5 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+22 23.4 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+22 22.3 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+22 21.2 female   1     own        moderate         moderate           931        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+22 20.1 female   1     own        moderate         moderate           931        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+22  19 female   1     own        moderate         moderate           931        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+23  32 female   1     own        moderate         moderate          1742        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1668.2
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+23  32 female   1     own        moderate         moderate        3410.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+23  32 female   1     own        moderate         moderate        5078.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+23  32 female   1     own        moderate         moderate        6746.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+23  32 female   1     own        moderate         moderate        8414.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+23  32 female   1     own        moderate         moderate         10083        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+23  32 female   1     own        moderate         moderate       11751.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+23  32 female   1     own        moderate         moderate       13419.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+23  32 female   1     own        moderate         moderate       15087.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+23  32 female   1     own        moderate         moderate       16755.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+23  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+24  32 female   1     own        moderate         moderate           931        9  others
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6.3
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+24  32 female   1     own        moderate         moderate           931     15.3  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+24  32 female   1     own        moderate         moderate           931     21.6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+24  32 female   1     own        moderate         moderate           931     27.9  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+24  32 female   1     own        moderate         moderate           931     34.2  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+24  32 female   1     own        moderate         moderate           931     40.5  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+24  32 female   1     own        moderate         moderate           931     46.8  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+24  32 female   1     own        moderate         moderate           931     53.1  others
+!v! MV FOUND, STEPS: #7
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+25  32 female   1     own        moderate         moderate          1925        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1649.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+25  32 female   1     own        moderate         moderate        3574.9        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+25  32 female   1     own        moderate         moderate        5224.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+25  32 female   1     own        moderate         moderate        6874.7        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+25  32 female   1     own        moderate         moderate        8524.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+25  32 female   1     own        moderate         moderate       10174.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+25  32 female   1     own        moderate         moderate       11824.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+25  32 female   1     own        moderate         moderate       13474.3        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+25  32 female   1     own        moderate         moderate       15124.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+25  32 female   1     own        moderate         moderate       16774.1        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+25  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+26  32 female   1     own        moderate         moderate           931       10  others
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6.2
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+26  32 female   1     own        moderate         moderate           931     16.2  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+26  32 female   1     own        moderate         moderate           931     22.4  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+26  32 female   1     own        moderate         moderate           931     28.6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+26  32 female   1     own        moderate         moderate           931     34.8  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+26  32 female   1     own        moderate         moderate           931       41  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+26  32 female   1     own        moderate         moderate           931     47.2  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+26  32 female   1     own        moderate         moderate           931     53.4  others
+!v! MV FOUND, STEPS: #7
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+27  32 female   1     own        moderate         moderate          2109        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1631.5
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+27  32 female   1     own        moderate         moderate        3740.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+27  32 female   1     own        moderate         moderate          5372        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+27  32 female   1     own        moderate         moderate        7003.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+27  32 female   1     own        moderate         moderate          8635        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+27  32 female   1     own        moderate         moderate       10266.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+27  32 female   1     own        moderate         moderate         11898        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+27  32 female   1     own        moderate         moderate       13529.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+27  32 female   1     own        moderate         moderate         15161        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+27  32 female   1     own        moderate         moderate       16792.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+27  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+28  32 female   1     own        moderate         moderate          2197        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1622.7
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+28  32 female   1     own        moderate         moderate        3819.7        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+28  32 female   1     own        moderate         moderate        5442.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+28  32 female   1     own        moderate         moderate        7065.1        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+28  32 female   1     own        moderate         moderate        8687.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+28  32 female   1     own        moderate         moderate       10310.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+28  32 female   1     own        moderate         moderate       11933.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+28  32 female   1     own        moderate         moderate       13555.9        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+28  32 female   1     own        moderate         moderate       15178.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+28  32 female   1     own        moderate         moderate       16801.3        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+28  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+29  32 female   1     own        moderate         moderate           931       11  others
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6.1
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+29  32 female   1     own        moderate         moderate           931     17.1  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+29  32 female   1     own        moderate         moderate           931     23.2  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+29  32 female   1     own        moderate         moderate           931     29.3  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+29  32 female   1     own        moderate         moderate           931     35.4  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+29  32 female   1     own        moderate         moderate           931     41.5  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+29  32 female   1     own        moderate         moderate           931     47.6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+29  32 female   1     own        moderate         moderate           931     53.7  others
+!v! MV FOUND, STEPS: #7
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+30  32 female   1     own        moderate         moderate          2378        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1604.6
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+30  32 female   1     own        moderate         moderate        3982.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+30  32 female   1     own        moderate         moderate        5587.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+30  32 female   1     own        moderate         moderate        7191.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+30  32 female   1     own        moderate         moderate        8796.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+30  32 female   1     own        moderate         moderate         10401        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+30  32 female   1     own        moderate         moderate       12005.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+30  32 female   1     own        moderate         moderate       13610.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+30  32 female   1     own        moderate         moderate       15214.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+30  32 female   1     own        moderate         moderate       16819.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+30  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+31  32 female   1     own        moderate         moderate          2475        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1594.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+31  32 female   1     own        moderate         moderate        4069.9        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+31  32 female   1     own        moderate         moderate        5664.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+31  32 female   1     own        moderate         moderate        7259.7        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+31  32 female   1     own        moderate         moderate        8854.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+31  32 female   1     own        moderate         moderate       10449.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+31  32 female   1     own        moderate         moderate       12044.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+31  32 female   1     own        moderate         moderate       13639.3        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+31  32 female   1     own        moderate         moderate       15234.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+31  32 female   1     own        moderate         moderate       16829.1        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+31  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+32  32 female   1     own        moderate         moderate          2480        6  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1594.4
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+32  32 female   1     own        moderate         moderate        4074.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+32  32 female   1     own        moderate         moderate        5668.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+32  32 female   1     own        moderate         moderate        7263.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+32  32 female   1     own        moderate         moderate        8857.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+32  32 female   1     own        moderate         moderate         10452        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+32  32 female   1     own        moderate         moderate       12046.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+32  32 female   1     own        moderate         moderate       13640.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+32  32 female   1     own        moderate         moderate       15235.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+32  32 female   1     own        moderate         moderate       16829.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+32  32 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+33  32 female   1     own        moderate         moderate           931       12  others
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+33  32 female   1     own        moderate         moderate           931       18  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+33  32 female   1     own        moderate         moderate           931       24  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+33  32 female   1     own        moderate         moderate           931       30  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+33  32 female   1     own        moderate         moderate           931       36  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+33  32 female   1     own        moderate         moderate           931       42  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+33  32 female   1     own        moderate         moderate           931       48  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+33  32 female   1     own        moderate         moderate           931       54  others
+!v! MV FOUND, STEPS: #7
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+34  32 female   1     own        moderate         moderate           931       13  others
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 5.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+34  32 female   1     own        moderate         moderate           931     18.9  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+34  32 female   1     own        moderate         moderate           931     24.8  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+34  32 female   1     own        moderate         moderate           931     30.7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+34  32 female   1     own        moderate         moderate           931     36.6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+34  32 female   1     own        moderate         moderate           931     42.5  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+34  32 female   1     own        moderate         moderate           931     48.4  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+34  32 female   1     own        moderate         moderate           931     54.3  others
+!v! MV FOUND, STEPS: #7
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+35  32 female   1     own        moderate         moderate           931       14  others
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 5.8
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+35  32 female   1     own        moderate         moderate           931     19.8  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+35  32 female   1     own        moderate         moderate           931     25.6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+35  32 female   1     own        moderate         moderate           931     31.4  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+35  32 female   1     own        moderate         moderate           931     37.2  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+35  32 female   1     own        moderate         moderate           931       43  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+35  32 female   1     own        moderate         moderate           931     48.8  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+35  32 female   1     own        moderate         moderate           931     54.6  others
+!v! MV FOUND, STEPS: #7
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+36  32 male   2     own        moderate         moderate           931        6     car
+MUT FEATURE: job
+[1] "Increment: "
+[1] 0.1
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+36  32 male 2.1     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+36  32 male 2.2     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+36  32 male 2.3     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+36  32 male 2.4     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+36  32 male 2.5     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+36  32 male 2.6     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+36  32 male 2.7     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+36  32 male 2.8     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+36  32 male 2.9     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+36  32 male   3     own        moderate         moderate           931        6     car
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate           937        7  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1748.7
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate        2685.7        7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate        4434.4        7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate        6183.1        7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate        7931.8        7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate        9680.5        7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate       11429.2        7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate       13177.9        7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate       14926.6        7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate       16675.3        7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate         18424        7  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6.5
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate         18424     13.5  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate         18424       20  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate         18424     26.5  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate         18424       33  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+37  32 female   1     own        moderate         moderate         18424     39.5  others
+!v! MV FOUND, STEPS: #5
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate          1009       10  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1741.5
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate        2750.5       10  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate          4492       10  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate        6233.5       10  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate          7975       10  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate        9716.5       10  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate         11458       10  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate       13199.5       10  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate         14941       10  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate       16682.5       10  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate         18424       10  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6.2
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate         18424     16.2  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate         18424     22.4  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate         18424     28.6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+38  32 female   1     own        moderate         moderate         18424     34.8  others
+!v! MV FOUND, STEPS: #4
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate           935       11  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1748.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate        2683.9       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate        4432.8       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate        6181.7       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate        7930.6       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate        9679.5       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate       11428.4       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate       13177.3       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate       14926.2       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate       16675.1       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate         18424       11  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6.1
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate         18424     17.1  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate         18424     23.2  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate         18424     29.3  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+39  32 female   1     own        moderate         moderate         18424     35.4  others
+!v! MV FOUND, STEPS: #4
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate          1105       11  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1731.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate        2836.9       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate        4568.8       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate        6300.7       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate        8032.6       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate        9764.5       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate       11496.4       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate       13228.3       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate       14960.2       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate       16692.1       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate         18424       11  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6.1
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate         18424     17.1  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate         18424     23.2  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate         18424     29.3  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+40  32 female   1     own        moderate         moderate         18424     35.4  others
+!v! MV FOUND, STEPS: #4
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate          1009       12  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1741.5
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate        2750.5       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate          4492       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate        6233.5       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate          7975       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate        9716.5       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate         11458       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate       13199.5       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate         14941       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate       16682.5       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate         18424       12  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate         18424       18  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate         18424       24  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate         18424       30  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+41  32 female   1     own        moderate         moderate         18424       36  others
+!v! MV FOUND, STEPS: #4
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  28 female   1     own        moderate         moderate          1375        6  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.9
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42 27.1 female   1     own        moderate         moderate          1375        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42 26.2 female   1     own        moderate         moderate          1375        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42 25.3 female   1     own        moderate         moderate          1375        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42 24.4 female   1     own        moderate         moderate          1375        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42 23.5 female   1     own        moderate         moderate          1375        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42 22.6 female   1     own        moderate         moderate          1375        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42 21.7 female   1     own        moderate         moderate          1375        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42 20.8 female   1     own        moderate         moderate          1375        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42 19.9 female   1     own        moderate         moderate          1375        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  19 female   1     own        moderate         moderate          1375        6  others
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1704.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  19 female   1     own        moderate         moderate        3079.9        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  19 female   1     own        moderate         moderate        4784.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  19 female   1     own        moderate         moderate        6489.7        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  19 female   1     own        moderate         moderate        8194.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  19 female   1     own        moderate         moderate        9899.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  19 female   1     own        moderate         moderate       11604.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  19 female   1     own        moderate         moderate       13309.3        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  19 female   1     own        moderate         moderate       15014.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  19 female   1     own        moderate         moderate       16719.1        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+42  19 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate          1105       12  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1731.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate        2836.9       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate        4568.8       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate        6300.7       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate        8032.6       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate        9764.5       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate       11496.4       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate       13228.3       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate       14960.2       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate       16692.1       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate         18424       12  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate         18424       18  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate         18424       24  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate         18424       30  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+43  32 female   1     own        moderate         moderate         18424       36  others
+!v! MV FOUND, STEPS: #4
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate          1094       14  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1733
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate          2827       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate          4560       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate          6293       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate          8026       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate          9759       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate         11492       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate         13225       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate         14958       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate         16691       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate         18424       14  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 5.8
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate         18424     19.8  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate         18424     25.6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate         18424     31.4  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+44  32 female   1     own        moderate         moderate         18424     37.2  others
+!v! MV FOUND, STEPS: #4
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate          1375       14  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1704.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate        3079.9       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate        4784.8       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate        6489.7       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate        8194.6       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate        9899.5       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate       11604.4       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate       13309.3       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate       15014.2       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate       16719.1       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate         18424       14  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 5.8
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate         18424     19.8  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate         18424     25.6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate         18424     31.4  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+45  32 female   1     own        moderate         moderate         18424     37.2  others
+!v! MV FOUND, STEPS: #4
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  28 female   1     own        moderate         moderate          2469        6  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.9
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46 27.1 female   1     own        moderate         moderate          2469        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46 26.2 female   1     own        moderate         moderate          2469        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46 25.3 female   1     own        moderate         moderate          2469        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46 24.4 female   1     own        moderate         moderate          2469        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46 23.5 female   1     own        moderate         moderate          2469        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46 22.6 female   1     own        moderate         moderate          2469        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46 21.7 female   1     own        moderate         moderate          2469        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46 20.8 female   1     own        moderate         moderate          2469        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46 19.9 female   1     own        moderate         moderate          2469        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  19 female   1     own        moderate         moderate          2469        6  others
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1595.5
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  19 female   1     own        moderate         moderate        4064.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  19 female   1     own        moderate         moderate          5660        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  19 female   1     own        moderate         moderate        7255.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  19 female   1     own        moderate         moderate          8851        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  19 female   1     own        moderate         moderate       10446.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  19 female   1     own        moderate         moderate         12042        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  19 female   1     own        moderate         moderate       13637.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  19 female   1     own        moderate         moderate         15233        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  19 female   1     own        moderate         moderate       16828.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+46  19 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  28 female   1     own        moderate         moderate          2475        6  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.9
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47 27.1 female   1     own        moderate         moderate          2475        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47 26.2 female   1     own        moderate         moderate          2475        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47 25.3 female   1     own        moderate         moderate          2475        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47 24.4 female   1     own        moderate         moderate          2475        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47 23.5 female   1     own        moderate         moderate          2475        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47 22.6 female   1     own        moderate         moderate          2475        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47 21.7 female   1     own        moderate         moderate          2475        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47 20.8 female   1     own        moderate         moderate          2475        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47 19.9 female   1     own        moderate         moderate          2475        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  19 female   1     own        moderate         moderate          2475        6  others
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1594.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  19 female   1     own        moderate         moderate        4069.9        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  19 female   1     own        moderate         moderate        5664.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  19 female   1     own        moderate         moderate        7259.7        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  19 female   1     own        moderate         moderate        8854.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  19 female   1     own        moderate         moderate       10449.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  19 female   1     own        moderate         moderate       12044.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  19 female   1     own        moderate         moderate       13639.3        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  19 female   1     own        moderate         moderate       15234.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  19 female   1     own        moderate         moderate       16829.1        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+47  19 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  28 female   1     own        moderate         moderate          2583        6  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.9
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48 27.1 female   1     own        moderate         moderate          2583        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48 26.2 female   1     own        moderate         moderate          2583        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48 25.3 female   1     own        moderate         moderate          2583        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48 24.4 female   1     own        moderate         moderate          2583        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48 23.5 female   1     own        moderate         moderate          2583        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48 22.6 female   1     own        moderate         moderate          2583        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48 21.7 female   1     own        moderate         moderate          2583        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48 20.8 female   1     own        moderate         moderate          2583        6  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48 19.9 female   1     own        moderate         moderate          2583        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  19 female   1     own        moderate         moderate          2583        6  others
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1584.1
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  19 female   1     own        moderate         moderate        4167.1        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  19 female   1     own        moderate         moderate        5751.2        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  19 female   1     own        moderate         moderate        7335.3        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  19 female   1     own        moderate         moderate        8919.4        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  19 female   1     own        moderate         moderate       10503.5        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  19 female   1     own        moderate         moderate       12087.6        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  19 female   1     own        moderate         moderate       13671.7        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  19 female   1     own        moderate         moderate       15255.8        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  19 female   1     own        moderate         moderate       16839.9        6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+48  19 female   1     own        moderate         moderate         18424        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate          1742       15  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1668.2
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate        3410.2       15  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate        5078.4       15  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate        6746.6       15  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate        8414.8       15  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate         10083       15  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate       11751.2       15  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate       13419.4       15  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate       15087.6       15  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate       16755.8       15  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate         18424       15  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 5.7
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate         18424     20.7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate         18424     26.4  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate         18424     32.1  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+49  32 female   1     own        moderate         moderate         18424     37.8  others
+!v! MV FOUND, STEPS: #4
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate          2469       13  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1595.5
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate        4064.5       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate          5660       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate        7255.5       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate          8851       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate       10446.5       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate         12042       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate       13637.5       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate         15233       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate       16828.5       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate         18424       13  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 5.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate         18424     18.9  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate         18424     24.8  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate         18424     30.7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+50  32 female   1     own        moderate         moderate         18424     36.6  others
+!v! MV FOUND, STEPS: #4
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51  26 female   1     own        moderate         moderate           931       12  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.7
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51 25.3 female   1     own        moderate         moderate           931       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51 24.6 female   1     own        moderate         moderate           931       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51 23.9 female   1     own        moderate         moderate           931       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51 23.2 female   1     own        moderate         moderate           931       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51 22.5 female   1     own        moderate         moderate           931       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51 21.8 female   1     own        moderate         moderate           931       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51 21.1 female   1     own        moderate         moderate           931       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51 20.4 female   1     own        moderate         moderate           931       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51 19.7 female   1     own        moderate         moderate           931       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51  19 female   1     own        moderate         moderate           931       12  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51  19 female   1     own        moderate         moderate           931       18  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51  19 female   1     own        moderate         moderate           931       24  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51  19 female   1     own        moderate         moderate           931       30  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51  19 female   1     own        moderate         moderate           931       36  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51  19 female   1     own        moderate         moderate           931       42  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+51  19 female   1     own        moderate         moderate           931       48  others
+!v! MV FOUND, STEPS: #6
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate          2469       14  others
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1595.5
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate        4064.5       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate          5660       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate        7255.5       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate          8851       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate       10446.5       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate         12042       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate       13637.5       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate         15233       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate       16828.5       14  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate         18424       14  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 5.8
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate         18424     19.8  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate         18424     25.6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate         18424     31.4  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+52  32 female   1     own        moderate         moderate         18424     37.2  others
+!v! MV FOUND, STEPS: #4
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  31 male   2     own        moderate         moderate           931        6     car
+MUT FEATURE: age
+[1] "Increment: "
+[1] -1.2
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53 29.8 male   2     own        moderate         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53 28.6 male   2     own        moderate         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53 27.4 male   2     own        moderate         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53 26.2 male   2     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  25 male   2     own        moderate         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53 23.8 male   2     own        moderate         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53 22.6 male   2     own        moderate         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53 21.4 male   2     own        moderate         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53 20.2 male   2     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  19 male   2     own        moderate         moderate           931        6     car
+[1] "\n#######################################################\n"
+MUT FEATURE: job
+[1] "Increment: "
+[1] 0.1
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  19 male 2.1     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  19 male 2.2     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  19 male 2.3     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  19 male 2.4     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  19 male 2.5     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  19 male 2.6     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  19 male 2.7     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  19 male 2.8     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  19 male 2.9     own        moderate         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+53  19 male   3     own        moderate         moderate           931        6     car
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+54  47 male   1     own          little         moderate           931        6     car
+MUT FEATURE: age
+[1] "Increment: "
+[1] 2.8
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+54 49.8 male   1     own          little         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+54 52.6 male   1     own          little         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+54 55.4 male   1     own          little         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+54 58.2 male   1     own          little         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+54  61 male   1     own          little         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+54 63.8 male   1     own          little         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+54 66.6 male   1     own          little         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+54 69.4 male   1     own          little         moderate           931        6     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+54 72.2 male   1     own          little         moderate           931        6     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+54  75 male   1     own          little         moderate           931        6     car
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+55  32 male   2     own        moderate         moderate           931        6  others
+MUT FEATURE: job
+[1] "Increment: "
+[1] 0.1
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+55  32 male 2.1     own        moderate         moderate           931        6  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+55  32 male 2.2     own        moderate         moderate           931        6  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+55  32 male 2.3     own        moderate         moderate           931        6  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+55  32 male 2.4     own        moderate         moderate           931        6  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+55  32 male 2.5     own        moderate         moderate           931        6  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+55  32 male 2.6     own        moderate         moderate           931        6  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+55  32 male 2.7     own        moderate         moderate           931        6  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+55  32 male 2.8     own        moderate         moderate           931        6  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+55  32 male 2.9     own        moderate         moderate           931        6  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+55  32 male   3     own        moderate         moderate           931        6  others
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  27 female   1     own        moderate         moderate           936       11  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.8
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56 26.2 female   1     own        moderate         moderate           936       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56 25.4 female   1     own        moderate         moderate           936       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56 24.6 female   1     own        moderate         moderate           936       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56 23.8 female   1     own        moderate         moderate           936       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  23 female   1     own        moderate         moderate           936       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56 22.2 female   1     own        moderate         moderate           936       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56 21.4 female   1     own        moderate         moderate           936       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56 20.6 female   1     own        moderate         moderate           936       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56 19.8 female   1     own        moderate         moderate           936       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate           936       11  others
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1748.8
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate        2684.8       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate        4433.6       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate        6182.4       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate        7931.2       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate          9680       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate       11428.8       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate       13177.6       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate       14926.4       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate       16675.2       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate         18424       11  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6.1
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate         18424     17.1  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate         18424     23.2  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate         18424     29.3  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate         18424     35.4  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+56  19 female   1     own        moderate         moderate         18424     41.5  others
+!v! MV FOUND, STEPS: #5
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  27 female   1     own        moderate         moderate          1129       11  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.8
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57 26.2 female   1     own        moderate         moderate          1129       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57 25.4 female   1     own        moderate         moderate          1129       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57 24.6 female   1     own        moderate         moderate          1129       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57 23.8 female   1     own        moderate         moderate          1129       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  23 female   1     own        moderate         moderate          1129       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57 22.2 female   1     own        moderate         moderate          1129       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57 21.4 female   1     own        moderate         moderate          1129       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57 20.6 female   1     own        moderate         moderate          1129       11  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57 19.8 female   1     own        moderate         moderate          1129       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate          1129       11  others
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1729.5
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate        2858.5       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate          4588       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate        6317.5       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate          8047       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate        9776.5       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate         11506       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate       13235.5       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate         14965       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate       16694.5       11  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate         18424       11  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6.1
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate         18424     17.1  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate         18424     23.2  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate         18424     29.3  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate         18424     35.4  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+57  19 female   1     own        moderate         moderate         18424     41.5  others
+!v! MV FOUND, STEPS: #5
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  27 female   1     own        moderate         moderate           929       12  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.8
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58 26.2 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58 25.4 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58 24.6 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58 23.8 female   1     own        moderate         moderate           929       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  23 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58 22.2 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58 21.4 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58 20.6 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58 19.8 female   1     own        moderate         moderate           929       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate           929       12  others
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] -65.3
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate         863.7       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate         798.4       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate         733.1       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate         667.8       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate         602.5       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate         537.2       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate         471.9       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate         406.6       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate         341.3       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate           276       12  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate           276       18  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate           276       24  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate           276       30  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate           276       36  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate           276       42  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+58  19 female   1     own        moderate         moderate           276       48  others
+!v! MV FOUND, STEPS: #6
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  27 female   1     own        moderate         moderate          1105       12  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.8
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59 26.2 female   1     own        moderate         moderate          1105       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59 25.4 female   1     own        moderate         moderate          1105       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59 24.6 female   1     own        moderate         moderate          1105       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59 23.8 female   1     own        moderate         moderate          1105       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  23 female   1     own        moderate         moderate          1105       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59 22.2 female   1     own        moderate         moderate          1105       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59 21.4 female   1     own        moderate         moderate          1105       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59 20.6 female   1     own        moderate         moderate          1105       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59 19.8 female   1     own        moderate         moderate          1105       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate          1105       12  others
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1731.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate        2836.9       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate        4568.8       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate        6300.7       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate        8032.6       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate        9764.5       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate       11496.4       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate       13228.3       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate       14960.2       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate       16692.1       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate         18424       12  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate         18424       18  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate         18424       24  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate         18424       30  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate         18424       36  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+59  19 female   1     own        moderate         moderate         18424       42  others
+!v! MV FOUND, STEPS: #5
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  25 female   1     own        moderate         moderate           929       12  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.6
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60 24.4 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60 23.8 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60 23.2 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60 22.6 female   1     own        moderate         moderate           929       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  22 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60 21.4 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60 20.8 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60 20.2 female   1     own        moderate         moderate           929       12  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60 19.6 female   1     own        moderate         moderate           929       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate           929       12  others
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] -65.3
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate         863.7       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate         798.4       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate         733.1       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate         667.8       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate         602.5       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate         537.2       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate         471.9       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate         406.6       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate         341.3       12  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate           276       12  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate           276       18  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate           276       24  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate           276       30  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate           276       36  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate           276       42  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+60  19 female   1     own        moderate         moderate           276       48  others
+!v! MV FOUND, STEPS: #6
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  28 female   1     own        moderate         moderate          2483       13  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.9
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61 27.1 female   1     own        moderate         moderate          2483       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61 26.2 female   1     own        moderate         moderate          2483       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61 25.3 female   1     own        moderate         moderate          2483       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61 24.4 female   1     own        moderate         moderate          2483       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61 23.5 female   1     own        moderate         moderate          2483       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61 22.6 female   1     own        moderate         moderate          2483       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61 21.7 female   1     own        moderate         moderate          2483       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61 20.8 female   1     own        moderate         moderate          2483       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61 19.9 female   1     own        moderate         moderate          2483       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate          2483       13  others
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1594.1
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate        4077.1       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate        5671.2       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate        7265.3       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate        8859.4       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate       10453.5       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate       12047.6       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate       13641.7       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate       15235.8       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate       16829.9       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate         18424       13  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 5.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate         18424     18.9  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate         18424     24.8  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate         18424     30.7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate         18424     36.6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+61  19 female   1     own        moderate         moderate         18424     42.5  others
+!v! MV FOUND, STEPS: #5
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  27 female   1     own        moderate         moderate          2469       13  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.8
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62 26.2 female   1     own        moderate         moderate          2469       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62 25.4 female   1     own        moderate         moderate          2469       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62 24.6 female   1     own        moderate         moderate          2469       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62 23.8 female   1     own        moderate         moderate          2469       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  23 female   1     own        moderate         moderate          2469       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62 22.2 female   1     own        moderate         moderate          2469       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62 21.4 female   1     own        moderate         moderate          2469       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62 20.6 female   1     own        moderate         moderate          2469       13  others
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62 19.8 female   1     own        moderate         moderate          2469       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate          2469       13  others
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] 1595.5
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate        4064.5       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate          5660       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate        7255.5       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate          8851       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate       10446.5       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate         12042       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate       13637.5       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate         15233       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate       16828.5       13  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate         18424       13  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 5.9
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate         18424     18.9  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate         18424     24.8  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate         18424     30.7  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate         18424     36.6  others
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose
+62  19 female   1     own        moderate         moderate         18424     42.5  others
+!v! MV FOUND, STEPS: #5
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63  25 male   1     own          little         moderate           931        9     car
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.6
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63 24.4 male   1     own          little         moderate           931        9     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63 23.8 male   1     own          little         moderate           931        9     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63 23.2 male   1     own          little         moderate           931        9     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63 22.6 male   1     own          little         moderate           931        9     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63  22 male   1     own          little         moderate           931        9     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63 21.4 male   1     own          little         moderate           931        9     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63 20.8 male   1     own          little         moderate           931        9     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63 20.2 male   1     own          little         moderate           931        9     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63 19.6 male   1     own          little         moderate           931        9     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63  19 male   1     own          little         moderate           931        9     car
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6.3
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63  19 male   1     own          little         moderate           931     15.3     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+63  19 male   1     own          little         moderate           931     21.6     car
+!v! MV FOUND, STEPS: #2
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  37 male   1     own        moderate         moderate           931       13  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] 3.8
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64 40.8 male   1     own        moderate         moderate           931       13  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64 44.6 male   1     own        moderate         moderate           931       13  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64 48.4 male   1     own        moderate         moderate           931       13  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64 52.2 male   1     own        moderate         moderate           931       13  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  56 male   1     own        moderate         moderate           931       13  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64 59.8 male   1     own        moderate         moderate           931       13  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64 63.6 male   1     own        moderate         moderate           931       13  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64 67.4 male   1     own        moderate         moderate           931       13  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64 71.2 male   1     own        moderate         moderate           931       13  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  75 male   1     own        moderate         moderate           931       13  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 5.9
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  75 male   1     own        moderate         moderate           931     18.9  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  75 male   1     own        moderate         moderate           931     24.8  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  75 male   1     own        moderate         moderate           931     30.7  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  75 male   1     own        moderate         moderate           931     36.6  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  75 male   1     own        moderate         moderate           931     42.5  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  75 male   1     own        moderate         moderate           931     48.4  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  75 male   1     own        moderate         moderate           931     54.3  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  75 male   1     own        moderate         moderate           931     60.2  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  75 male   1     own        moderate         moderate           931     66.1  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+64  75 male   1     own        moderate         moderate           931       72  others
+!v! MV FOUND, STEPS: #10
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  38 male   1     own        moderate         moderate           931       12  others
+MUT FEATURE: age
+[1] "Increment: "
+[1] 3.7
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65 41.7 male   1     own        moderate         moderate           931       12  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65 45.4 male   1     own        moderate         moderate           931       12  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65 49.1 male   1     own        moderate         moderate           931       12  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65 52.8 male   1     own        moderate         moderate           931       12  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65 56.5 male   1     own        moderate         moderate           931       12  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65 60.2 male   1     own        moderate         moderate           931       12  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65 63.9 male   1     own        moderate         moderate           931       12  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65 67.6 male   1     own        moderate         moderate           931       12  others
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65 71.3 male   1     own        moderate         moderate           931       12  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  75 male   1     own        moderate         moderate           931       12  others
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  75 male   1     own        moderate         moderate           931       18  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  75 male   1     own        moderate         moderate           931       24  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  75 male   1     own        moderate         moderate           931       30  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  75 male   1     own        moderate         moderate           931       36  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  75 male   1     own        moderate         moderate           931       42  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  75 male   1     own        moderate         moderate           931       48  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  75 male   1     own        moderate         moderate           931       54  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  75 male   1     own        moderate         moderate           931       60  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  75 male   1     own        moderate         moderate           931       66  others
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+65  75 male   1     own        moderate         moderate           931       72  others
+!v! MV FOUND, STEPS: #10
+[1] "\n#######################################################\n"
+[1] "Original CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  27 male   1     own          little         moderate           871       12     car
+MUT FEATURE: age
+[1] "Increment: "
+[1] -0.8
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66 26.2 male   1     own          little         moderate           871       12     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66 25.4 male   1     own          little         moderate           871       12     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66 24.6 male   1     own          little         moderate           871       12     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66 23.8 male   1     own          little         moderate           871       12     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  23 male   1     own          little         moderate           871       12     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66 22.2 male   1     own          little         moderate           871       12     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66 21.4 male   1     own          little         moderate           871       12     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66 20.6 male   1     own          little         moderate           871       12     car
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66 19.8 male   1     own          little         moderate           871       12     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate           871       12     car
+[1] "\n#######################################################\n"
+MUT FEATURE: credit.amount
+[1] "Increment: "
+[1] -59.5
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate         811.5       12     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate           752       12     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate         692.5       12     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate           633       12     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate         573.5       12     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate           514       12     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate         454.5       12     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate           395       12     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate         335.5       12     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate           276       12     car
+[1] "\n#######################################################\n"
+MUT FEATURE: duration
+[1] "Increment: "
+[1] 6
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate           276       18     car
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+66  19 male   1     own          little         moderate           276       24     car
+!v! MV FOUND, STEPS: #2
+[1] "\n#######################################################\n"
