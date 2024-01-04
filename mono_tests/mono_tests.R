@@ -116,6 +116,7 @@ monoTest <- function(test_data,
                      test_data_id,
                      test_data_class_label,
                      test_data_class_values,
+                     test_data_naf,
                      ml_alg_id) {
   # Count of counterfactuals (valid or not), for each (dataset, model) pair.
   cf_count = 0
@@ -225,7 +226,8 @@ monoTest <- function(test_data,
                                                  p.mut.gen = best.params$p.mut.gen, 
                                                  p.mut.use.orig = best.params$p.mut.use.orig, 
                                                  p.rec.gen = best.params$p.rec.gen, initialization = "icecurve",
-                                                 p.rec.use.orig = best.params$p.rec.use.orig)})
+                                                 p.rec.use.orig = best.params$p.rec.use.orig,
+                                                 fixed.features = test_data_naf)})
     
     # Number of counterfactuals.
     nrow(test_data.cf$results$counterfactuals)
@@ -268,8 +270,9 @@ monoTest <- function(test_data,
             writeLines(sprintf("MUT FEATURE: %s", k))
             
             # Calculate increment.
-            # NOTE: Should the increment be fractional?
-            # NOTE: How to handle increments below 0 if integer.
+            # NOTE: How to handle increments below 0.
+            #       Produced if the difference between the original feature
+            #       and the counterfactual is minimal.
             inc = 0
             if (cf[[k]] < x.interest[[k]]) {
               # Adjust minimum.
@@ -277,7 +280,7 @@ monoTest <- function(test_data,
                 print("MIN CHANGED")
                 min_feat_values[[k]] = cf[[k]]
               }
-              inc = (min_feat_values[[k]] - cf[[k]]) / monot_mut_steps
+              inc = (min_feat_values[[k]] - cf[[k]]) %/% monot_mut_steps
             }
             else {
               # Adjust maximum.
@@ -285,7 +288,7 @@ monoTest <- function(test_data,
                 print("MAX CHANGED")
                 max_feat_values[[k]] = cf[[k]]
               }
-              inc = (max_feat_values[[k]] - cf[[k]]) / monot_mut_steps
+              inc = (max_feat_values[[k]] - cf[[k]]) %/% monot_mut_steps
             }
             
             print("Increment: ")
@@ -340,7 +343,8 @@ test_data = droplevels.data.frame(test_data)
 
 # Test dataset w/ algorithm type.
 monoTest(test_data,
-          german_id,
-          german_class_label,
-          german_class_values,
-          SVM_ALG)
+         german_id,
+         german_class_label,
+         german_class_values,
+         german_naf,
+         SVM_ALG)
