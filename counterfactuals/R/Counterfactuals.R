@@ -231,7 +231,7 @@ Counterfactuals = R6::R6Class("Counterfactuals",
       p.mut = 0.2, p.mut.gen = 0.5, p.mut.use.orig = 0.2, k = 1L, weights = NULL,
       lower = NULL, upper = NULL, initialization = "random",
       track.infeas = TRUE) {
-
+      
       super$initialize(predictor = predictor)
       fixed.features = private$sanitize_feature(fixed.features, predictor$data$feature.names)
 
@@ -664,13 +664,13 @@ Counterfactuals = R6::R6Class("Counterfactuals",
         ilen = length(initial.pop[[1]]$use.orig)
         distribution = function() rbinom(n = ilen, size = ilen,
           prob = t(prob.use.orig))
-        initial.pop = initSelector(initial.pop, vector.name = "use.orig",
-          distribution = distribution)
+        warnings(initial.pop = initSelector(initial.pop, vector.name = "use.orig",
+          distribution = distribution))
       }
       i = sapply(self$x.interest, is.factor)
       x.interest = self$x.interest
       x.interest[i] = lapply(self$x.interest[i], as.character)
-
+      
       initial.pop = lapply(initial.pop, function(x) {
         x = transform_to_orig(x, x.interest, delete.use.orig = FALSE,
           fixed.features = self$fixed.features, max.changed = self$max.changed)

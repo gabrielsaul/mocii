@@ -1,0 +1,41 @@
+       GT50K
+1 0.01827281
+[1] "Point of Interest: "
+    age workclass fnlwgt education education.num marital.status        occupation relationship  race  sex capital.gain
+549  21   Private 259510   HS-grad             9  Never-married Handlers-cleaners    Own-child White Male            0
+    capital.loss hours.per.week native.country target
+549            0             36  United-States LTE50K
+Called from: file(file, "rt")
+   (Intercept) targetgood sexmale housingown housingrent saving.accountsmoderate saving.accountsquite rich
+2            1          0       0          1           0                       0                         0
+4            1          1       1          0           0                       0                         0
+5            1          0       1          0           0                       0                         0
+8            1          1       1          0           1                       0                         0
+10           1          0       1          1           0                       0                         0
+11           1          0       0          0           1                       0                         0
+12           1          0       0          0           1                       0                         0
+13           1          1       0          1           0                       0                         0
+14           1          0       1          1           0                       0                         0
+15           1          1       0          0           1                       0                         0
+   saving.accountsrich checking.accountmoderate checking.accountrich purposecar purposedomestic appliances
+2                    0                        1                    0          0                          0
+4                    0                        0                    0          0                          0
+5                    0                        0                    0          1                          0
+8                    0                        1                    0          1                          0
+10                   0                        1                    0          1                          0
+11                   0                        1                    0          1                          0
+12                   0                        0                    0          0                          0
+13                   0                        1                    0          0                          0
+14                   0                        0                    0          1                          0
+15                   0                        0                    0          1                          0
+   purposeeducation purposefurniture/equipment purposeradio/TV purposerepairs purposevacation/others
+2                 0                          0               1              0                      0
+4                 0                          1               0              0                      0
+5                 0                          0               0              0                      0
+8                 0                          0               0              0                      0
+10                0                          0               0              0                      0
+11                0                          0               0              0                      0
+12                0                          0               0              0                      0
+13                0                          0               1              0                      0
+14                0                          0               0              0                      0
+15                0                          0               0              0                      0
