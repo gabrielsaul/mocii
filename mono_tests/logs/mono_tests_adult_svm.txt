@@ -1,0 +1,3409 @@
+[1] "\nMIN FEAT VALUES:"
+$age
+[1] 17
+
+$workclass
+[1] "Federal_gov"
+
+$fnlwgt
+[1] 21174
+
+$education
+[1] "10th"
+
+$education_num
+[1] 1
+
+$marital_status
+[1] "Divorced"
+
+$occupation
+[1] "Adm_clerical"
+
+$relationship
+[1] "Husband"
+
+$race
+[1] "Amer_Indian_Eskimo"
+
+$sex
+[1] "Female"
+
+$capital_gain
+[1] 0
+
+$capital_loss
+[1] 0
+
+$hours_per_week
+[1] 1
+
+$native_country
+[1] "Cambodia"
+
+$class
+[1] "GT50K"
+
+[1] "\nMAX FEAT VALUES:"
+$age
+[1] 90
+
+$workclass
+[1] "State_gov"
+
+$fnlwgt
+[1] 1033222
+
+$education
+[1] "Some_college"
+
+$education_num
+[1] 16
+
+$marital_status
+[1] "Widowed"
+
+$occupation
+[1] "Transport_moving"
+
+$relationship
+[1] "Wife"
+
+$race
+[1] "White"
+
+$sex
+[1] "Male"
+
+$capital_gain
+[1] 25236
+
+$capital_loss
+[1] 2415
+
+$hours_per_week
+[1] 99
+
+$native_country
+[1] "United_States"
+
+$class
+[1] "LTE50K"
+
+    age workclass fnlwgt    education education_num     marital_status
+503  52   Private  48925 Some_college            10 Married_civ_spouse
+      occupation relationship  race  sex capital_gain capital_loss
+503 Adm_clerical      Husband White Male            0            0
+    hours_per_week native_country  class
+503             40  United_States LTE50K
+      GT50K
+1 0.1630503
+[1] "\nPoint of Interest: "
+    age workclass fnlwgt    education education_num     marital_status
+503  52   Private  48925 Some_college            10 Married_civ_spouse
+      occupation relationship  race  sex capital_gain capital_loss
+503 Adm_clerical      Husband White Male            0            0
+    hours_per_week native_country  class
+503             40  United_States LTE50K
+[1] "Counterfactuals: "
+   age workclass fnlwgt    education education_num     marital_status
+1   52   Private  48925 Some_college            10 Married_civ_spouse
+2   52   Private  48925 Some_college            10 Married_civ_spouse
+3   52   Private  49033 Some_college            10 Married_civ_spouse
+4   52   Private  49626 Some_college            10 Married_civ_spouse
+5   52   Private  50116 Some_college            10 Married_civ_spouse
+6   52   Private  50207 Some_college            10 Married_civ_spouse
+7   52   Private  51341 Some_college            10 Married_civ_spouse
+8   52   Private  51347 Some_college            10 Married_civ_spouse
+9   52   Private  51688 Some_college            10 Married_civ_spouse
+10  52   Private  51696 Some_college            10 Married_civ_spouse
+11  52   Private  51711 Some_college            10 Married_civ_spouse
+12  52   Private  51712 Some_college            10 Married_civ_spouse
+13  52   Private  51745 Some_college            10 Married_civ_spouse
+14  52   Private  51842 Some_college            10 Married_civ_spouse
+15  52   Private  51981 Some_college            10 Married_civ_spouse
+16  52   Private  56252 Some_college            10 Married_civ_spouse
+17  52   Private  57100 Some_college            10 Married_civ_spouse
+18  52   Private  57910 Some_college            10 Married_civ_spouse
+19  52   Private  57927 Some_college            10 Married_civ_spouse
+20  52   Private  82510 Some_college            10 Married_civ_spouse
+21  52   Private  92732 Some_college            10 Married_civ_spouse
+22  52   Private 102955 Some_college            10 Married_civ_spouse
+23  52   Private 116460 Some_college            10 Married_civ_spouse
+24  52   Private 120553 Some_college            10 Married_civ_spouse
+25  52   Private 121850 Some_college            10 Married_civ_spouse
+26  52   Private 122058 Some_college            10 Married_civ_spouse
+27  52   Private 123401 Some_college            10 Married_civ_spouse
+28  52   Private 125219 Some_college            10 Married_civ_spouse
+29  52   Private 127091 Some_college            10 Married_civ_spouse
+30  52   Private 128373 Some_college            10 Married_civ_spouse
+31  52   Private 129705 Some_college            10 Married_civ_spouse
+32  52   Private 131064 Some_college            10 Married_civ_spouse
+33  52   Private 133434 Some_college            10 Married_civ_spouse
+34  52   Private  48925 Some_college            10 Married_civ_spouse
+35  52   Private  48925 Some_college            10 Married_civ_spouse
+36  52   Private  48925 Some_college            10 Married_civ_spouse
+37  52   Private  48925 Some_college            10 Married_civ_spouse
+38  52   Private  48925 Some_college            10 Married_civ_spouse
+39  52   Private 154069 Some_college            10 Married_civ_spouse
+40  52   Private  48925 Some_college            10 Married_civ_spouse
+41  52   Private  48925 Some_college            10 Married_civ_spouse
+42  52   Private  48925 Some_college            10 Married_civ_spouse
+43  52   Private  48925 Some_college            10 Married_civ_spouse
+44  52   Private 113178 Some_college            10 Married_civ_spouse
+45  52   Private  48925 Some_college            10 Married_civ_spouse
+46  52   Private  48925 Some_college            10 Married_civ_spouse
+47  52   Private 143846 Some_college            10 Married_civ_spouse
+48  52   Private 135055 Some_college            10 Married_civ_spouse
+49  52   Private 133623 Some_college            10 Married_civ_spouse
+50  52   Private 133434 Some_college            10 Married_civ_spouse
+51  52   Private  92732 Some_college            10 Married_civ_spouse
+52  52   Private  48925 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+1     Adm_clerical      Husband White Male         5606            0
+2  Exec_managerial      Husband White Male            0            0
+3  Exec_managerial      Husband White Male            0            0
+4  Exec_managerial      Husband White Male            0            0
+5  Exec_managerial      Husband White Male            0            0
+6  Exec_managerial      Husband White Male            0            0
+7  Exec_managerial      Husband White Male            0            0
+8  Exec_managerial      Husband White Male            0            0
+9  Exec_managerial      Husband White Male            0            0
+10 Exec_managerial      Husband White Male            0            0
+11 Exec_managerial      Husband White Male            0            0
+12 Exec_managerial      Husband White Male            0            0
+13 Exec_managerial      Husband White Male            0            0
+14 Exec_managerial      Husband White Male            0            0
+15 Exec_managerial      Husband White Male            0            0
+16 Exec_managerial      Husband White Male            0            0
+17 Exec_managerial      Husband White Male            0            0
+18 Exec_managerial      Husband White Male            0            0
+19 Exec_managerial      Husband White Male            0            0
+20 Exec_managerial      Husband White Male            0            0
+21 Exec_managerial      Husband White Male            0            0
+22 Exec_managerial      Husband White Male            0            0
+23 Exec_managerial      Husband White Male            0            0
+24 Exec_managerial      Husband White Male            0            0
+25 Exec_managerial      Husband White Male            0            0
+26 Exec_managerial      Husband White Male            0            0
+27 Exec_managerial      Husband White Male            0            0
+28 Exec_managerial      Husband White Male            0            0
+29 Exec_managerial      Husband White Male            0            0
+30 Exec_managerial      Husband White Male            0            0
+31 Exec_managerial      Husband White Male            0            0
+32 Exec_managerial      Husband White Male            0            0
+33 Exec_managerial      Husband White Male            0            0
+34    Adm_clerical      Husband White Male         5340            0
+35    Adm_clerical      Husband White Male         4843            0
+36    Adm_clerical      Husband White Male         4191            0
+37    Adm_clerical      Husband White Male         3823            0
+38    Adm_clerical      Husband White Male         3313            0
+39    Adm_clerical      Husband White Male          764            0
+40    Adm_clerical      Husband White Male         1274           73
+41    Adm_clerical      Husband White Male         1245            0
+42    Tech_support      Husband White Male            0           24
+43    Adm_clerical      Husband White Male          935            0
+44    Adm_clerical      Husband White Male          509            0
+45    Tech_support      Husband White Male            0            0
+46    Adm_clerical      Husband White Male          764            0
+47    Adm_clerical      Husband White Male            0            0
+48    Adm_clerical      Husband White Male            0            0
+49    Adm_clerical      Husband White Male            0            0
+50    Adm_clerical      Husband White Male            0            0
+51    Adm_clerical      Husband White Male          254            0
+52    Adm_clerical      Husband White Male          518            0
+   hours_per_week native_country dist.target dist.x.interest nr.changed
+1              40  United_States  0.00000000     0.015867355          1
+2              40  United_States  0.00000000     0.071428571          1
+3              40  United_States  0.00000000     0.071436194          2
+4              40  United_States  0.00000000     0.071478047          2
+5              40  United_States  0.00000000     0.071512630          2
+6              40  United_States  0.00000000     0.071519053          2
+7              40  United_States  0.00000000     0.071599088          2
+8              40  United_States  0.00000000     0.071599512          2
+9              40  United_States  0.00000000     0.071623579          2
+10             40  United_States  0.00000000     0.071624144          2
+11             40  United_States  0.00000000     0.071625202          2
+12             40  United_States  0.00000000     0.071625273          2
+13             40  United_States  0.00000000     0.071627602          2
+14             40  United_States  0.00000000     0.071634448          2
+15             40  United_States  0.00000000     0.071644259          2
+16             40  United_States  0.00000000     0.071945698          2
+17             40  United_States  0.00000000     0.072005549          2
+18             40  United_States  0.00000000     0.072062717          2
+19             40  United_States  0.00000000     0.072063917          2
+20             40  United_States  0.00000000     0.073798942          2
+21             40  United_States  0.00000000     0.074520393          2
+22             40  United_States  0.00000000     0.075241914          2
+23             40  United_States  0.00000000     0.076195073          2
+24             40  United_States  0.00000000     0.076483950          2
+25             40  United_States  0.00000000     0.076575490          2
+26             40  United_States  0.00000000     0.076590170          2
+27             40  United_States  0.00000000     0.076684957          2
+28             40  United_States  0.00000000     0.076813268          2
+29             40  United_States  0.00000000     0.076945391          2
+30             40  United_States  0.00000000     0.077035872          2
+31             40  United_States  0.00000000     0.077129882          2
+32             40  United_States  0.00000000     0.077225798          2
+33             40  United_States  0.00000000     0.077393068          2
+34             40  United_States  0.01673491     0.015114462          1
+35             40  United_States  0.05408336     0.013707742          1
+36             40  United_States  0.10217917     0.011862306          1
+37             40  United_States  0.12850414     0.010820710          1
+38             40  United_States  0.16361616     0.009377194          1
+39             40  United_States  0.27418351     0.009583323          2
+40             40  United_States  0.27743128     0.005765084          2
+41             40  United_States  0.28382451     0.003523877          1
+42             40  United_States  0.29719382     0.072138421          2
+43             40  United_States  0.29839494     0.002646446          1
+44             40  United_States  0.29885262     0.005975550          2
+45             40  United_States  0.29928374     0.071428571          1
+46             40  United_States  0.30604375     0.002162444          1
+47             40  United_States  0.31250771     0.006699358          1
+48             40  United_States  0.31489615     0.006078904          1
+49             40  United_States  0.31528313     0.005977836          1
+50             40  United_States  0.31533416     0.005964497          1
+51             40  United_States  0.31573415     0.003810749          2
+52             40  United_States  0.31657057     0.001466159          1
+     dist.train      pred
+1  0.0465267186 0.5033001
+2  0.0069448761 0.5198069
+3  0.0069372536 0.5198527
+4  0.0068954007 0.5201045
+5  0.0068608174 0.5203123
+6  0.0068543948 0.5203509
+7  0.0067743590 0.5208312
+8  0.0067739356 0.5208338
+9  0.0067498684 0.5209781
+10 0.0067493038 0.5209815
+11 0.0067482451 0.5209878
+12 0.0067481745 0.5209882
+13 0.0067458454 0.5210022
+14 0.0067389993 0.5210432
+15 0.0067291890 0.5211020
+16 0.0064277493 0.5229020
+17 0.0063678989 0.5232580
+18 0.0063107305 0.5235976
+19 0.0063095307 0.5236047
+20 0.0045745057 0.5336971
+21 0.0038530549 0.5377653
+22 0.0031315335 0.5417539
+23 0.0021783743 0.5468949
+24 0.0018894976 0.5484234
+25 0.0017979576 0.5489047
+26 0.0017832773 0.5489818
+27 0.0016884907 0.5494785
+28 0.0015601795 0.5501485
+29 0.0014280570 0.5508354
+30 0.0013375757 0.5513041
+31 0.0012435655 0.5517895
+32 0.0011476496 0.5522832
+33 0.0009803792 0.5531404
+34 0.0457738259 0.4832651
+35 0.0443671053 0.4459166
+36 0.0425216691 0.3978208
+37 0.0414800732 0.3714959
+38 0.0400365571 0.3363838
+39 0.0356754268 0.2258165
+40 0.0364244478 0.2225687
+41 0.0341832410 0.2161755
+42 0.0030979820 0.2028062
+43 0.0333058097 0.2016051
+44 0.0320676538 0.2011474
+45 0.0023881329 0.2007163
+46 0.0328218072 0.1939562
+47 0.0327914617 0.1874923
+48 0.0321710084 0.1851039
+49 0.0320699403 0.1847169
+50 0.0320566011 0.1846658
+51 0.0299028529 0.1842659
+52 0.0321255230 0.1834294
+ [ reached 'max' / getOption("max.print") -- omitted 29 rows ]
+[1] "\nOriginal CF:"
+  age workclass fnlwgt    education education_num     marital_status
+1  52   Private  48925 Some_college            10 Married_civ_spouse
+    occupation relationship  race  sex capital_gain capital_loss hours_per_week
+1 Adm_clerical      Husband White Male         5606            0             40
+  native_country
+1  United_States
+      GT50K
+1 0.5033001
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "capital_gain"
+
+Mutated Feature: capital_gain
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 1963.000000
+  age workclass fnlwgt    education education_num     marital_status
+1  52   Private  48925 Some_college            10 Married_civ_spouse
+    occupation relationship  race  sex capital_gain capital_loss hours_per_week
+1 Adm_clerical      Husband White Male         7569            0             40
+  native_country
+1  United_States
+      GT50K
+1 0.6441764
+  age workclass fnlwgt    education education_num     marital_status
+1  52   Private  48925 Some_college            10 Married_civ_spouse
+    occupation relationship  race  sex capital_gain capital_loss hours_per_week
+1 Adm_clerical      Husband White Male         9532            0             40
+  native_country
+1  United_States
+      GT50K
+1 0.7572615
+  age workclass fnlwgt    education education_num     marital_status
+1  52   Private  48925 Some_college            10 Married_civ_spouse
+    occupation relationship  race  sex capital_gain capital_loss hours_per_week
+1 Adm_clerical      Husband White Male        11495            0             40
+  native_country
+1  United_States
+      GT50K
+1 0.8354355
+  age workclass fnlwgt    education education_num     marital_status
+1  52   Private  48925 Some_college            10 Married_civ_spouse
+    occupation relationship  race  sex capital_gain capital_loss hours_per_week
+1 Adm_clerical      Husband White Male        13458            0             40
+  native_country
+1  United_States
+      GT50K
+1 0.8845887
+  age workclass fnlwgt    education education_num     marital_status
+1  52   Private  48925 Some_college            10 Married_civ_spouse
+    occupation relationship  race  sex capital_gain capital_loss hours_per_week
+1 Adm_clerical      Husband White Male        15421            0             40
+  native_country
+1  United_States
+      GT50K
+1 0.9137579
+  age workclass fnlwgt    education education_num     marital_status
+1  52   Private  48925 Some_college            10 Married_civ_spouse
+    occupation relationship  race  sex capital_gain capital_loss hours_per_week
+1 Adm_clerical      Husband White Male        17384            0             40
+  native_country
+1  United_States
+      GT50K
+1 0.9300798
+  age workclass fnlwgt    education education_num     marital_status
+1  52   Private  48925 Some_college            10 Married_civ_spouse
+    occupation relationship  race  sex capital_gain capital_loss hours_per_week
+1 Adm_clerical      Husband White Male        19347            0             40
+  native_country
+1  United_States
+      GT50K
+1 0.9379892
+  age workclass fnlwgt    education education_num     marital_status
+1  52   Private  48925 Some_college            10 Married_civ_spouse
+    occupation relationship  race  sex capital_gain capital_loss hours_per_week
+1 Adm_clerical      Husband White Male        21310            0             40
+  native_country
+1  United_States
+      GT50K
+1 0.9398232
+  age workclass fnlwgt    education education_num     marital_status
+1  52   Private  48925 Some_college            10 Married_civ_spouse
+    occupation relationship  race  sex capital_gain capital_loss hours_per_week
+1 Adm_clerical      Husband White Male        23273            0             40
+  native_country
+1  United_States
+      GT50K
+1 0.9364883
+  age workclass fnlwgt    education education_num     marital_status
+1  52   Private  48925 Some_college            10 Married_civ_spouse
+    occupation relationship  race  sex capital_gain capital_loss hours_per_week
+1 Adm_clerical      Husband White Male        25236            0             40
+  native_country
+1  United_States
+      GT50K
+1 0.9278929
+Successful Steps: 10/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age workclass fnlwgt    education education_num     marital_status
+2  52   Private  48925 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+2 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+2             40  United_States
+      GT50K
+1 0.5198069
+
+Number of Mutated Features: 0.000000
+[1] "\nMutated Features:"
+NULL
+[1] "\nOriginal CF:"
+  age workclass fnlwgt    education education_num     marital_status
+3  52   Private  49033 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+3 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+3             40  United_States
+      GT50K
+1 0.5198527
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 98419.000000
+  age workclass fnlwgt    education education_num     marital_status
+3  52   Private 147452 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+3 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+3             40  United_States
+      GT50K
+1 0.5581084
+  age workclass fnlwgt    education education_num     marital_status
+3  52   Private 245871 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+3 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+3             40  United_States
+      GT50K
+1 0.5876363
+  age workclass fnlwgt    education education_num     marital_status
+3  52   Private 344290 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+3 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+3             40  United_States
+      GT50K
+1 0.6067294
+  age workclass fnlwgt    education education_num     marital_status
+3  52   Private 442709 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+3 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+3             40  United_States
+      GT50K
+1 0.6145637
+  age workclass fnlwgt    education education_num     marital_status
+3  52   Private 541128 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+3 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+3             40  United_States
+      GT50K
+1 0.6109663
+  age workclass fnlwgt    education education_num     marital_status
+3  52   Private 639547 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+3 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+3             40  United_States
+      GT50K
+1 0.5962764
+  age workclass fnlwgt    education education_num     marital_status
+3  52   Private 737966 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+3 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+3             40  United_States
+      GT50K
+1 0.5713824
+  age workclass fnlwgt    education education_num     marital_status
+3  52   Private 836385 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+3 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+3             40  United_States
+      GT50K
+1 0.5378734
+  age workclass fnlwgt    education education_num     marital_status
+3  52   Private 934804 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+3 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+3             40  United_States
+     GT50K
+1 0.498129
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age workclass fnlwgt    education education_num     marital_status
+4  52   Private  49626 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+4 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+4             40  United_States
+      GT50K
+1 0.5201045
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 98360.000000
+  age workclass fnlwgt    education education_num     marital_status
+4  52   Private 147986 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+4 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+4             40  United_States
+      GT50K
+1 0.5582942
+  age workclass fnlwgt    education education_num     marital_status
+4  52   Private 246346 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+4 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+4             40  United_States
+      GT50K
+1 0.5877545
+  age workclass fnlwgt    education education_num     marital_status
+4  52   Private 344706 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+4 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+4             40  United_States
+      GT50K
+1 0.6067866
+  age workclass fnlwgt    education education_num     marital_status
+4  52   Private 443066 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+4 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+4             40  United_States
+      GT50K
+1 0.6145712
+  age workclass fnlwgt    education education_num     marital_status
+4  52   Private 541426 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+4 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+4             40  United_States
+      GT50K
+1 0.6109382
+  age workclass fnlwgt    education education_num     marital_status
+4  52   Private 639786 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+4 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+4             40  United_States
+      GT50K
+1 0.5962278
+  age workclass fnlwgt    education education_num     marital_status
+4  52   Private 738146 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+4 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+4             40  United_States
+      GT50K
+1 0.5713284
+  age workclass fnlwgt    education education_num     marital_status
+4  52   Private 836506 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+4 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+4             40  United_States
+      GT50K
+1 0.5378278
+  age workclass fnlwgt    education education_num     marital_status
+4  52   Private 934866 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+4 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+4             40  United_States
+      GT50K
+1 0.4981026
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age workclass fnlwgt    education education_num     marital_status
+5  52   Private  50116 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+5 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+5             40  United_States
+      GT50K
+1 0.5203123
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 98311.000000
+  age workclass fnlwgt    education education_num     marital_status
+5  52   Private 148427 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+5 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+5             40  United_States
+      GT50K
+1 0.5584474
+  age workclass fnlwgt    education education_num     marital_status
+5  52   Private 246738 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+5 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+5             40  United_States
+      GT50K
+1 0.5878518
+  age workclass fnlwgt    education education_num     marital_status
+5  52   Private 345049 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+5 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+5             40  United_States
+      GT50K
+1 0.6068335
+  age workclass fnlwgt    education education_num     marital_status
+5  52   Private 443360 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+5 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+5             40  United_States
+      GT50K
+1 0.6145773
+  age workclass fnlwgt    education education_num     marital_status
+5  52   Private 541671 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+5 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+5             40  United_States
+      GT50K
+1 0.6109151
+  age workclass fnlwgt    education education_num     marital_status
+5  52   Private 639982 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+5 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+5             40  United_States
+      GT50K
+1 0.5961879
+  age workclass fnlwgt    education education_num     marital_status
+5  52   Private 738293 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+5 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+5             40  United_States
+      GT50K
+1 0.5712843
+  age workclass fnlwgt    education education_num     marital_status
+5  52   Private 836604 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+5 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+5             40  United_States
+      GT50K
+1 0.5377909
+  age workclass fnlwgt    education education_num     marital_status
+5  52   Private 934915 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+5 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+5             40  United_States
+      GT50K
+1 0.4980818
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age workclass fnlwgt    education education_num     marital_status
+6  52   Private  50207 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+6 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+6             40  United_States
+      GT50K
+1 0.5203509
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 98302.000000
+  age workclass fnlwgt    education education_num     marital_status
+6  52   Private 148509 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+6 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+6             40  United_States
+      GT50K
+1 0.5584758
+  age workclass fnlwgt    education education_num     marital_status
+6  52   Private 246811 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+6 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+6             40  United_States
+    GT50K
+1 0.58787
+  age workclass fnlwgt    education education_num     marital_status
+6  52   Private 345113 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+6 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+6             40  United_States
+      GT50K
+1 0.6068423
+  age workclass fnlwgt    education education_num     marital_status
+6  52   Private 443415 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+6 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+6             40  United_States
+      GT50K
+1 0.6145785
+  age workclass fnlwgt    education education_num     marital_status
+6  52   Private 541717 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+6 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+6             40  United_States
+      GT50K
+1 0.6109108
+  age workclass fnlwgt    education education_num     marital_status
+6  52   Private 640019 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+6 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+6             40  United_States
+      GT50K
+1 0.5961804
+  age workclass fnlwgt    education education_num     marital_status
+6  52   Private 738321 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+6 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+6             40  United_States
+      GT50K
+1 0.5712759
+  age workclass fnlwgt    education education_num     marital_status
+6  52   Private 836623 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+6 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+6             40  United_States
+      GT50K
+1 0.5377837
+  age workclass fnlwgt    education education_num     marital_status
+6  52   Private 934925 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+6 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+6             40  United_States
+      GT50K
+1 0.4980775
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age workclass fnlwgt    education education_num     marital_status
+7  52   Private  51341 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+7 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+7             40  United_States
+      GT50K
+1 0.5208312
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 98188.000000
+  age workclass fnlwgt    education education_num     marital_status
+7  52   Private 149529 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+7 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+7             40  United_States
+      GT50K
+1 0.5588294
+  age workclass fnlwgt    education education_num     marital_status
+7  52   Private 247717 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+7 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+7             40  United_States
+      GT50K
+1 0.5880942
+  age workclass fnlwgt    education education_num     marital_status
+7  52   Private 345905 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+7 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+7             40  United_States
+      GT50K
+1 0.6069501
+  age workclass fnlwgt    education education_num     marital_status
+7  52   Private 444093 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+7 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+7             40  United_States
+      GT50K
+1 0.6145921
+  age workclass fnlwgt    education education_num     marital_status
+7  52   Private 542281 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+7 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+7             40  United_States
+      GT50K
+1 0.6108572
+  age workclass fnlwgt    education education_num     marital_status
+7  52   Private 640469 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+7 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+7             40  United_States
+      GT50K
+1 0.5960886
+  age workclass fnlwgt    education education_num     marital_status
+7  52   Private 738657 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+7 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+7             40  United_States
+      GT50K
+1 0.5711749
+  age workclass fnlwgt    education education_num     marital_status
+7  52   Private 836845 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+7 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+7             40  United_States
+   GT50K
+1 0.5377
+  age workclass fnlwgt    education education_num     marital_status
+7  52   Private 935033 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+7 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+7             40  United_States
+      GT50K
+1 0.4980315
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age workclass fnlwgt    education education_num     marital_status
+8  52   Private  51347 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+8 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+8             40  United_States
+      GT50K
+1 0.5208338
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 98188.000000
+  age workclass fnlwgt    education education_num     marital_status
+8  52   Private 149535 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+8 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+8             40  United_States
+      GT50K
+1 0.5588315
+  age workclass fnlwgt    education education_num     marital_status
+8  52   Private 247723 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+8 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+8             40  United_States
+      GT50K
+1 0.5880957
+  age workclass fnlwgt    education education_num     marital_status
+8  52   Private 345911 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+8 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+8             40  United_States
+      GT50K
+1 0.6069509
+  age workclass fnlwgt    education education_num     marital_status
+8  52   Private 444099 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+8 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+8             40  United_States
+      GT50K
+1 0.6145922
+  age workclass fnlwgt    education education_num     marital_status
+8  52   Private 542287 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+8 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+8             40  United_States
+      GT50K
+1 0.6108567
+  age workclass fnlwgt    education education_num     marital_status
+8  52   Private 640475 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+8 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+8             40  United_States
+      GT50K
+1 0.5960874
+  age workclass fnlwgt    education education_num     marital_status
+8  52   Private 738663 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+8 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+8             40  United_States
+      GT50K
+1 0.5711731
+  age workclass fnlwgt    education education_num     marital_status
+8  52   Private 836851 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+8 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+8             40  United_States
+      GT50K
+1 0.5376977
+  age workclass fnlwgt    education education_num     marital_status
+8  52   Private 935039 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+8 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+8             40  United_States
+     GT50K
+1 0.498029
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age workclass fnlwgt    education education_num     marital_status
+9  52   Private  51688 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+9 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+9             40  United_States
+      GT50K
+1 0.5209781
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 98153.000000
+  age workclass fnlwgt    education education_num     marital_status
+9  52   Private 149841 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+9 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+9             40  United_States
+      GT50K
+1 0.5589374
+  age workclass fnlwgt    education education_num     marital_status
+9  52   Private 247994 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+9 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+9             40  United_States
+      GT50K
+1 0.5881626
+  age workclass fnlwgt    education education_num     marital_status
+9  52   Private 346147 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+9 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+9             40  United_States
+      GT50K
+1 0.6069829
+  age workclass fnlwgt    education education_num     marital_status
+9  52   Private 444300 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+9 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+9             40  United_States
+      GT50K
+1 0.6145962
+  age workclass fnlwgt    education education_num     marital_status
+9  52   Private 542453 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+9 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+9             40  United_States
+      GT50K
+1 0.6108408
+  age workclass fnlwgt    education education_num     marital_status
+9  52   Private 640606 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+9 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+9             40  United_States
+      GT50K
+1 0.5960607
+  age workclass fnlwgt    education education_num     marital_status
+9  52   Private 738759 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+9 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+9             40  United_States
+      GT50K
+1 0.5711442
+  age workclass fnlwgt    education education_num     marital_status
+9  52   Private 836912 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+9 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+9             40  United_States
+      GT50K
+1 0.5376747
+  age workclass fnlwgt    education education_num     marital_status
+9  52   Private 935065 Some_college            10 Married_civ_spouse
+       occupation relationship  race  sex capital_gain capital_loss
+9 Exec_managerial      Husband White Male            0            0
+  hours_per_week native_country
+9             40  United_States
+      GT50K
+1 0.4980179
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+10  52   Private  51696 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+10 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+10             40  United_States
+      GT50K
+1 0.5209815
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 98153.000000
+   age workclass fnlwgt    education education_num     marital_status
+10  52   Private 149849 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+10 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+10             40  United_States
+      GT50K
+1 0.5589402
+   age workclass fnlwgt    education education_num     marital_status
+10  52   Private 248002 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+10 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+10             40  United_States
+      GT50K
+1 0.5881646
+   age workclass fnlwgt    education education_num     marital_status
+10  52   Private 346155 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+10 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+10             40  United_States
+     GT50K
+1 0.606984
+   age workclass fnlwgt    education education_num     marital_status
+10  52   Private 444308 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+10 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+10             40  United_States
+      GT50K
+1 0.6145963
+   age workclass fnlwgt    education education_num     marital_status
+10  52   Private 542461 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+10 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+10             40  United_States
+      GT50K
+1 0.6108401
+   age workclass fnlwgt    education education_num     marital_status
+10  52   Private 640614 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+10 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+10             40  United_States
+     GT50K
+1 0.596059
+   age workclass fnlwgt    education education_num     marital_status
+10  52   Private 738767 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+10 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+10             40  United_States
+      GT50K
+1 0.5711418
+   age workclass fnlwgt    education education_num     marital_status
+10  52   Private 836920 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+10 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+10             40  United_States
+      GT50K
+1 0.5376717
+   age workclass fnlwgt    education education_num     marital_status
+10  52   Private 935073 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+10 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+10             40  United_States
+      GT50K
+1 0.4980145
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+11  52   Private  51711 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+11 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+11             40  United_States
+      GT50K
+1 0.5209878
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 98151.000000
+   age workclass fnlwgt    education education_num     marital_status
+11  52   Private 149862 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+11 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+11             40  United_States
+      GT50K
+1 0.5589447
+   age workclass fnlwgt    education education_num     marital_status
+11  52   Private 248013 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+11 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+11             40  United_States
+      GT50K
+1 0.5881673
+   age workclass fnlwgt    education education_num     marital_status
+11  52   Private 346164 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+11 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+11             40  United_States
+      GT50K
+1 0.6069852
+   age workclass fnlwgt    education education_num     marital_status
+11  52   Private 444315 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+11 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+11             40  United_States
+      GT50K
+1 0.6145964
+   age workclass fnlwgt    education education_num     marital_status
+11  52   Private 542466 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+11 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+11             40  United_States
+      GT50K
+1 0.6108396
+   age workclass fnlwgt    education education_num     marital_status
+11  52   Private 640617 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+11 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+11             40  United_States
+      GT50K
+1 0.5960584
+   age workclass fnlwgt    education education_num     marital_status
+11  52   Private 738768 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+11 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+11             40  United_States
+      GT50K
+1 0.5711415
+   age workclass fnlwgt    education education_num     marital_status
+11  52   Private 836919 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+11 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+11             40  United_States
+      GT50K
+1 0.5376721
+   age workclass fnlwgt    education education_num     marital_status
+11  52   Private 935070 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+11 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+11             40  United_States
+      GT50K
+1 0.4980158
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+12  52   Private  51712 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+12 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+12             40  United_States
+      GT50K
+1 0.5209882
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 98151.000000
+   age workclass fnlwgt    education education_num     marital_status
+12  52   Private 149863 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+12 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+12             40  United_States
+     GT50K
+1 0.558945
+   age workclass fnlwgt    education education_num     marital_status
+12  52   Private 248014 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+12 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+12             40  United_States
+      GT50K
+1 0.5881676
+   age workclass fnlwgt    education education_num     marital_status
+12  52   Private 346165 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+12 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+12             40  United_States
+      GT50K
+1 0.6069853
+   age workclass fnlwgt    education education_num     marital_status
+12  52   Private 444316 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+12 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+12             40  United_States
+      GT50K
+1 0.6145965
+   age workclass fnlwgt    education education_num     marital_status
+12  52   Private 542467 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+12 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+12             40  United_States
+      GT50K
+1 0.6108395
+   age workclass fnlwgt    education education_num     marital_status
+12  52   Private 640618 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+12 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+12             40  United_States
+      GT50K
+1 0.5960582
+   age workclass fnlwgt    education education_num     marital_status
+12  52   Private 738769 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+12 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+12             40  United_States
+      GT50K
+1 0.5711412
+   age workclass fnlwgt    education education_num     marital_status
+12  52   Private 836920 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+12 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+12             40  United_States
+      GT50K
+1 0.5376717
+   age workclass fnlwgt    education education_num     marital_status
+12  52   Private 935071 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+12 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+12             40  United_States
+      GT50K
+1 0.4980154
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+13  52   Private  51745 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+13 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+13             40  United_States
+      GT50K
+1 0.5210022
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 98148.000000
+   age workclass fnlwgt    education education_num     marital_status
+13  52   Private 149893 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+13 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+13             40  United_States
+      GT50K
+1 0.5589554
+   age workclass fnlwgt    education education_num     marital_status
+13  52   Private 248041 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+13 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+13             40  United_States
+      GT50K
+1 0.5881742
+   age workclass fnlwgt    education education_num     marital_status
+13  52   Private 346189 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+13 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+13             40  United_States
+      GT50K
+1 0.6069886
+   age workclass fnlwgt    education education_num     marital_status
+13  52   Private 444337 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+13 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+13             40  United_States
+      GT50K
+1 0.6145969
+   age workclass fnlwgt    education education_num     marital_status
+13  52   Private 542485 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+13 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+13             40  United_States
+      GT50K
+1 0.6108378
+   age workclass fnlwgt    education education_num     marital_status
+13  52   Private 640633 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+13 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+13             40  United_States
+      GT50K
+1 0.5960551
+   age workclass fnlwgt    education education_num     marital_status
+13  52   Private 738781 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+13 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+13             40  United_States
+      GT50K
+1 0.5711376
+   age workclass fnlwgt    education education_num     marital_status
+13  52   Private 836929 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+13 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+13             40  United_States
+      GT50K
+1 0.5376683
+   age workclass fnlwgt    education education_num     marital_status
+13  52   Private 935077 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+13 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+13             40  United_States
+      GT50K
+1 0.4980128
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+14  52   Private  51842 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+14 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+14             40  United_States
+      GT50K
+1 0.5210432
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 98138.000000
+   age workclass fnlwgt    education education_num     marital_status
+14  52   Private 149980 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+14 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+14             40  United_States
+      GT50K
+1 0.5589855
+   age workclass fnlwgt    education education_num     marital_status
+14  52   Private 248118 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+14 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+14             40  United_States
+      GT50K
+1 0.5881932
+   age workclass fnlwgt    education education_num     marital_status
+14  52   Private 346256 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+14 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+14             40  United_States
+      GT50K
+1 0.6069977
+   age workclass fnlwgt    education education_num     marital_status
+14  52   Private 444394 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+14 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+14             40  United_States
+     GT50K
+1 0.614598
+   age workclass fnlwgt    education education_num     marital_status
+14  52   Private 542532 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+14 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+14             40  United_States
+      GT50K
+1 0.6108333
+   age workclass fnlwgt    education education_num     marital_status
+14  52   Private 640670 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+14 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+14             40  United_States
+      GT50K
+1 0.5960476
+   age workclass fnlwgt    education education_num     marital_status
+14  52   Private 738808 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+14 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+14             40  United_States
+      GT50K
+1 0.5711295
+   age workclass fnlwgt    education education_num     marital_status
+14  52   Private 836946 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+14 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+14             40  United_States
+      GT50K
+1 0.5376619
+   age workclass fnlwgt    education education_num     marital_status
+14  52   Private 935084 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+14 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+14             40  United_States
+      GT50K
+1 0.4980098
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+15  52   Private  51981 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+15 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+15             40  United_States
+     GT50K
+1 0.521102
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 98124.000000
+   age workclass fnlwgt    education education_num     marital_status
+15  52   Private 150105 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+15 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+15             40  United_States
+      GT50K
+1 0.5590287
+   age workclass fnlwgt    education education_num     marital_status
+15  52   Private 248229 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+15 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+15             40  United_States
+      GT50K
+1 0.5882206
+   age workclass fnlwgt    education education_num     marital_status
+15  52   Private 346353 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+15 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+15             40  United_States
+      GT50K
+1 0.6070108
+   age workclass fnlwgt    education education_num     marital_status
+15  52   Private 444477 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+15 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+15             40  United_States
+      GT50K
+1 0.6145996
+   age workclass fnlwgt    education education_num     marital_status
+15  52   Private 542601 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+15 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+15             40  United_States
+      GT50K
+1 0.6108267
+   age workclass fnlwgt    education education_num     marital_status
+15  52   Private 640725 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+15 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+15             40  United_States
+      GT50K
+1 0.5960363
+   age workclass fnlwgt    education education_num     marital_status
+15  52   Private 738849 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+15 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+15             40  United_States
+      GT50K
+1 0.5711171
+   age workclass fnlwgt    education education_num     marital_status
+15  52   Private 836973 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+15 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+15             40  United_States
+      GT50K
+1 0.5376517
+   age workclass fnlwgt    education education_num     marital_status
+15  52   Private 935097 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+15 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+15             40  United_States
+      GT50K
+1 0.4980043
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+16  52   Private  56252 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+16 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+16             40  United_States
+     GT50K
+1 0.522902
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 97697.000000
+   age workclass fnlwgt    education education_num     marital_status
+16  52   Private 153949 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+16 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+16             40  United_States
+      GT50K
+1 0.5603507
+   age workclass fnlwgt    education education_num     marital_status
+16  52   Private 251646 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+16 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+16             40  United_States
+      GT50K
+1 0.5890566
+   age workclass fnlwgt    education education_num     marital_status
+16  52   Private 349343 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+16 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+16             40  United_States
+      GT50K
+1 0.6074097
+   age workclass fnlwgt    education education_num     marital_status
+16  52   Private 447040 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+16 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+16             40  United_States
+      GT50K
+1 0.6146451
+   age workclass fnlwgt    education education_num     marital_status
+16  52   Private 544737 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+16 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+16             40  United_States
+      GT50K
+1 0.6106199
+   age workclass fnlwgt    education education_num     marital_status
+16  52   Private 642434 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+16 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+16             40  United_States
+      GT50K
+1 0.5956855
+   age workclass fnlwgt    education education_num     marital_status
+16  52   Private 740131 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+16 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+16             40  United_States
+      GT50K
+1 0.5707307
+   age workclass fnlwgt    education education_num     marital_status
+16  52   Private 837828 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+16 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+16             40  United_States
+     GT50K
+1 0.537329
+   age workclass fnlwgt    education education_num     marital_status
+16  52   Private 935525 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+16 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+16             40  United_States
+     GT50K
+1 0.497822
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+17  52   Private  57100 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+17 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+17             40  United_States
+     GT50K
+1 0.523258
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 97612.000000
+   age workclass fnlwgt    education education_num     marital_status
+17  52   Private 154712 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+17 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+17             40  United_States
+      GT50K
+1 0.5606115
+   age workclass fnlwgt    education education_num     marital_status
+17  52   Private 252324 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+17 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+17             40  United_States
+     GT50K
+1 0.589221
+   age workclass fnlwgt    education education_num     marital_status
+17  52   Private 349936 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+17 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+17             40  United_States
+      GT50K
+1 0.6074875
+   age workclass fnlwgt    education education_num     marital_status
+17  52   Private 447548 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+17 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+17             40  United_States
+      GT50K
+1 0.6146532
+   age workclass fnlwgt    education education_num     marital_status
+17  52   Private 545160 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+17 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+17             40  United_States
+      GT50K
+1 0.6105783
+   age workclass fnlwgt    education education_num     marital_status
+17  52   Private 642772 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+17 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+17             40  United_States
+      GT50K
+1 0.5956157
+   age workclass fnlwgt    education education_num     marital_status
+17  52   Private 740384 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+17 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+17             40  United_States
+      GT50K
+1 0.5706543
+   age workclass fnlwgt    education education_num     marital_status
+17  52   Private 837996 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+17 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+17             40  United_States
+      GT50K
+1 0.5372655
+   age workclass fnlwgt    education education_num     marital_status
+17  52   Private 935608 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+17 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+17             40  United_States
+      GT50K
+1 0.4977867
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+18  52   Private  57910 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+18 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+18             40  United_States
+      GT50K
+1 0.5235976
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 97531.000000
+   age workclass fnlwgt    education education_num     marital_status
+18  52   Private 155441 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+18 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+18             40  United_States
+      GT50K
+1 0.5608601
+   age workclass fnlwgt    education education_num     marital_status
+18  52   Private 252972 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+18 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+18             40  United_States
+      GT50K
+1 0.5893776
+   age workclass fnlwgt    education education_num     marital_status
+18  52   Private 350503 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+18 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+18             40  United_States
+      GT50K
+1 0.6075616
+   age workclass fnlwgt    education education_num     marital_status
+18  52   Private 448034 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+18 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+18             40  United_States
+      GT50K
+1 0.6146606
+   age workclass fnlwgt    education education_num     marital_status
+18  52   Private 545565 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+18 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+18             40  United_States
+      GT50K
+1 0.6105383
+   age workclass fnlwgt    education education_num     marital_status
+18  52   Private 643096 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+18 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+18             40  United_States
+      GT50K
+1 0.5955488
+   age workclass fnlwgt    education education_num     marital_status
+18  52   Private 740627 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+18 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+18             40  United_States
+      GT50K
+1 0.5705808
+   age workclass fnlwgt    education education_num     marital_status
+18  52   Private 838158 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+18 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+18             40  United_States
+      GT50K
+1 0.5372043
+   age workclass fnlwgt    education education_num     marital_status
+18  52   Private 935689 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+18 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+18             40  United_States
+      GT50K
+1 0.4977522
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+19  52   Private  57927 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+19 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+19             40  United_States
+      GT50K
+1 0.5236047
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 97530.000000
+   age workclass fnlwgt    education education_num     marital_status
+19  52   Private 155457 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+19 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+19             40  United_States
+      GT50K
+1 0.5608656
+   age workclass fnlwgt    education education_num     marital_status
+19  52   Private 252987 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+19 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+19             40  United_States
+      GT50K
+1 0.5893812
+   age workclass fnlwgt    education education_num     marital_status
+19  52   Private 350517 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+19 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+19             40  United_States
+      GT50K
+1 0.6075634
+   age workclass fnlwgt    education education_num     marital_status
+19  52   Private 448047 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+19 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+19             40  United_States
+      GT50K
+1 0.6146608
+   age workclass fnlwgt    education education_num     marital_status
+19  52   Private 545577 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+19 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+19             40  United_States
+      GT50K
+1 0.6105371
+   age workclass fnlwgt    education education_num     marital_status
+19  52   Private 643107 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+19 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+19             40  United_States
+      GT50K
+1 0.5955465
+   age workclass fnlwgt    education education_num     marital_status
+19  52   Private 740637 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+19 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+19             40  United_States
+      GT50K
+1 0.5705778
+   age workclass fnlwgt    education education_num     marital_status
+19  52   Private 838167 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+19 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+19             40  United_States
+      GT50K
+1 0.5372009
+   age workclass fnlwgt    education education_num     marital_status
+19  52   Private 935697 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+19 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+19             40  United_States
+      GT50K
+1 0.4977488
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+20  52   Private  82510 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+20 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+20             40  United_States
+      GT50K
+1 0.5336971
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 95071.000000
+   age workclass fnlwgt    education education_num     marital_status
+20  52   Private 177581 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+20 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+20             40  United_States
+      GT50K
+1 0.5681731
+   age workclass fnlwgt    education education_num     marital_status
+20  52   Private 272652 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+20 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+20             40  United_States
+      GT50K
+1 0.5939139
+   age workclass fnlwgt    education education_num     marital_status
+20  52   Private 367723 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+20 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+20             40  United_States
+      GT50K
+1 0.6096316
+   age workclass fnlwgt    education education_num     marital_status
+20  52   Private 462794 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+20 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+20             40  United_States
+      GT50K
+1 0.6147541
+   age workclass fnlwgt    education education_num     marital_status
+20  52   Private 557865 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+20 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+20             40  United_States
+      GT50K
+1 0.6092341
+   age workclass fnlwgt    education education_num     marital_status
+20  52   Private 652936 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+20 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+20             40  United_States
+      GT50K
+1 0.5934621
+   age workclass fnlwgt    education education_num     marital_status
+20  52   Private 748007 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+20 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+20             40  United_States
+      GT50K
+1 0.5683246
+   age workclass fnlwgt    education education_num     marital_status
+20  52   Private 843078 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+20 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+20             40  United_States
+      GT50K
+1 0.5353369
+   age workclass fnlwgt    education education_num     marital_status
+20  52   Private 938149 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+20 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+20             40  United_States
+      GT50K
+1 0.4967034
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+21  52   Private  92732 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+21 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+21             40  United_States
+      GT50K
+1 0.5377653
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 94049.000000
+   age workclass fnlwgt    education education_num     marital_status
+21  52   Private 186781 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+21 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+21             40  United_States
+      GT50K
+1 0.5710727
+   age workclass fnlwgt    education education_num     marital_status
+21  52   Private 280830 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+21 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+21             40  United_States
+      GT50K
+1 0.5956724
+   age workclass fnlwgt    education education_num     marital_status
+21  52   Private 374879 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+21 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+21             40  United_States
+      GT50K
+1 0.6103892
+   age workclass fnlwgt    education education_num     marital_status
+21  52   Private 468928 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+21 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+21             40  United_States
+      GT50K
+1 0.6147172
+   age workclass fnlwgt    education education_num     marital_status
+21  52   Private 562977 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+21 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+21             40  United_States
+      GT50K
+1 0.6086413
+   age workclass fnlwgt    education education_num     marital_status
+21  52   Private 657026 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+21 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+21             40  United_States
+     GT50K
+1 0.592565
+   age workclass fnlwgt    education education_num     marital_status
+21  52   Private 751075 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+21 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+21             40  United_States
+      GT50K
+1 0.5673726
+   age workclass fnlwgt    education education_num     marital_status
+21  52   Private 845124 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+21 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+21             40  United_States
+      GT50K
+1 0.5345558
+   age workclass fnlwgt    education education_num     marital_status
+21  52   Private 939173 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+21 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+21             40  United_States
+      GT50K
+1 0.4962662
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+22  52   Private 102955 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+22 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+22             40  United_States
+      GT50K
+1 0.5417539
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 93027.000000
+   age workclass fnlwgt    education education_num     marital_status
+22  52   Private 195982 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+22 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+22             40  United_States
+      GT50K
+1 0.5738886
+   age workclass fnlwgt    education education_num     marital_status
+22  52   Private 289009 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+22 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+22             40  United_States
+      GT50K
+1 0.5973559
+   age workclass fnlwgt    education education_num     marital_status
+22  52   Private 382036 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+22 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+22             40  United_States
+      GT50K
+1 0.6110866
+   age workclass fnlwgt    education education_num     marital_status
+22  52   Private 475063 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+22 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+22             40  United_States
+      GT50K
+1 0.6146359
+   age workclass fnlwgt    education education_num     marital_status
+22  52   Private 568090 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+22 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+22             40  United_States
+      GT50K
+1 0.6080187
+   age workclass fnlwgt    education education_num     marital_status
+22  52   Private 661117 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+22 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+22             40  United_States
+      GT50K
+1 0.5916503
+   age workclass fnlwgt    education education_num     marital_status
+22  52   Private 754144 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+22 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+22             40  United_States
+      GT50K
+1 0.5664121
+   age workclass fnlwgt    education education_num     marital_status
+22  52   Private 847171 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+22 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+22             40  United_States
+      GT50K
+1 0.5337718
+   age workclass fnlwgt    education education_num     marital_status
+22  52   Private 940198 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+22 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+22             40  United_States
+      GT50K
+1 0.4958283
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+23  52   Private 116460 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+23 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+23             40  United_States
+      GT50K
+1 0.5468949
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 91676.000000
+   age workclass fnlwgt    education education_num     marital_status
+23  52   Private 208136 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+23 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+23             40  United_States
+      GT50K
+1 0.5774771
+   age workclass fnlwgt    education education_num     marital_status
+23  52   Private 299812 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+23 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+23             40  United_States
+      GT50K
+1 0.5994634
+   age workclass fnlwgt    education education_num     marital_status
+23  52   Private 391488 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+23 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+23             40  United_States
+      GT50K
+1 0.6119149
+   age workclass fnlwgt    education education_num     marital_status
+23  52   Private 483164 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+23 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+23             40  United_States
+      GT50K
+1 0.6144605
+   age workclass fnlwgt    education education_num     marital_status
+23  52   Private 574840 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+23 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+23             40  United_States
+      GT50K
+1 0.6071515
+   age workclass fnlwgt    education education_num     marital_status
+23  52   Private 666516 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+23 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+23             40  United_States
+      GT50K
+1 0.5904168
+   age workclass fnlwgt    education education_num     marital_status
+23  52   Private 758192 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+23 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+23             40  United_States
+      GT50K
+1 0.5651329
+   age workclass fnlwgt    education education_num     marital_status
+23  52   Private 849868 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+23 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+23             40  United_States
+      GT50K
+1 0.5327348
+   age workclass fnlwgt    education education_num     marital_status
+23  52   Private 941544 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+23 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+23             40  United_States
+      GT50K
+1 0.4952528
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+24  52   Private 120553 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+24 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+24             40  United_States
+      GT50K
+1 0.5484234
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 91267.000000
+   age workclass fnlwgt    education education_num     marital_status
+24  52   Private 211820 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+24 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+24             40  United_States
+      GT50K
+1 0.5785348
+   age workclass fnlwgt    education education_num     marital_status
+24  52   Private 303087 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+24 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+24             40  United_States
+      GT50K
+1 0.6000761
+   age workclass fnlwgt    education education_num     marital_status
+24  52   Private 394354 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+24 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+24             40  United_States
+      GT50K
+1 0.6121452
+   age workclass fnlwgt    education education_num     marital_status
+24  52   Private 485621 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+24 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+24             40  United_States
+      GT50K
+1 0.6143921
+   age workclass fnlwgt    education education_num     marital_status
+24  52   Private 576888 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+24 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+24             40  United_States
+      GT50K
+1 0.6068782
+   age workclass fnlwgt    education education_num     marital_status
+24  52   Private 668155 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+24 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+24             40  United_States
+      GT50K
+1 0.5900365
+   age workclass fnlwgt    education education_num     marital_status
+24  52   Private 759422 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+24 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+24             40  United_States
+      GT50K
+1 0.5647414
+   age workclass fnlwgt    education education_num     marital_status
+24  52   Private 850689 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+24 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+24             40  United_States
+      GT50K
+1 0.5324183
+   age workclass fnlwgt    education education_num     marital_status
+24  52   Private 941956 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+24 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+24             40  United_States
+      GT50K
+1 0.4950765
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+25  52   Private 121850 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+25 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+25             40  United_States
+      GT50K
+1 0.5489047
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 91137.000000
+   age workclass fnlwgt    education education_num     marital_status
+25  52   Private 212987 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+25 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+25             40  United_States
+     GT50K
+1 0.578867
+   age workclass fnlwgt    education education_num     marital_status
+25  52   Private 304124 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+25 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+25             40  United_States
+      GT50K
+1 0.6002676
+   age workclass fnlwgt    education education_num     marital_status
+25  52   Private 395261 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+25 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+25             40  United_States
+     GT50K
+1 0.612216
+   age workclass fnlwgt    education education_num     marital_status
+25  52   Private 486398 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+25 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+25             40  United_States
+     GT50K
+1 0.614369
+   age workclass fnlwgt    education education_num     marital_status
+25  52   Private 577535 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+25 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+25             40  United_States
+      GT50K
+1 0.6067909
+   age workclass fnlwgt    education education_num     marital_status
+25  52   Private 668672 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+25 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+25             40  United_States
+      GT50K
+1 0.5899159
+   age workclass fnlwgt    education education_num     marital_status
+25  52   Private 759809 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+25 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+25             40  United_States
+      GT50K
+1 0.5646179
+   age workclass fnlwgt    education education_num     marital_status
+25  52   Private 850946 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+25 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+25             40  United_States
+      GT50K
+1 0.5323191
+   age workclass fnlwgt    education education_num     marital_status
+25  52   Private 942083 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+25 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+25             40  United_States
+      GT50K
+1 0.4950221
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+26  52   Private 122058 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+26 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+26             40  United_States
+      GT50K
+1 0.5489818
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 91116.000000
+   age workclass fnlwgt    education education_num     marital_status
+26  52   Private 213174 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+26 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+26             40  United_States
+      GT50K
+1 0.5789201
+   age workclass fnlwgt    education education_num     marital_status
+26  52   Private 304290 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+26 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+26             40  United_States
+      GT50K
+1 0.6002981
+   age workclass fnlwgt    education education_num     marital_status
+26  52   Private 395406 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+26 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+26             40  United_States
+      GT50K
+1 0.6122273
+   age workclass fnlwgt    education education_num     marital_status
+26  52   Private 486522 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+26 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+26             40  United_States
+      GT50K
+1 0.6143652
+   age workclass fnlwgt    education education_num     marital_status
+26  52   Private 577638 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+26 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+26             40  United_States
+     GT50K
+1 0.606777
+   age workclass fnlwgt    education education_num     marital_status
+26  52   Private 668754 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+26 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+26             40  United_States
+      GT50K
+1 0.5898968
+   age workclass fnlwgt    education education_num     marital_status
+26  52   Private 759870 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+26 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+26             40  United_States
+      GT50K
+1 0.5645985
+   age workclass fnlwgt    education education_num     marital_status
+26  52   Private 850986 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+26 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+26             40  United_States
+      GT50K
+1 0.5323036
+   age workclass fnlwgt    education education_num     marital_status
+26  52   Private 942102 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+26 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+26             40  United_States
+     GT50K
+1 0.495014
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+27  52   Private 123401 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+27 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+27             40  United_States
+      GT50K
+1 0.5494785
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 90982.000000
+   age workclass fnlwgt    education education_num     marital_status
+27  52   Private 214383 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+27 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+27             40  United_States
+      GT50K
+1 0.5792625
+   age workclass fnlwgt    education education_num     marital_status
+27  52   Private 305365 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+27 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+27             40  United_States
+      GT50K
+1 0.6004951
+   age workclass fnlwgt    education education_num     marital_status
+27  52   Private 396347 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+27 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+27             40  United_States
+      GT50K
+1 0.6122996
+   age workclass fnlwgt    education education_num     marital_status
+27  52   Private 487329 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+27 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+27             40  United_States
+      GT50K
+1 0.6143403
+   age workclass fnlwgt    education education_num     marital_status
+27  52   Private 578311 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+27 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+27             40  United_States
+      GT50K
+1 0.6066856
+   age workclass fnlwgt    education education_num     marital_status
+27  52   Private 669293 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+27 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+27             40  United_States
+      GT50K
+1 0.5897708
+   age workclass fnlwgt    education education_num     marital_status
+27  52   Private 760275 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+27 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+27             40  United_States
+      GT50K
+1 0.5644691
+   age workclass fnlwgt    education education_num     marital_status
+27  52   Private 851257 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+27 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+27             40  United_States
+     GT50K
+1 0.532199
+   age workclass fnlwgt    education education_num     marital_status
+27  52   Private 942239 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+27 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+27             40  United_States
+      GT50K
+1 0.4949554
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+28  52   Private 125219 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+28 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+28             40  United_States
+      GT50K
+1 0.5501485
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 90800.000000
+   age workclass fnlwgt    education education_num     marital_status
+28  52   Private 216019 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+28 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+28             40  United_States
+      GT50K
+1 0.5797233
+   age workclass fnlwgt    education education_num     marital_status
+28  52   Private 306819 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+28 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+28             40  United_States
+      GT50K
+1 0.6007594
+   age workclass fnlwgt    education education_num     marital_status
+28  52   Private 397619 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+28 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+28             40  United_States
+      GT50K
+1 0.6123957
+   age workclass fnlwgt    education education_num     marital_status
+28  52   Private 488419 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+28 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+28             40  United_States
+      GT50K
+1 0.6143055
+   age workclass fnlwgt    education education_num     marital_status
+28  52   Private 579219 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+28 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+28             40  United_States
+      GT50K
+1 0.6065614
+   age workclass fnlwgt    education education_num     marital_status
+28  52   Private 670019 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+28 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+28             40  United_States
+      GT50K
+1 0.5896006
+   age workclass fnlwgt    education education_num     marital_status
+28  52   Private 760819 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+28 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+28             40  United_States
+      GT50K
+1 0.5642952
+   age workclass fnlwgt    education education_num     marital_status
+28  52   Private 851619 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+28 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+28             40  United_States
+      GT50K
+1 0.5320592
+   age workclass fnlwgt    education education_num     marital_status
+28  52   Private 942419 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+28 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+28             40  United_States
+      GT50K
+1 0.4948783
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+29  52   Private 127091 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+29 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+29             40  United_States
+      GT50K
+1 0.5508354
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 90613.000000
+   age workclass fnlwgt    education education_num     marital_status
+29  52   Private 217704 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+29 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+29             40  United_States
+      GT50K
+1 0.5801951
+   age workclass fnlwgt    education education_num     marital_status
+29  52   Private 308317 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+29 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+29             40  United_States
+      GT50K
+1 0.6010291
+   age workclass fnlwgt    education education_num     marital_status
+29  52   Private 398930 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+29 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+29             40  United_States
+      GT50K
+1 0.6124927
+   age workclass fnlwgt    education education_num     marital_status
+29  52   Private 489543 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+29 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+29             40  United_States
+      GT50K
+1 0.6142682
+   age workclass fnlwgt    education education_num     marital_status
+29  52   Private 580156 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+29 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+29             40  United_States
+      GT50K
+1 0.6064324
+   age workclass fnlwgt    education education_num     marital_status
+29  52   Private 670769 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+29 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+29             40  United_States
+      GT50K
+1 0.5894242
+   age workclass fnlwgt    education education_num     marital_status
+29  52   Private 761382 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+29 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+29             40  United_States
+      GT50K
+1 0.5641149
+   age workclass fnlwgt    education education_num     marital_status
+29  52   Private 851995 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+29 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+29             40  United_States
+      GT50K
+1 0.5319139
+   age workclass fnlwgt    education education_num     marital_status
+29  52   Private 942608 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+29 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+29             40  United_States
+      GT50K
+1 0.4947974
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+30  52   Private 128373 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+30 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+30             40  United_States
+      GT50K
+1 0.5513041
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 90485.000000
+   age workclass fnlwgt    education education_num     marital_status
+30  52   Private 218858 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+30 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+30             40  United_States
+      GT50K
+1 0.5805165
+   age workclass fnlwgt    education education_num     marital_status
+30  52   Private 309343 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+30 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+30             40  United_States
+      GT50K
+1 0.6012124
+   age workclass fnlwgt    education education_num     marital_status
+30  52   Private 399828 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+30 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+30             40  United_States
+     GT50K
+1 0.612558
+   age workclass fnlwgt    education education_num     marital_status
+30  52   Private 490313 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+30 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+30             40  United_States
+      GT50K
+1 0.6142417
+   age workclass fnlwgt    education education_num     marital_status
+30  52   Private 580798 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+30 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+30             40  United_States
+      GT50K
+1 0.6063434
+   age workclass fnlwgt    education education_num     marital_status
+30  52   Private 671283 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+30 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+30             40  United_States
+     GT50K
+1 0.589303
+   age workclass fnlwgt    education education_num     marital_status
+30  52   Private 761768 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+30 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+30             40  United_States
+      GT50K
+1 0.5639911
+   age workclass fnlwgt    education education_num     marital_status
+30  52   Private 852253 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+30 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+30             40  United_States
+      GT50K
+1 0.5318141
+   age workclass fnlwgt    education education_num     marital_status
+30  52   Private 942738 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+30 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+30             40  United_States
+      GT50K
+1 0.4947417
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+31  52   Private 129705 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+31 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+31             40  United_States
+      GT50K
+1 0.5517895
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 90352.000000
+   age workclass fnlwgt    education education_num     marital_status
+31  52   Private 220057 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+31 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+31             40  United_States
+      GT50K
+1 0.5808489
+   age workclass fnlwgt    education education_num     marital_status
+31  52   Private 310409 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+31 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+31             40  United_States
+      GT50K
+1 0.6014016
+   age workclass fnlwgt    education education_num     marital_status
+31  52   Private 400761 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+31 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+31             40  United_States
+      GT50K
+1 0.6126248
+   age workclass fnlwgt    education education_num     marital_status
+31  52   Private 491113 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+31 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+31             40  United_States
+      GT50K
+1 0.6142135
+   age workclass fnlwgt    education education_num     marital_status
+31  52   Private 581465 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+31 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+31             40  United_States
+      GT50K
+1 0.6062505
+   age workclass fnlwgt    education education_num     marital_status
+31  52   Private 671817 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+31 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+31             40  United_States
+      GT50K
+1 0.5891767
+   age workclass fnlwgt    education education_num     marital_status
+31  52   Private 762169 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+31 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+31             40  United_States
+      GT50K
+1 0.5638624
+   age workclass fnlwgt    education education_num     marital_status
+31  52   Private 852521 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+31 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+31             40  United_States
+      GT50K
+1 0.5317104
+   age workclass fnlwgt    education education_num     marital_status
+31  52   Private 942873 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+31 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+31             40  United_States
+      GT50K
+1 0.4946839
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+32  52   Private 131064 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+32 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+32             40  United_States
+      GT50K
+1 0.5522832
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 90216.000000
+   age workclass fnlwgt    education education_num     marital_status
+32  52   Private 221280 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+32 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+32             40  United_States
+      GT50K
+1 0.5811865
+   age workclass fnlwgt    education education_num     marital_status
+32  52   Private 311496 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+32 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+32             40  United_States
+      GT50K
+1 0.6015931
+   age workclass fnlwgt    education education_num     marital_status
+32  52   Private 401712 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+32 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+32             40  United_States
+      GT50K
+1 0.6126919
+   age workclass fnlwgt    education education_num     marital_status
+32  52   Private 491928 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+32 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+32             40  United_States
+     GT50K
+1 0.614184
+   age workclass fnlwgt    education education_num     marital_status
+32  52   Private 582144 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+32 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+32             40  United_States
+      GT50K
+1 0.6061553
+   age workclass fnlwgt    education education_num     marital_status
+32  52   Private 672360 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+32 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+32             40  United_States
+      GT50K
+1 0.5890481
+   age workclass fnlwgt    education education_num     marital_status
+32  52   Private 762576 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+32 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+32             40  United_States
+      GT50K
+1 0.5637316
+   age workclass fnlwgt    education education_num     marital_status
+32  52   Private 852792 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+32 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+32             40  United_States
+      GT50K
+1 0.5316055
+   age workclass fnlwgt    education education_num     marital_status
+32  52   Private 943008 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+32 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+32             40  United_States
+      GT50K
+1 0.4946261
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age workclass fnlwgt    education education_num     marital_status
+33  52   Private 133434 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+33 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+33             40  United_States
+      GT50K
+1 0.5531404
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "fnlwgt"
+
+Mutated Feature: fnlwgt
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 89979.000000
+   age workclass fnlwgt    education education_num     marital_status
+33  52   Private 223413 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+33 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+33             40  United_States
+      GT50K
+1 0.5817714
+   age workclass fnlwgt    education education_num     marital_status
+33  52   Private 313392 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+33 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+33             40  United_States
+      GT50K
+1 0.6019239
+   age workclass fnlwgt    education education_num     marital_status
+33  52   Private 403371 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+33 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+33             40  United_States
+      GT50K
+1 0.6128063
+   age workclass fnlwgt    education education_num     marital_status
+33  52   Private 493350 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+33 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+33             40  United_States
+      GT50K
+1 0.6141306
+   age workclass fnlwgt    education education_num     marital_status
+33  52   Private 583329 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+33 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+33             40  United_States
+      GT50K
+1 0.6059881
+   age workclass fnlwgt    education education_num     marital_status
+33  52   Private 673308 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+33 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+33             40  United_States
+      GT50K
+1 0.5888228
+   age workclass fnlwgt    education education_num     marital_status
+33  52   Private 763287 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+33 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+33             40  United_States
+      GT50K
+1 0.5635028
+   age workclass fnlwgt    education education_num     marital_status
+33  52   Private 853266 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+33 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+33             40  United_States
+     GT50K
+1 0.531422
+   age workclass fnlwgt    education education_num     marital_status
+33  52   Private 943245 Some_college            10 Married_civ_spouse
+        occupation relationship  race  sex capital_gain capital_loss
+33 Exec_managerial      Husband White Male            0            0
+   hours_per_week native_country
+33             40  United_States
+      GT50K
+1 0.4945246
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 8/9
+[1] "\n###########################################################\n"
+[1] "\nRESULTS: "
+An object of class "monoTestResults"
+Slot "resilience_total":
+[1] 6.920072
+
+Slot "resilience_cf":
+ [1] 1.0000000 1.0000000 0.8888889 0.8888889 0.8888889 0.8888889 0.8000000
+ [8] 0.8888889 0.8000000 0.8888889 0.8000000 0.8000000 0.8888889 0.8000000
+[15] 0.8000000 0.8000000 0.8000000 0.8000000 0.8888889 0.8000000 0.8000000
+[22] 0.8888889 0.8000000 0.8888889 0.8000000 0.8000000 0.8000000 0.8000000
+[29] 0.8000000 0.8888889 0.8888889 0.8888889 0.8888889
+
+Slot "resilience_ft":
+           age      workclass         fnlwgt      education  education_num 
+     1.0000000      1.0000000      0.8401434      1.0000000      1.0000000 
+marital_status     occupation   relationship           race            sex 
+     1.0000000      1.0000000      1.0000000      1.0000000      1.0000000 
+  capital_gain   capital_loss hours_per_week native_country 
+     1.0000000      1.0000000      1.0000000      1.0000000 
+
+Slot "n_cf":
+[1] 81
+
+Slot "n_cf_invalid":
+[1] 48
+
+Slot "n_ft_mutated_total":
+[1] 32
+
+Slot "n_ft_mutated":
+           age      workclass         fnlwgt      education  education_num 
+             0              0             31              0              0 
+marital_status     occupation   relationship           race            sex 
+             0              0              0              0              0 
+  capital_gain   capital_loss hours_per_week native_country 
+             1              0              0              0 
+
+Slot "n_samples_tested":
+[1] 1
+
+Slot "n_samples_rejected":
+[1] 0
+
+Slot "n_succ_steps_ft":
+           age      workclass         fnlwgt      education  education_num 
+             0              0            248              0              0 
+marital_status     occupation   relationship           race            sex 
+             0              0              0              0              0 
+  capital_gain   capital_loss hours_per_week native_country 
+            10              0              0              0 
+
+Slot "n_max_steps_ft":
+           age      workclass         fnlwgt      education  education_num 
+             0              0            296              0              0 
+marital_status     occupation   relationship           race            sex 
+             0              0              0              0              0 
+  capital_gain   capital_loss hours_per_week native_country 
+            10              0              0              0 
+
+Execution Time: 32.330326

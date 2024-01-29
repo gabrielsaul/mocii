@@ -1,0 +1,722 @@
+[1] "\nMIN FEAT VALUES:"
+$riskperformance
+[1] "Bad"
+
+$externalriskestimate
+[1] -9
+
+$msinceoldesttradeopen
+[1] -8
+
+$msincemostrecenttradeopen
+[1] -9
+
+$averageminfile
+[1] -9
+
+$numsatisfactorytrades
+[1] -9
+
+$numtrades60ever2derogpubrec
+[1] -9
+
+$numtrades90ever2derogpubrec
+[1] -9
+
+$percenttradesneverdelq
+[1] -9
+
+$msincemostrecentdelq
+[1] -7
+
+$maxdelq2publicreclast12m
+[1] -9
+
+$maxdelqever
+[1] -9
+
+$numtotaltrades
+[1] -9
+
+$numtradesopeninlast12m
+[1] -9
+
+$percentinstalltrades
+[1] -9
+
+$msincemostrecentinqexcl7days
+[1] -7
+
+$numinqlast6m
+[1] -9
+
+$numinqlast6mexcl7days
+[1] -9
+
+$netfractionrevolvingburden
+[1] -8
+
+$netfractioninstallburden
+[1] -8
+
+$numrevolvingtradeswbalance
+[1] -8
+
+$numinstalltradeswbalance
+[1] -8
+
+$numbank2natltradeswhighutilization
+[1] -8
+
+$percenttradeswbalance
+[1] -8
+
+[1] "\nMAX FEAT VALUES:"
+$riskperformance
+[1] "Good"
+
+$externalriskestimate
+[1] 93
+
+$msinceoldesttradeopen
+[1] 513
+
+$msincemostrecenttradeopen
+[1] 100
+
+$averageminfile
+[1] 258
+
+$numsatisfactorytrades
+[1] 70
+
+$numtrades60ever2derogpubrec
+[1] 17
+
+$numtrades90ever2derogpubrec
+[1] 16
+
+$percenttradesneverdelq
+[1] 100
+
+$msincemostrecentdelq
+[1] 82
+
+$maxdelq2publicreclast12m
+[1] 9
+
+$maxdelqever
+[1] 8
+
+$numtotaltrades
+[1] 72
+
+$numtradesopeninlast12m
+[1] 14
+
+$percentinstalltrades
+[1] 100
+
+$msincemostrecentinqexcl7days
+[1] 23
+
+$numinqlast6m
+[1] 29
+
+$numinqlast6mexcl7days
+[1] 29
+
+$netfractionrevolvingburden
+[1] 120
+
+$netfractioninstallburden
+[1] 144
+
+$numrevolvingtradeswbalance
+[1] 21
+
+$numinstalltradeswbalance
+[1] 14
+
+$numbank2natltradeswhighutilization
+[1] 13
+
+$percenttradeswbalance
+[1] 100
+
+# weights:  76
+initial  value 688.208256 
+iter  10 value 555.894814
+iter  20 value 532.376224
+iter  30 value 520.303442
+iter  40 value 504.413239
+iter  50 value 485.796195
+iter  60 value 482.161519
+iter  70 value 482.133225
+final  value 482.133193 
+converged
+    riskperformance externalriskestimate msinceoldesttradeopen
+175             Bad                   69                    82
+    msincemostrecenttradeopen averageminfile numsatisfactorytrades
+175                        13             57                    15
+    numtrades60ever2derogpubrec numtrades90ever2derogpubrec
+175                           5                           4
+    percenttradesneverdelq msincemostrecentdelq maxdelq2publicreclast12m
+175                     67                   23                        6
+    maxdelqever numtotaltrades numtradesopeninlast12m percentinstalltrades
+175           2             21                      0                   71
+    msincemostrecentinqexcl7days numinqlast6m numinqlast6mexcl7days
+175                            5            2                     2
+    netfractionrevolvingburden netfractioninstallburden
+175                          6                       66
+    numrevolvingtradeswbalance numinstalltradeswbalance
+175                          1                        2
+    numbank2natltradeswhighutilization percenttradeswbalance
+175                                 -8                    75
+        Good
+1 0.09133981
+[1] "\nPoint of Interest: "
+    riskperformance externalriskestimate msinceoldesttradeopen
+175             Bad                   69                    82
+    msincemostrecenttradeopen averageminfile numsatisfactorytrades
+175                        13             57                    15
+    numtrades60ever2derogpubrec numtrades90ever2derogpubrec
+175                           5                           4
+    percenttradesneverdelq msincemostrecentdelq maxdelq2publicreclast12m
+175                     67                   23                        6
+    maxdelqever numtotaltrades numtradesopeninlast12m percentinstalltrades
+175           2             21                      0                   71
+    msincemostrecentinqexcl7days numinqlast6m numinqlast6mexcl7days
+175                            5            2                     2
+    netfractionrevolvingburden netfractioninstallburden
+175                          6                       66
+    numrevolvingtradeswbalance numinstalltradeswbalance
+175                          1                        2
+    numbank2natltradeswhighutilization percenttradeswbalance
+175                                 -8                    75
+[1] "Counterfactuals: "
+   externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+1                    69                    82                        13
+2                    69                    82                        13
+3                    69                    82                        -9
+5                    69                    85                        13
+6                    69                    82                        13
+7                    69                    82                        13
+8                    69                    82                        13
+9                    69                    82                        13
+10                   69                    82                        13
+11                   69                    82                        13
+   averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+1              57                    15                           5
+2              57                    15                           5
+3              57                    15                           5
+5              57                    15                           5
+6              57                    15                           5
+7              57                    15                           5
+8              57                    15                           5
+9              57                    15                           5
+10             57                    15                           5
+11             57                    15                           5
+   numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+1                           -2                     67                   23
+2                           -3                     67                   23
+3                            4                     67                   23
+5                            4                     67                   23
+6                            4                     67                   23
+7                            3                     67                   23
+8                            4                     67                   23
+9                            4                     67                   23
+10                           4                     67                   23
+11                           4                     67                   23
+   maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+1                         6           2             21                      0
+2                         6           2             21                      0
+3                         6           2             21                      0
+5                         6           2             21                      0
+6                         6           2             21                      0
+7                         6           2             21                      0
+8                         6           2             21                      0
+9                         6           2             21                      0
+10                        6           2             21                      0
+11                        6           2             21                      0
+   percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+1                    71                            5            2
+2                    71                           -9            2
+3                    71                            5            2
+5                    71                            5            2
+6                    71                            4            2
+7                    71                            5            2
+8                    71                            5            4
+9                    71                            5            2
+10                   71                           -9            2
+11                   71                           -7            2
+   numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+1                      2                          6                       66
+2                      2                          6                       66
+3                      2                          6                       66
+5                      2                          6                       66
+6                      2                          6                       66
+7                      2                          6                       66
+8                      2                          6                       66
+9                      2                          6                       66
+10                     2                          6                       66
+11                     2                          6                       66
+   numrevolvingtradeswbalance numinstalltradeswbalance
+1                           1                        2
+2                           1                        2
+3                           1                        2
+5                           1                        2
+6                           1                        2
+7                           1                        2
+8                           1                        2
+9                           1                        2
+10                          1                        2
+11                          1                        2
+   numbank2natltradeswhighutilization percenttradeswbalance dist.target
+1                                  -8                    75   0.0000000
+2                                  -8                    75   0.0000000
+3                                  -8                    75   0.1317227
+5                                  -8                    75   0.4086602
+6                                  -8                    75   0.4086602
+7                                  -8                    75   0.4086602
+8                                  -8                    75   0.4086602
+9                                  -2                    75   0.4086602
+10                                 -8                    75   0.4086602
+11                                 -8                   100   0.4086602
+   dist.x.interest nr.changed dist.train       pred
+1     0.0104347826          1 0.07204652 0.81763050
+2     0.0311956522          2 0.06600541 0.81763050
+3     0.0087754288          1 0.07364205 0.36827726
+5     0.0002498751          1 0.07179665 0.09133981
+6     0.0013586957          1 0.07068783 0.09133981
+7     0.0017391304          1 0.07030739 0.09133981
+8     0.0022883295          1 0.06975819 0.09133981
+9     0.0118577075          1 0.06552438 0.09133981
+10    0.0190217391          1 0.06426628 0.09133981
+11    0.0262764260          2 0.06115001 0.09133981
+[1] "\nOriginal CF:"
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+1                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+1             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+1                          -2                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+1                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+1                   71                            5            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+1                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+1                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+1                                 -8                    75
+       Good
+1 0.8176305
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "numtrades90ever2derogpubrec"
+
+Mutated Feature: numtrades90ever2derogpubrec
+[1] "\nMAX_STEPS:"
+[1] 7
+
+Increment: -1.000000
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+1                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+1             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+1                          -3                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+1                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+1                   71                            5            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+1                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+1                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+1                                 -8                    75
+       Good
+1 0.8176305
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+1                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+1             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+1                          -4                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+1                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+1                   71                            5            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+1                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+1                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+1                                 -8                    75
+       Good
+1 0.8176305
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+1                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+1             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+1                          -5                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+1                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+1                   71                            5            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+1                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+1                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+1                                 -8                    75
+       Good
+1 0.8176305
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+1                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+1             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+1                          -6                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+1                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+1                   71                            5            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+1                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+1                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+1                                 -8                    75
+       Good
+1 0.8176305
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+1                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+1             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+1                          -7                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+1                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+1                   71                            5            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+1                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+1                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+1                                 -8                    75
+       Good
+1 0.8176305
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+1                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+1             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+1                          -8                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+1                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+1                   71                            5            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+1                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+1                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+1                                 -8                    75
+       Good
+1 0.8176305
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+1                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+1             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+1                          -9                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+1                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+1                   71                            5            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+1                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+1                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+1                                 -8                    75
+       Good
+1 0.8176305
+Successful Steps: 7/7
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+2                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+2             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+2                          -3                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+2                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+2                   71                           -9            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+2                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+2                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+2                                 -8                    75
+       Good
+1 0.8176305
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "numtrades90ever2derogpubrec"  "msincemostrecentinqexcl7days"
+
+Mutated Feature: numtrades90ever2derogpubrec
+[1] "\nMAX_STEPS:"
+[1] 6
+
+Increment: -1.000000
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+2                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+2             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+2                          -4                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+2                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+2                   71                           -9            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+2                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+2                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+2                                 -8                    75
+       Good
+1 0.8176305
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+2                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+2             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+2                          -5                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+2                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+2                   71                           -9            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+2                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+2                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+2                                 -8                    75
+       Good
+1 0.8176305
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+2                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+2             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+2                          -6                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+2                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+2                   71                           -9            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+2                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+2                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+2                                 -8                    75
+       Good
+1 0.8176305
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+2                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+2             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+2                          -7                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+2                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+2                   71                           -9            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+2                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+2                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+2                                 -8                    75
+       Good
+1 0.8176305
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+2                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+2             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+2                          -8                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+2                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+2                   71                           -9            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+2                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+2                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+2                                 -8                    75
+       Good
+1 0.8176305
+  externalriskestimate msinceoldesttradeopen msincemostrecenttradeopen
+2                   69                    82                        13
+  averageminfile numsatisfactorytrades numtrades60ever2derogpubrec
+2             57                    15                           5
+  numtrades90ever2derogpubrec percenttradesneverdelq msincemostrecentdelq
+2                          -9                     67                   23
+  maxdelq2publicreclast12m maxdelqever numtotaltrades numtradesopeninlast12m
+2                        6           2             21                      0
+  percentinstalltrades msincemostrecentinqexcl7days numinqlast6m
+2                   71                           -9            2
+  numinqlast6mexcl7days netfractionrevolvingburden netfractioninstallburden
+2                     2                          6                       66
+  numrevolvingtradeswbalance numinstalltradeswbalance
+2                          1                        2
+  numbank2natltradeswhighutilization percenttradeswbalance
+2                                 -8                    75
+       Good
+1 0.8176305
+Successful Steps: 6/6
+[1] "\n###########################################################\n"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nRESULTS: "
+An object of class "monoTestResults"
+Slot "resilience_total":
+[1] 11.5
+
+Slot "resilience_cf":
+[1] 1 1
+
+Slot "resilience_ft":
+              externalriskestimate              msinceoldesttradeopen 
+                                 1                                  1 
+         msincemostrecenttradeopen                     averageminfile 
+                                 1                                  1 
+             numsatisfactorytrades        numtrades60ever2derogpubrec 
+                                 1                                  1 
+       numtrades90ever2derogpubrec             percenttradesneverdelq 
+                                 1                                  1 
+              msincemostrecentdelq           maxdelq2publicreclast12m 
+                                 1                                  1 
+                       maxdelqever                     numtotaltrades 
+                                 1                                  1 
+            numtradesopeninlast12m               percentinstalltrades 
+                                 1                                  1 
+      msincemostrecentinqexcl7days                       numinqlast6m 
+                                 1                                  1 
+             numinqlast6mexcl7days         netfractionrevolvingburden 
+                                 1                                  1 
+          netfractioninstallburden         numrevolvingtradeswbalance 
+                                 1                                  1 
+          numinstalltradeswbalance numbank2natltradeswhighutilization 
+                                 1                                  1 
+             percenttradeswbalance 
+                                 1 
+
+Slot "n_cf":
+[1] 10
+
+Slot "n_cf_invalid":
+[1] 8
+
+Slot "n_ft_mutated_total":
+[1] 3
+
+Slot "n_ft_mutated":
+              externalriskestimate              msinceoldesttradeopen 
+                                 0                                  0 
+         msincemostrecenttradeopen                     averageminfile 
+                                 0                                  0 
+             numsatisfactorytrades        numtrades60ever2derogpubrec 
+                                 0                                  0 
+       numtrades90ever2derogpubrec             percenttradesneverdelq 
+                                 2                                  0 
+              msincemostrecentdelq           maxdelq2publicreclast12m 
+                                 0                                  0 
+                       maxdelqever                     numtotaltrades 
+                                 0                                  0 
+            numtradesopeninlast12m               percentinstalltrades 
+                                 0                                  0 
+      msincemostrecentinqexcl7days                       numinqlast6m 
+                                 1                                  0 
+             numinqlast6mexcl7days         netfractionrevolvingburden 
+                                 0                                  0 
+          netfractioninstallburden         numrevolvingtradeswbalance 
+                                 0                                  0 
+          numinstalltradeswbalance numbank2natltradeswhighutilization 
+                                 0                                  0 
+             percenttradeswbalance 
+                                 0 
+
+Slot "n_samples_tested":
+[1] 1
+
+Slot "n_samples_rejected":
+[1] 0
+
+Slot "n_succ_steps_ft":
+              externalriskestimate              msinceoldesttradeopen 
+                                 0                                  0 
+         msincemostrecenttradeopen                     averageminfile 
+                                 0                                  0 
+             numsatisfactorytrades        numtrades60ever2derogpubrec 
+                                 0                                  0 
+       numtrades90ever2derogpubrec             percenttradesneverdelq 
+                                13                                  0 
+              msincemostrecentdelq           maxdelq2publicreclast12m 
+                                 0                                  0 
+                       maxdelqever                     numtotaltrades 
+                                 0                                  0 
+            numtradesopeninlast12m               percentinstalltrades 
+                                 0                                  0 
+      msincemostrecentinqexcl7days                       numinqlast6m 
+                                 0                                  0 
+             numinqlast6mexcl7days         netfractionrevolvingburden 
+                                 0                                  0 
+          netfractioninstallburden         numrevolvingtradeswbalance 
+                                 0                                  0 
+          numinstalltradeswbalance numbank2natltradeswhighutilization 
+                                 0                                  0 
+             percenttradeswbalance 
+                                 0 
+
+Slot "n_max_steps_ft":
+              externalriskestimate              msinceoldesttradeopen 
+                                 0                                  0 
+         msincemostrecenttradeopen                     averageminfile 
+                                 0                                  0 
+             numsatisfactorytrades        numtrades60ever2derogpubrec 
+                                 0                                  0 
+       numtrades90ever2derogpubrec             percenttradesneverdelq 
+                                13                                  0 
+              msincemostrecentdelq           maxdelq2publicreclast12m 
+                                 0                                  0 
+                       maxdelqever                     numtotaltrades 
+                                 0                                  0 
+            numtradesopeninlast12m               percentinstalltrades 
+                                 0                                  0 
+      msincemostrecentinqexcl7days                       numinqlast6m 
+                                 0                                  0 
+             numinqlast6mexcl7days         netfractionrevolvingburden 
+                                 0                                  0 
+          netfractioninstallburden         numrevolvingtradeswbalance 
+                                 0                                  0 
+          numinstalltradeswbalance numbank2natltradeswhighutilization 
+                                 0                                  0 
+             percenttradeswbalance 
+                                 0 
+
+Execution Time: 25.964039

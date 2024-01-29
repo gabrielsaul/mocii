@@ -1,0 +1,1191 @@
+[1] "\nMIN FEAT VALUES:"
+$age
+[1] 19
+
+$sex
+[1] "female"
+
+$job
+[1] 0
+
+$housing
+[1] "free"
+
+$saving.accounts
+[1] "little"
+
+$checking.account
+[1] "little"
+
+$credit.amount
+[1] 276
+
+$duration
+[1] 6
+
+$purpose
+[1] "business"
+
+$risk
+[1] "bad"
+
+[1] "\nMAX FEAT VALUES:"
+$age
+[1] 75
+
+$sex
+[1] "male"
+
+$job
+[1] 3
+
+$housing
+[1] "rent"
+
+$saving.accounts
+[1] "rich"
+
+$checking.account
+[1] "rich"
+
+$credit.amount
+[1] 18424
+
+$duration
+[1] 72
+
+$purpose
+[1] "vacation/others"
+
+$risk
+[1] "good"
+
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose risk
+581  30 male   2     own          little         moderate          1056       18     car  bad
+       good
+1 0.6002616
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose risk
+500  45 male   1     own          little           little          4006       28     car  bad
+       good
+1 0.5073325
+    age  sex job housing saving.accounts checking.account credit.amount duration             purpose risk
+477  39 male   3    rent          little           little          3345       24 furniture/equipment  bad
+       good
+1 0.4396512
+[1] "\nPoint of Interest: "
+    age  sex job housing saving.accounts checking.account credit.amount duration             purpose risk
+477  39 male   3    rent          little           little          3345       24 furniture/equipment  bad
+[1] "Counterfactuals: "
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose dist.target
+1   39 male   3    rent          little           little          3345       17 furniture/equipment 0.000000000
+2   39 male   3    rent          little           little          3345       16 furniture/equipment 0.000000000
+3   39 male   3    rent          little           little          3345       15 furniture/equipment 0.000000000
+4   39 male   3    rent          little           little          3345       14 furniture/equipment 0.000000000
+5   39 male   3    rent          little           little          3345       13 furniture/equipment 0.000000000
+6   39 male   3    rent          little           little          3345       12 furniture/equipment 0.000000000
+7   39 male   3    rent          little           little          3345       11 furniture/equipment 0.000000000
+8   39 male   3    rent          little           little          3345       10 furniture/equipment 0.000000000
+9   39 male   3    rent          little           little          3345        9 furniture/equipment 0.000000000
+10  39 male   3    rent          little           little          3345        8 furniture/equipment 0.000000000
+11  39 male   3    rent          little           little          3345        7 furniture/equipment 0.000000000
+12  39 male   3    rent          little           little          3345        6 furniture/equipment 0.000000000
+13  39 male   3    rent          little           little          3347       17 furniture/equipment 0.000000000
+14  39 male   3    rent          little           little          3372       16 furniture/equipment 0.000000000
+15  39 male   3    rent          little           little          3347       15 furniture/equipment 0.000000000
+16  39 male   3    rent          little           little          3347       12 furniture/equipment 0.000000000
+17  39 male   3    rent          little           little          3347       11 furniture/equipment 0.000000000
+18  39 male   3    rent          little           little          3347       10 furniture/equipment 0.000000000
+19  39 male   3    rent          little           little          3347        9 furniture/equipment 0.000000000
+20  39 male   3    rent          little           little          3347        8 furniture/equipment 0.000000000
+21  39 male   3    rent          little           little          3347        6 furniture/equipment 0.000000000
+22  39 male   3    rent          little           little          3368        6 furniture/equipment 0.000000000
+23  39 male   3    rent          little           little          3372        6 furniture/equipment 0.000000000
+24  39 male   2    rent          little           little          3345        6                 car 0.000000000
+25  39 male   3    rent          little           little          3345       18 furniture/equipment 0.002185132
+26  39 male   3    rent          little           little          3347       18 furniture/equipment 0.002211143
+27  39 male   3    rent          little           little          3270       19 furniture/equipment 0.010838951
+28  39 male   3    rent          little           little          3345       19 furniture/equipment 0.011814128
+29  39 male   3    rent          little           little          3372       19 furniture/equipment 0.012168034
+30  39 male   3    rent          little           little          3345       20 furniture/equipment 0.021498048
+31  39 male   3    rent          little           little          3345       21 furniture/equipment 0.031215329
+32  39 male   3    rent          little           little          3368       21 furniture/equipment 0.031519215
+33  39 male   3    rent          little           little          3345       22 furniture/equipment 0.040944149
+34  39 male   3    rent          little           little          3345       23 furniture/equipment 0.050662593
+35  39 male   3    rent          little           little          3161       24 furniture/equipment 0.057937035
+36  39 male   3    rent          little           little          3270       24 furniture/equipment 0.059359422
+37  39 male   3    rent          little           little          3331       24 furniture/equipment 0.060163479
+39  39 male   3    rent          little           little          3347       24 furniture/equipment 0.060375326
+40  39 male   3    rent          little           little          3350       24 furniture/equipment 0.060415091
+41  39 male   3    rent          little           little          3354       24 furniture/equipment 0.060468132
+42  39 male   3    rent          little           little          3368       24 furniture/equipment 0.060653969
+43  39 male   3    rent          little           little          3372       24 furniture/equipment 0.060707121
+44  39 male   3    rent          little           little          3395       24 furniture/equipment 0.061013213
+   dist.x.interest nr.changed  dist.train      pred
+1     1.178451e-02          1 0.028677931 0.5073678
+2     1.346801e-02          1 0.026994429 0.5168241
+3     1.515152e-02          1 0.025310928 0.5261639
+4     1.683502e-02          1 0.023627426 0.5353682
+5     1.851852e-02          1 0.021943924 0.5444191
+6     2.020202e-02          1 0.020260422 0.5532994
+7     2.188552e-02          1 0.018576921 0.5619933
+8     2.356902e-02          1 0.016893419 0.5704864
+9     2.525253e-02          1 0.015209917 0.5787650
+10    2.693603e-02          1 0.013526416 0.5868173
+11    2.861953e-02          1 0.011842914 0.5946323
+12    3.030303e-02          1 0.010159412 0.6022006
+13    1.179676e-02          2 0.028665686 0.5073420
+14    1.363332e-02          2 0.026829122 0.5164774
+15    1.516376e-02          2 0.025298683 0.5261385
+16    2.021427e-02          2 0.020248177 0.5532748
+17    2.189777e-02          2 0.018564676 0.5619691
+18    2.358127e-02          2 0.016881174 0.5704624
+19    2.526477e-02          2 0.015197672 0.5787414
+20    2.694827e-02          2 0.013514171 0.5867940
+21    3.031528e-02          2 0.010147167 0.6021781
+22    3.044385e-02          2 0.010018595 0.6019412
+23    3.046834e-02          2 0.009994105 0.6018959
+24    1.784512e-01          3 0.005994801 0.6951022
+25    1.010101e-02          1 0.030361433 0.4978149
+26    1.011326e-02          2 0.030349188 0.4977889
+27    8.876696e-03          2 0.032504122 0.4891610
+28    8.417508e-03          1 0.032044934 0.4881859
+29    8.582816e-03          2 0.031879627 0.4878320
+30    6.734007e-03          1 0.033728436 0.4785020
+31    5.050505e-03          1 0.035411938 0.4687847
+32    5.191323e-03          2 0.035271120 0.4684808
+33    3.367003e-03          1 0.037095439 0.4590559
+34    1.683502e-03          1 0.038778941 0.4493374
+35    1.126540e-03          1 0.041588982 0.4420630
+36    4.591874e-04          1 0.040921630 0.4406406
+37    8.571499e-05          1 0.040548158 0.4398365
+39    1.224500e-05          1 0.040450198 0.4396247
+40    3.061249e-05          1 0.040431830 0.4395849
+41    5.510249e-05          1 0.040407340 0.4395319
+42    1.408175e-04          1 0.040321625 0.4393460
+43    1.653075e-04          1 0.040297135 0.4392929
+44    3.061249e-04          1 0.040291013 0.4389868
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345       17 furniture/equipment
+       good
+1 0.5073678
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 11
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345       16 furniture/equipment
+       good
+1 0.5168241
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345       15 furniture/equipment
+       good
+1 0.5261639
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345       14 furniture/equipment
+       good
+1 0.5353682
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345       13 furniture/equipment
+       good
+1 0.5444191
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345       12 furniture/equipment
+       good
+1 0.5532994
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345       11 furniture/equipment
+       good
+1 0.5619933
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345       10 furniture/equipment
+       good
+1 0.5704864
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345        9 furniture/equipment
+      good
+1 0.578765
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345        8 furniture/equipment
+       good
+1 0.5868173
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345        7 furniture/equipment
+       good
+1 0.5946323
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+1  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+Successful Steps: 11/11
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+2  39 male   3    rent          little           little          3345       16 furniture/equipment
+       good
+1 0.5168241
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+2  39 male   3    rent          little           little          3345       15 furniture/equipment
+       good
+1 0.5261639
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+2  39 male   3    rent          little           little          3345       14 furniture/equipment
+       good
+1 0.5353682
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+2  39 male   3    rent          little           little          3345       13 furniture/equipment
+       good
+1 0.5444191
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+2  39 male   3    rent          little           little          3345       12 furniture/equipment
+       good
+1 0.5532994
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+2  39 male   3    rent          little           little          3345       11 furniture/equipment
+       good
+1 0.5619933
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+2  39 male   3    rent          little           little          3345       10 furniture/equipment
+       good
+1 0.5704864
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+2  39 male   3    rent          little           little          3345        9 furniture/equipment
+      good
+1 0.578765
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+2  39 male   3    rent          little           little          3345        8 furniture/equipment
+       good
+1 0.5868173
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+2  39 male   3    rent          little           little          3345        7 furniture/equipment
+       good
+1 0.5946323
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+2  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+Successful Steps: 10/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+3  39 male   3    rent          little           little          3345       15 furniture/equipment
+       good
+1 0.5261639
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+3  39 male   3    rent          little           little          3345       14 furniture/equipment
+       good
+1 0.5353682
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+3  39 male   3    rent          little           little          3345       13 furniture/equipment
+       good
+1 0.5444191
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+3  39 male   3    rent          little           little          3345       12 furniture/equipment
+       good
+1 0.5532994
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+3  39 male   3    rent          little           little          3345       11 furniture/equipment
+       good
+1 0.5619933
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+3  39 male   3    rent          little           little          3345       10 furniture/equipment
+       good
+1 0.5704864
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+3  39 male   3    rent          little           little          3345        9 furniture/equipment
+      good
+1 0.578765
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+3  39 male   3    rent          little           little          3345        8 furniture/equipment
+       good
+1 0.5868173
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+3  39 male   3    rent          little           little          3345        7 furniture/equipment
+       good
+1 0.5946323
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+3  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+Successful Steps: 9/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+4  39 male   3    rent          little           little          3345       14 furniture/equipment
+       good
+1 0.5353682
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 8
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+4  39 male   3    rent          little           little          3345       13 furniture/equipment
+       good
+1 0.5444191
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+4  39 male   3    rent          little           little          3345       12 furniture/equipment
+       good
+1 0.5532994
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+4  39 male   3    rent          little           little          3345       11 furniture/equipment
+       good
+1 0.5619933
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+4  39 male   3    rent          little           little          3345       10 furniture/equipment
+       good
+1 0.5704864
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+4  39 male   3    rent          little           little          3345        9 furniture/equipment
+      good
+1 0.578765
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+4  39 male   3    rent          little           little          3345        8 furniture/equipment
+       good
+1 0.5868173
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+4  39 male   3    rent          little           little          3345        7 furniture/equipment
+       good
+1 0.5946323
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+4  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+Successful Steps: 8/8
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+5  39 male   3    rent          little           little          3345       13 furniture/equipment
+       good
+1 0.5444191
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 7
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+5  39 male   3    rent          little           little          3345       12 furniture/equipment
+       good
+1 0.5532994
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+5  39 male   3    rent          little           little          3345       11 furniture/equipment
+       good
+1 0.5619933
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+5  39 male   3    rent          little           little          3345       10 furniture/equipment
+       good
+1 0.5704864
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+5  39 male   3    rent          little           little          3345        9 furniture/equipment
+      good
+1 0.578765
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+5  39 male   3    rent          little           little          3345        8 furniture/equipment
+       good
+1 0.5868173
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+5  39 male   3    rent          little           little          3345        7 furniture/equipment
+       good
+1 0.5946323
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+5  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+Successful Steps: 7/7
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+6  39 male   3    rent          little           little          3345       12 furniture/equipment
+       good
+1 0.5532994
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 6
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+6  39 male   3    rent          little           little          3345       11 furniture/equipment
+       good
+1 0.5619933
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+6  39 male   3    rent          little           little          3345       10 furniture/equipment
+       good
+1 0.5704864
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+6  39 male   3    rent          little           little          3345        9 furniture/equipment
+      good
+1 0.578765
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+6  39 male   3    rent          little           little          3345        8 furniture/equipment
+       good
+1 0.5868173
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+6  39 male   3    rent          little           little          3345        7 furniture/equipment
+       good
+1 0.5946323
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+6  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+Successful Steps: 6/6
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+7  39 male   3    rent          little           little          3345       11 furniture/equipment
+       good
+1 0.5619933
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 5
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+7  39 male   3    rent          little           little          3345       10 furniture/equipment
+       good
+1 0.5704864
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+7  39 male   3    rent          little           little          3345        9 furniture/equipment
+      good
+1 0.578765
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+7  39 male   3    rent          little           little          3345        8 furniture/equipment
+       good
+1 0.5868173
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+7  39 male   3    rent          little           little          3345        7 furniture/equipment
+       good
+1 0.5946323
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+7  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+Successful Steps: 5/5
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+8  39 male   3    rent          little           little          3345       10 furniture/equipment
+       good
+1 0.5704864
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 4
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+8  39 male   3    rent          little           little          3345        9 furniture/equipment
+      good
+1 0.578765
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+8  39 male   3    rent          little           little          3345        8 furniture/equipment
+       good
+1 0.5868173
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+8  39 male   3    rent          little           little          3345        7 furniture/equipment
+       good
+1 0.5946323
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+8  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+Successful Steps: 4/4
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+9  39 male   3    rent          little           little          3345        9 furniture/equipment
+      good
+1 0.578765
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 3
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+9  39 male   3    rent          little           little          3345        8 furniture/equipment
+       good
+1 0.5868173
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+9  39 male   3    rent          little           little          3345        7 furniture/equipment
+       good
+1 0.5946323
+  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+9  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+Successful Steps: 3/3
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+10  39 male   3    rent          little           little          3345        8 furniture/equipment
+       good
+1 0.5868173
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 2
+
+Increment: -1.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+10  39 male   3    rent          little           little          3345        7 furniture/equipment
+       good
+1 0.5946323
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+10  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+Successful Steps: 2/2
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+11  39 male   3    rent          little           little          3345        7 furniture/equipment
+       good
+1 0.5946323
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 1
+
+Increment: -1.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+11  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+Successful Steps: 1/1
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+12  39 male   3    rent          little           little          3345        6 furniture/equipment
+       good
+1 0.6022006
+
+Number of Mutated Features: 1.000000
+[1] "\nMutated Features:"
+[1] "duration"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+13  39 male   3    rent          little           little          3347       17 furniture/equipment
+      good
+1 0.507342
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 1508.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+13  39 male   3    rent          little           little          4855       17 furniture/equipment
+       good
+1 0.4854404
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/9
+[1] "\n###########################################################\n"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 11
+
+Increment: -1.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+13  39 male   3    rent          little           little          4855       16 furniture/equipment
+       good
+1 0.4949453
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/11
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          3372       16 furniture/equipment
+       good
+1 0.5164774
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 1505.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          4877       16 furniture/equipment
+       good
+1 0.4945915
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/10
+[1] "\n###########################################################\n"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: -1.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          4877       15 furniture/equipment
+       good
+1 0.5040025
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          4877       14 furniture/equipment
+       good
+1 0.5133008
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          4877       13 furniture/equipment
+       good
+1 0.5224675
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          4877       12 furniture/equipment
+       good
+1 0.5314845
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          4877       11 furniture/equipment
+       good
+1 0.5403349
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          4877       10 furniture/equipment
+       good
+1 0.5490028
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          4877        9 furniture/equipment
+       good
+1 0.5574735
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          4877        8 furniture/equipment
+       good
+1 0.5657336
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          4877        7 furniture/equipment
+       good
+1 0.5737708
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+14  39 male   3    rent          little           little          4877        6 furniture/equipment
+       good
+1 0.5815742
+Successful Steps: 10/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+15  39 male   3    rent          little           little          3347       15 furniture/equipment
+       good
+1 0.5261385
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 1508.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+15  39 male   3    rent          little           little          4855       15 furniture/equipment
+       good
+1 0.5043568
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+15  39 male   3    rent          little           little          6363       15 furniture/equipment
+       good
+1 0.4780685
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 1/9
+[1] "\n###########################################################\n"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: -1.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+15  39 male   3    rent          little           little          6363       14 furniture/equipment
+       good
+1 0.4872498
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/9
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+16  39 male   3    rent          little           little          3347       12 furniture/equipment
+       good
+1 0.5532748
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 1508.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+16  39 male   3    rent          little           little          4855       12 furniture/equipment
+       good
+1 0.5318381
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+16  39 male   3    rent          little           little          6363       12 furniture/equipment
+      good
+1 0.505289
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+16  39 male   3    rent          little           little          7871       12 furniture/equipment
+       good
+1 0.4752067
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 2/9
+[1] "\n###########################################################\n"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 6
+
+Increment: -1.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+16  39 male   3    rent          little           little          7871       11 furniture/equipment
+       good
+1 0.4837965
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/6
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+17  39 male   3    rent          little           little          3347       11 furniture/equipment
+       good
+1 0.5619691
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 1508.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+17  39 male   3    rent          little           little          4855       11 furniture/equipment
+       good
+1 0.5406875
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+17  39 male   3    rent          little           little          6363       11 furniture/equipment
+      good
+1 0.514111
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+17  39 male   3    rent          little           little          7871       11 furniture/equipment
+       good
+1 0.4837965
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 2/9
+[1] "\n###########################################################\n"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 5
+
+Increment: -1.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+17  39 male   3    rent          little           little          7871       10 furniture/equipment
+       good
+1 0.4922681
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/5
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+18  39 male   3    rent          little           little          3347       10 furniture/equipment
+       good
+1 0.5704624
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 1508.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+18  39 male   3    rent          little           little          4855       10 furniture/equipment
+       good
+1 0.5493541
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+18  39 male   3    rent          little           little          6363       10 furniture/equipment
+       good
+1 0.5227787
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+18  39 male   3    rent          little           little          7871       10 furniture/equipment
+       good
+1 0.4922681
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 2/9
+[1] "\n###########################################################\n"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 4
+
+Increment: -1.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+18  39 male   3    rent          little           little          7871        9 furniture/equipment
+       good
+1 0.5006054
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+18  39 male   3    rent          little           little          7871        8 furniture/equipment
+       good
+1 0.5087935
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+18  39 male   3    rent          little           little          7871        7 furniture/equipment
+       good
+1 0.5168183
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+18  39 male   3    rent          little           little          7871        6 furniture/equipment
+       good
+1 0.5246667
+Successful Steps: 4/4
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+19  39 male   3    rent          little           little          3347        9 furniture/equipment
+       good
+1 0.5787414
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 1508.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+19  39 male   3    rent          little           little          4855        9 furniture/equipment
+       good
+1 0.5578231
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+19  39 male   3    rent          little           little          6363        9 furniture/equipment
+       good
+1 0.5312767
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+19  39 male   3    rent          little           little          7871        9 furniture/equipment
+       good
+1 0.5006054
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+19  39 male   3    rent          little           little          9379        9 furniture/equipment
+       good
+1 0.4679572
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 3/9
+[1] "\n###########################################################\n"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 3
+
+Increment: -1.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+19  39 male   3    rent          little           little          9379        8 furniture/equipment
+       good
+1 0.4758286
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/3
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+20  39 male   3    rent          little           little          3347        8 furniture/equipment
+      good
+1 0.586794
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 1508.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+20  39 male   3    rent          little           little          4855        8 furniture/equipment
+       good
+1 0.5660812
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+20  39 male   3    rent          little           little          6363        8 furniture/equipment
+       good
+1 0.5395902
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+20  39 male   3    rent          little           little          7871        8 furniture/equipment
+       good
+1 0.5087935
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+20  39 male   3    rent          little           little          9379        8 furniture/equipment
+       good
+1 0.4758286
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 3/9
+[1] "\n###########################################################\n"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 2
+
+Increment: -1.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+20  39 male   3    rent          little           little          9379        7 furniture/equipment
+       good
+1 0.4835761
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/2
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+21  39 male   3    rent          little           little          3347        6 furniture/equipment
+       good
+1 0.6021781
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 1508.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+21  39 male   3    rent          little           little          4855        6 furniture/equipment
+      good
+1 0.581917
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+21  39 male   3    rent          little           little          6363        6 furniture/equipment
+       good
+1 0.5556117
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+21  39 male   3    rent          little           little          7871        6 furniture/equipment
+       good
+1 0.5246667
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+21  39 male   3    rent          little           little          9379        6 furniture/equipment
+       good
+1 0.4911864
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 3/9
+[1] "\n###########################################################\n"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+22  39 male   3    rent          little           little          3368        6 furniture/equipment
+       good
+1 0.6019412
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 1506.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+22  39 male   3    rent          little           little          4874        6 furniture/equipment
+      good
+1 0.581621
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+22  39 male   3    rent          little           little          6380        6 furniture/equipment
+       good
+1 0.5552853
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+22  39 male   3    rent          little           little          7886        6 furniture/equipment
+       good
+1 0.5243422
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+22  39 male   3    rent          little           little          9392        6 furniture/equipment
+      good
+1 0.490894
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 3/9
+[1] "\n###########################################################\n"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+23  39 male   3    rent          little           little          3372        6 furniture/equipment
+       good
+1 0.6018959
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 1505.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+23  39 male   3    rent          little           little          4877        6 furniture/equipment
+       good
+1 0.5815742
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+23  39 male   3    rent          little           little          6382        6 furniture/equipment
+       good
+1 0.5552469
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+23  39 male   3    rent          little           little          7887        6 furniture/equipment
+       good
+1 0.5243205
+   age  sex job housing saving.accounts checking.account credit.amount duration             purpose
+23  39 male   3    rent          little           little          9392        6 furniture/equipment
+      good
+1 0.490894
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 3/10
+[1] "\n###########################################################\n"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nOriginal CF:"
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+24  39 male   2    rent          little           little          3345        6     car
+       good
+1 0.6951022
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "job"      "duration"
+
+Mutated Feature: job
+[1] "\nMAX_STEPS:"
+[1] 2
+
+Increment: -1.000000
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+24  39 male   1    rent          little           little          3345        6     car
+       good
+1 0.7057875
+   age  sex job housing saving.accounts checking.account credit.amount duration purpose
+24  39 male   0    rent          little           little          3345        6     car
+       good
+1 0.7067584
+Successful Steps: 2/2
+[1] "\n###########################################################\n"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nRESULTS: "
+An object of class "monoTestResults"
+Slot "resilience_total":
+[1] 0.6563973
+
+Slot "resilience_cf":
+ [1] 1.00000000 1.00000000 1.00000000 1.00000000 1.00000000 1.00000000 1.00000000 1.00000000 1.00000000 1.00000000
+[11] 1.00000000 1.00000000 0.00000000 0.50000000 0.05555556 0.11111111 0.11111111 0.61111111 0.16666667 0.16666667
+[21] 0.66666667 0.66666667 0.65000000 1.00000000
+
+Slot "resilience_ft":
+             age              sex              job          housing  saving.accounts checking.account    credit.amount 
+             NaN              NaN        1.0000000              NaN              NaN              NaN        0.2191919 
+        duration          purpose 
+       0.7500000              NaN 
+
+Slot "n_cf":
+[1] 43
+
+Slot "n_cf_invalid":
+[1] 19
+
+Slot "n_ft_mutated_total":
+[1] 36
+
+Slot "n_ft_mutated":
+             age              sex              job          housing  saving.accounts checking.account    credit.amount 
+               0                0                1                0                0                0               11 
+        duration          purpose 
+              24                0 
+
+Slot "n_samples_tested":
+[1] 1
+
+Slot "n_samples_rejected":
+[1] 2
+
+Slot "n_succ_steps_ft":
+             age              sex              job          housing  saving.accounts checking.account    credit.amount 
+               0                0                2                0                0                0               22 
+        duration          purpose 
+              80                0 
+
+Slot "n_max_steps_ft":
+             age              sex              job          housing  saving.accounts checking.account    credit.amount 
+               0                0                2                0                0                0              101 
+        duration          purpose 
+             116                0 
+
+Execution Time: 6.336022

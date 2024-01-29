@@ -1,0 +1,315 @@
+[1] "\nMIN FEAT VALUES:"
+$age
+[1] 19
+
+$sex
+[1] "female"
+
+$job
+[1] 0
+
+$housing
+[1] "free"
+
+$saving.accounts
+[1] "little"
+
+$checking.account
+[1] "little"
+
+$credit.amount
+[1] 276
+
+$duration
+[1] 6
+
+$purpose
+[1] "business"
+
+$risk
+[1] "bad"
+
+[1] "\nMAX FEAT VALUES:"
+$age
+[1] 75
+
+$sex
+[1] "male"
+
+$job
+[1] 3
+
+$housing
+[1] "rent"
+
+$saving.accounts
+[1] "rich"
+
+$checking.account
+[1] "rich"
+
+$credit.amount
+[1] 18424
+
+$duration
+[1] 72
+
+$purpose
+[1] "vacation/others"
+
+$risk
+[1] "good"
+
+    age  sex job housing saving.accounts checking.account credit.amount duration  purpose risk
+888  23 male   2     own          little         moderate         15672       48 business  bad
+   good
+1 0.026
+[1] "\nPoint of Interest: "
+    age  sex job housing saving.accounts checking.account credit.amount duration  purpose risk
+888  23 male   2     own          little         moderate         15672       48 business  bad
+[1] "Counterfactuals: "
+   age  sex job housing saving.accounts checking.account credit.amount duration  purpose dist.target dist.x.interest
+1   23 male   2     own          little         moderate          3778        6 business       0.000     0.143528073
+2   23 male   2     own          little         moderate           704       13 business       0.000     0.150564123
+3   23 male   2     own          little         moderate           276        8 business       0.000     0.161602061
+4   23 male   1     own          little         moderate         18424        6 business       0.002     0.124593225
+5   23 male   2     own          little         moderate         15672       13 business       0.102     0.058922559
+6   23 male   2     own          little         moderate         15672       19 business       0.112     0.048821549
+7   23 male   2     own          little         moderate          3808       48 business       0.190     0.072637328
+8   23 male   2     own          little         moderate         15672       42 business       0.316     0.010101010
+9   23 male   2     own          little         moderate         16947       48 business       0.468     0.007806186
+11  23 male   2     own          little         moderate         13241       48 business       0.480     0.014883795
+   nr.changed  dist.train  pred
+1           2 0.026897079 0.860
+2           2 0.015612757 0.684
+3           2 0.009815678 0.864
+4           3 0.136220725 0.498
+5           1 0.070550059 0.398
+6           1 0.060449049 0.388
+7           1 0.054346163 0.310
+8           1 0.021728510 0.184
+9           1 0.019433686 0.032
+11          1 0.011192803 0.020
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+1  23 male   2     own          little         moderate          3778        6 business
+  good
+1 0.86
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: -350.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+1  23 male   2     own          little         moderate          3428        6 business
+   good
+1 0.848
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+1  23 male   2     own          little         moderate          3078        6 business
+   good
+1 0.854
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+1  23 male   2     own          little         moderate          2728        6 business
+   good
+1 0.866
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+1  23 male   2     own          little         moderate          2378        6 business
+   good
+1 0.856
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+1  23 male   2     own          little         moderate          2028        6 business
+   good
+1 0.844
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+1  23 male   2     own          little         moderate          1678        6 business
+   good
+1 0.826
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+1  23 male   2     own          little         moderate          1328        6 business
+   good
+1 0.814
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+1  23 male   2     own          little         moderate           978        6 business
+  good
+1 0.88
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+1  23 male   2     own          little         moderate           628        6 business
+   good
+1 0.846
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+1  23 male   2     own          little         moderate           278        6 business
+  good
+1 0.87
+Successful Steps: 10/10
+[1] "\n###########################################################\n"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           704       13 business
+   good
+1 0.684
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: -43.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           661       13 business
+   good
+1 0.676
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           618       13 business
+   good
+1 0.716
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           575       13 business
+   good
+1 0.752
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           532       13 business
+   good
+1 0.758
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           489       13 business
+   good
+1 0.772
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           446       13 business
+   good
+1 0.772
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           403       13 business
+   good
+1 0.784
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           360       13 business
+   good
+1 0.786
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           317       13 business
+   good
+1 0.786
+Successful Steps: 9/9
+[1] "\n###########################################################\n"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 7
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           317       12 business
+   good
+1 0.764
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           317       11 business
+  good
+1 0.84
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           317       10 business
+  good
+1 0.86
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           317        9 business
+   good
+1 0.846
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           317        8 business
+   good
+1 0.864
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           317        7 business
+   good
+1 0.874
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+2  23 male   2     own          little         moderate           317        6 business
+  good
+1 0.87
+Successful Steps: 7/7
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+3  23 male   2     own          little         moderate           276        8 business
+   good
+1 0.864
+
+Number of Mutated Features: 2.000000
+[1] "\nMutated Features:"
+[1] "credit.amount" "duration"     
+[1] "Already at min/max."
+[1] "Full resilience."
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 2
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+3  23 male   2     own          little         moderate           276        7 business
+   good
+1 0.874
+  age  sex job housing saving.accounts checking.account credit.amount duration  purpose
+3  23 male   2     own          little         moderate           276        6 business
+  good
+1 0.87
+Successful Steps: 2/2
+[1] "\n###########################################################\n"
+[1] "\nRESULTS: "
+An object of class "monoTestResults"
+Slot "resilience_total":
+[1] 1
+
+Slot "resilience_cf":
+[1] 1 1 1
+
+Slot "resilience_ft":
+             age              sex              job          housing  saving.accounts checking.account    credit.amount 
+             NaN              NaN              NaN              NaN              NaN              NaN                1 
+        duration          purpose 
+               1              NaN 
+
+Slot "n_cf":
+[1] 10
+
+Slot "n_cf_invalid":
+[1] 7
+
+Slot "n_ft_mutated_total":
+[1] 6
+
+Slot "n_ft_mutated":
+             age              sex              job          housing  saving.accounts checking.account    credit.amount 
+               0                0                0                0                0                0                3 
+        duration          purpose 
+               3                0 
+
+Slot "n_samples_tested":
+[1] 1
+
+Slot "n_samples_rejected":
+[1] 0
+
+Slot "n_succ_steps_ft":
+             age              sex              job          housing  saving.accounts checking.account    credit.amount 
+               0                0                0                0                0                0               19 
+        duration          purpose 
+               9                0 
+
+Slot "n_max_steps_ft":
+             age              sex              job          housing  saving.accounts checking.account    credit.amount 
+               0                0                0                0                0                0               19 
+        duration          purpose 
+               9                0 
+
+Execution Time: 48.521356
