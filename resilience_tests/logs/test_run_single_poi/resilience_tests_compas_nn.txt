@@ -1,0 +1,260 @@
+[1] 961
+[1] "\nMIN FEAT VALUES:"
+$sex
+[1] "Female"
+
+$age
+[1] 19
+
+$age_cat
+[1] "25_45"
+
+$race
+[1] "African_American"
+
+$decile_score
+[1] 1
+
+$priors_count
+[1] 0
+
+$days_b_screening_arrest
+[1] -106
+
+$c_charge_degree
+[1] "F"
+
+$is_recid
+[1] 0
+
+$score_text
+[1] "High"
+
+$two_year_recid
+[1] "no"
+
+[1] "\nMAX FEAT VALUES:"
+$sex
+[1] "Male"
+
+$age
+[1] 83
+
+$age_cat
+[1] "Less_than_25"
+
+$race
+[1] "Other"
+
+$decile_score
+[1] 10
+
+$priors_count
+[1] 36
+
+$days_b_screening_arrest
+[1] 812
+
+$c_charge_degree
+[1] "M"
+
+$is_recid
+[1] 1
+
+$score_text
+[1] "Medium"
+
+$two_year_recid
+[1] "yes"
+
+# weights:  70
+initial  value 629.425673 
+iter  10 value 97.124207
+iter  20 value 81.947924
+iter  30 value 74.354344
+iter  40 value 68.371662
+iter  50 value 64.372958
+iter  60 value 58.446706
+iter  70 value 53.976324
+iter  80 value 51.429668
+iter  90 value 49.917295
+iter 100 value 47.457112
+final  value 47.457112 
+stopped after 100 iterations
+     sex age         age_cat     race decile_score priors_count days_b_screening_arrest c_charge_degree
+801 Male  83 Greater_than_45 Hispanic            1            0                       0               M
+    is_recid score_text two_year_recid
+801        0        Low             no
+  no
+1  1
+     sex age         age_cat      race decile_score priors_count days_b_screening_arrest c_charge_degree
+214 Male  56 Greater_than_45 Caucasian            1            7                      -1               F
+    is_recid score_text two_year_recid
+214        1        Low            yes
+          no
+1 0.01796701
+[1] "\nPoint of Interest: "
+     sex age         age_cat      race decile_score priors_count days_b_screening_arrest c_charge_degree
+214 Male  56 Greater_than_45 Caucasian            1            7                      -1               F
+    is_recid score_text two_year_recid
+214        1        Low            yes
+[1] "Counterfactuals: "
+    sex age         age_cat      race decile_score priors_count days_b_screening_arrest c_charge_degree
+1  Male  56 Greater_than_45 Caucasian            1            7                      -1               F
+2  Male  56 Greater_than_45 Caucasian            1            0                    -254               F
+3  Male  56 Greater_than_45 Caucasian            1            0                      -1               F
+4  Male  56 Greater_than_45 Caucasian            1            7                     812               F
+5  Male  56 Greater_than_45 Caucasian            1            7                     796               F
+6  Male  56 Greater_than_45 Caucasian            1            7                     791               F
+7  Male  56 Greater_than_45 Caucasian            1           36                      -1               F
+8  Male  56 Greater_than_45 Caucasian            1            7                     643               F
+9  Male  56 Greater_than_45 Caucasian            1           35                      -1               F
+10 Male  56 Greater_than_45 Caucasian            1           33                      -1               F
+11 Male  56 Greater_than_45 Caucasian            1           30                      -1               F
+12 Male  56 Greater_than_45 Caucasian            1           29                      -1               F
+13 Male  56 Greater_than_45 Caucasian            1           22                      -1               F
+14 Male  56 Greater_than_45 Caucasian            1           19                      -1               F
+15 Male  56 Greater_than_45 Caucasian            1           18                      -1               F
+16 Male  56 Greater_than_45 Caucasian            1            7                      89               F
+17 Male  56 Greater_than_45 Caucasian            1            7                      56               F
+18 Male  56 Greater_than_45 Caucasian            1            7                      20               F
+20 Male  56 Greater_than_45 Caucasian            1            7                      17               M
+21 Male  56 Greater_than_45 Caucasian            1            6                      -1               F
+22 Male  56 Greater_than_45 Caucasian            1            5                      -1               F
+23 Male  56 Greater_than_45 Caucasian            1            7                      -1               M
+24 Male  56 Greater_than_45 Caucasian            1            0                      -1               F
+   is_recid score_text dist.target dist.x.interest nr.changed  dist.train       pred
+1         0        Low   0.0000000     0.100000000          1 0.016807910 1.00000000
+2         1        Low   0.0000000     0.041953341          2 0.030282452 1.00000000
+3         0        Low   0.0000000     0.119444444          2 0.000000000 1.00000000
+4         1        Low   0.4224722     0.072330961          1 0.087443955 0.07752779
+5         1        Low   0.4226037     0.070907473          1 0.086020468 0.07739633
+6         1        Low   0.4226556     0.070462633          1 0.085575628 0.07734442
+7         1        Low   0.4270271     0.080555556          1 0.066898553 0.07297292
+8         1        Low   0.4352487     0.057295374          1 0.072408368 0.06475126
+9         1        Low   0.4423321     0.077777778          1 0.064120775 0.05766790
+10        1        Low   0.4599518     0.072222222          1 0.058565220 0.04004822
+11        1        Low   0.4717779     0.063888889          1 0.050231886 0.02822208
+12        1        Low   0.4739335     0.061111111          1 0.047454109 0.02606647
+13        1        Low   0.4802854     0.041666667          1 0.028009664 0.01971460
+14        1        Low   0.4811188     0.033333333          1 0.019676331 0.01888116
+15        1        Low   0.4813006     0.030555556          1 0.016898553 0.01869944
+16        1        Low   0.4813580     0.008007117          1 0.023120112 0.01864199
+17        1        Low   0.4817708     0.005071174          1 0.020184169 0.01822918
+18        1        Low   0.4819731     0.001868327          1 0.016981322 0.01802694
+20        1        Low   0.4820426     0.101601423          2 0.009934757 0.01795737
+21        1        Low   0.4820501     0.002777778          1 0.012335217 0.01794994
+22        1        Low   0.4820641     0.005555556          1 0.009557439 0.01793589
+23        1        Low   0.4820721     0.100000000          1 0.008333333 0.01792791
+24        1        Low   0.5000000     0.019444444          1 0.007951492 0.00000000
+[1] "\nOriginal CF:"
+   sex age         age_cat      race decile_score priors_count days_b_screening_arrest c_charge_degree
+1 Male  56 Greater_than_45 Caucasian            1            7                      -1               F
+  is_recid score_text
+1        0        Low
+  no
+1  1
+
+Number of Mutated Features: 1
+[1] "\nMutated Features:"
+[1] "is_recid"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nOriginal CF:"
+   sex age         age_cat      race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  56 Greater_than_45 Caucasian            1            0                    -254               F
+  is_recid score_text
+2        1        Low
+  no
+1  1
+
+Number of Mutated Features: 2
+[1] "\nMutated Features:"
+[1] "priors_count"            "days_b_screening_arrest"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nOriginal CF:"
+   sex age         age_cat      race decile_score priors_count days_b_screening_arrest c_charge_degree
+3 Male  56 Greater_than_45 Caucasian            1            0                      -1               F
+  is_recid score_text
+3        0        Low
+  no
+1  1
+
+Number of Mutated Features: 2
+[1] "\nMutated Features:"
+[1] "priors_count" "is_recid"    
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nRESULTS: "
+An object of class "resilienceTestResults"
+Slot "resilience_df":
+  sex age age_cat race decile_score priors_count days_b_screening_arrest c_charge_degree is_recid score_text
+1 NaN NaN     NaN  NaN          NaN          NaN                     NaN             NaN        1        NaN
+2 NaN NaN     NaN  NaN          NaN            1                       1             NaN      NaN        NaN
+3 NaN NaN     NaN  NaN          NaN            1                     NaN             NaN        1        NaN
+
+Slot "resilience_feat":
+                    sex                     age                 age_cat                    race 
+                    NaN                     NaN                     NaN                     NaN 
+           decile_score            priors_count days_b_screening_arrest         c_charge_degree 
+                    NaN                       1                       1                     NaN 
+               is_recid              score_text 
+                      1                     NaN 
+
+Slot "resilience_feat_avg":
+[1] 1
+
+Slot "resilience_feat_max":
+[1] 1
+
+Slot "resilience_feat_min":
+[1] 1
+
+Slot "resilience_cf":
+1 2 3 
+1 1 1 
+
+Slot "resilience_cf_avg":
+[1] 1
+
+Slot "resilience_cf_max":
+[1] 1
+
+Slot "resilience_cf_min":
+[1] 1
+
+Slot "feat_mut_frequency":
+                    sex                     age                 age_cat                    race 
+                      0                       0                       0                       0 
+           decile_score            priors_count days_b_screening_arrest         c_charge_degree 
+                      0                       2                       1                       0 
+               is_recid              score_text 
+                      2                       0 
+
+Slot "feat_mut_total":
+[1] 5
+
+Slot "cf_total_count":
+[1] 23
+
+Slot "cf_valid_count":
+[1] 3
+
+Slot "cf_tested_count":
+[1] 3
+
+Slot "cf_invalid_count":
+[1] 20
+
+Slot "points_of_interest_tested":
+[1] 1
+
+Slot "points_of_interest_rejected":
+[1] 1
+
+Execution Time: 45.574650

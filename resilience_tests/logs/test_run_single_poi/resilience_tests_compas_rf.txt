@@ -1,0 +1,301 @@
+[1] 961
+[1] "\nMIN FEAT VALUES:"
+$sex
+[1] "Female"
+
+$age
+[1] 19
+
+$age_cat
+[1] "25_45"
+
+$race
+[1] "African_American"
+
+$decile_score
+[1] 1
+
+$priors_count
+[1] 0
+
+$days_b_screening_arrest
+[1] -106
+
+$c_charge_degree
+[1] "F"
+
+$is_recid
+[1] 0
+
+$score_text
+[1] "High"
+
+$two_year_recid
+[1] "no"
+
+[1] "\nMAX FEAT VALUES:"
+$sex
+[1] "Male"
+
+$age
+[1] 83
+
+$age_cat
+[1] "Less_than_25"
+
+$race
+[1] "Other"
+
+$decile_score
+[1] 10
+
+$priors_count
+[1] 36
+
+$days_b_screening_arrest
+[1] 812
+
+$c_charge_degree
+[1] "M"
+
+$is_recid
+[1] 1
+
+$score_text
+[1] "Medium"
+
+$two_year_recid
+[1] "yes"
+
+     sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+298 Male  34   25_45 African_American            4            5                      -1               M
+    is_recid score_text two_year_recid
+298        0        Low             no
+    no
+1 0.98
+    sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+28 Male  27   25_45 African_American            3            8                      -1               F
+   is_recid score_text two_year_recid
+28        1        Low            yes
+     no
+1 0.304
+[1] "\nPoint of Interest: "
+    sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+28 Male  27   25_45 African_American            3            8                      -1               F
+   is_recid score_text two_year_recid
+28        1        Low            yes
+[1] "Counterfactuals: "
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+1 Male  27   25_45 African_American            4            8                      -1               F
+2 Male  27   25_45 African_American            3           11                      -1               F
+3 Male  27   25_45 African_American            3            0                      -1               F
+4 Male  27   25_45 African_American            3            0                      -1               M
+6 Male  27   25_45 African_American            3            7                      -1               F
+  is_recid score_text dist.target dist.x.interest nr.changed  dist.train  pred
+1        1        Low       0.000     0.011111111          1 0.005902778 0.502
+2        0        Low       0.000     0.108333333          2 0.004429246 0.990
+3        0        Low       0.000     0.122222222          2 0.003213968 0.998
+4        1        Low       0.170     0.122222222          2 0.003125000 0.330
+6        1        Low       0.206     0.002777778          1 0.008296263 0.294
+[1] "\nOriginal CF:"
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+1 Male  27   25_45 African_American            4            8                      -1               F
+  is_recid score_text
+1        1        Low
+     no
+1 0.502
+
+Number of Mutated Features: 1
+[1] "\nMutated Features:"
+[1] "decile_score"
+
+Mutated Feature: decile_score
+[1] "\nMAX_STEPS:"
+[1] 6
+
+Increment: 1.000000
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+1 Male  27   25_45 African_American            5            8                      -1               F
+  is_recid score_text
+1        1        Low
+     no
+1 0.326
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/6
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           11                      -1               F
+  is_recid score_text
+2        0        Low
+    no
+1 0.99
+
+Number of Mutated Features: 2
+[1] "\nMutated Features:"
+[1] "priors_count" "is_recid"    
+
+Mutated Feature: priors_count
+[1] "\nMAX_STEPS:"
+[1] 12
+
+Increment: 2.000000
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           13                      -1               F
+  is_recid score_text
+2        0        Low
+     no
+1 0.984
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           15                      -1               F
+  is_recid score_text
+2        0        Low
+     no
+1 0.984
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           17                      -1               F
+  is_recid score_text
+2        0        Low
+     no
+1 0.984
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           19                      -1               F
+  is_recid score_text
+2        0        Low
+    no
+1 0.98
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           21                      -1               F
+  is_recid score_text
+2        0        Low
+    no
+1 0.98
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           23                      -1               F
+  is_recid score_text
+2        0        Low
+     no
+1 0.978
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           25                      -1               F
+  is_recid score_text
+2        0        Low
+     no
+1 0.978
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           27                      -1               F
+  is_recid score_text
+2        0        Low
+     no
+1 0.978
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           29                      -1               F
+  is_recid score_text
+2        0        Low
+     no
+1 0.978
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           31                      -1               F
+  is_recid score_text
+2        0        Low
+     no
+1 0.978
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           33                      -1               F
+  is_recid score_text
+2        0        Low
+     no
+1 0.978
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+2 Male  27   25_45 African_American            3           35                      -1               F
+  is_recid score_text
+2        0        Low
+     no
+1 0.978
+Successful Steps: 12/12
+[1] "\n###########################################################\n"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nOriginal CF:"
+   sex age age_cat             race decile_score priors_count days_b_screening_arrest c_charge_degree
+3 Male  27   25_45 African_American            3            0                      -1               F
+  is_recid score_text
+3        0        Low
+     no
+1 0.998
+
+Number of Mutated Features: 2
+[1] "\nMutated Features:"
+[1] "priors_count" "is_recid"    
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nRESULTS: "
+An object of class "resilienceTestResults"
+Slot "resilience_df":
+  sex age age_cat race decile_score priors_count days_b_screening_arrest c_charge_degree is_recid score_text
+1 NaN NaN     NaN  NaN            0          NaN                     NaN             NaN      NaN        NaN
+2 NaN NaN     NaN  NaN          NaN            1                     NaN             NaN        1        NaN
+3 NaN NaN     NaN  NaN          NaN            1                     NaN             NaN        1        NaN
+
+Slot "resilience_feat":
+                    sex                     age                 age_cat                    race 
+                    NaN                     NaN                     NaN                     NaN 
+           decile_score            priors_count days_b_screening_arrest         c_charge_degree 
+                      0                       1                     NaN                     NaN 
+               is_recid              score_text 
+                      1                     NaN 
+
+Slot "resilience_feat_avg":
+[1] 0.6666667
+
+Slot "resilience_feat_max":
+[1] 1
+
+Slot "resilience_feat_min":
+[1] 0
+
+Slot "resilience_cf":
+1 2 3 
+0 1 1 
+
+Slot "resilience_cf_avg":
+[1] 0.6666667
+
+Slot "resilience_cf_max":
+[1] 1
+
+Slot "resilience_cf_min":
+[1] 0
+
+Slot "feat_mut_frequency":
+                    sex                     age                 age_cat                    race 
+                      0                       0                       0                       0 
+           decile_score            priors_count days_b_screening_arrest         c_charge_degree 
+                      1                       2                       0                       0 
+               is_recid              score_text 
+                      2                       0 
+
+Slot "feat_mut_total":
+[1] 5
+
+Slot "cf_total_count":
+[1] 5
+
+Slot "cf_valid_count":
+[1] 3
+
+Slot "cf_tested_count":
+[1] 3
+
+Slot "cf_invalid_count":
+[1] 2
+
+Slot "points_of_interest_tested":
+[1] 1
+
+Slot "points_of_interest_rejected":
+[1] 1
+
+Execution Time: 1.275647

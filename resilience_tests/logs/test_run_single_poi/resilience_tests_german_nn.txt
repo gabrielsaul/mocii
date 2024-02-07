@@ -1,0 +1,191 @@
+[1] 522
+[1] "\nMIN FEAT VALUES:"
+$age
+[1] 19
+
+$sex
+[1] "female"
+
+$job
+[1] 0
+
+$housing
+[1] "free"
+
+$saving.accounts
+[1] "little"
+
+$checking.account
+[1] "little"
+
+$credit.amount
+[1] 276
+
+$duration
+[1] 6
+
+$purpose
+[1] "business"
+
+$risk
+[1] "bad"
+
+[1] "\nMAX FEAT VALUES:"
+$age
+[1] 75
+
+$sex
+[1] "male"
+
+$job
+[1] 3
+
+$housing
+[1] "rent"
+
+$saving.accounts
+[1] "rich"
+
+$checking.account
+[1] "rich"
+
+$credit.amount
+[1] 18424
+
+$duration
+[1] 72
+
+$purpose
+[1] "vacation/others"
+
+$risk
+[1] "good"
+
+# weights:  79
+initial  value 390.212796 
+iter  10 value 313.870167
+iter  20 value 298.697569
+iter  30 value 275.000013
+iter  40 value 259.020815
+iter  50 value 248.970445
+iter  60 value 246.311416
+iter  70 value 246.297260
+final  value 246.297154 
+converged
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose risk
+839  63 male   2     own          little           little          2957       24     car good
+       good
+1 0.8988542
+    age    sex job housing saving.accounts checking.account credit.amount duration purpose risk
+382  38 female   3    free          little         moderate         12976       18     car  bad
+       good
+1 0.7654836
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose risk
+826  30 male   2     own          little           little          1602       21     car good
+       good
+1 0.3887897
+[1] "\nPoint of Interest: "
+    age  sex job housing saving.accounts checking.account credit.amount duration purpose risk
+826  30 male   2     own          little           little          1602       21     car good
+[1] "Counterfactuals: "
+  age  sex job housing saving.accounts checking.account credit.amount duration purpose dist.target
+1  30 male   2     own          little           little          1602        7     car   0.0000000
+3  30 male   2     own          little           little          1638       21     car   0.1112103
+4  30 male   2     own          little           little          1708       21     car   0.1112103
+5  30 male   2     own          little           little          1602       20     car   0.1112103
+6  30 male   2     own          little           little          2005       21     car   0.1112103
+7  30 male   2     own          little           little          1602       19     car   0.1112103
+8  30 male   2     own          little           little          3808       21     car   0.1112103
+9  30 male   2     own          little         moderate          1602       21     car   0.1112103
+  dist.x.interest nr.changed  dist.train      pred
+1    0.0235690236          1 0.011595085 0.7654836
+3    0.0002204100          1 0.018108682 0.3887897
+4    0.0006489849          1 0.017680107 0.3887897
+5    0.0016835017          1 0.016645590 0.3887897
+6    0.0024673671          1 0.015861725 0.3887897
+7    0.0033670034          1 0.014962089 0.3887897
+8    0.0135062327          1 0.013212233 0.3887897
+9    0.1111111111          1 0.008393389 0.3887897
+[1] "\nOriginal CF:"
+  age  sex job housing saving.accounts checking.account credit.amount duration purpose
+1  30 male   2     own          little           little          1602        7     car
+       good
+1 0.7654836
+
+Number of Mutated Features: 1
+[1] "\nMutated Features:"
+[1] "duration"
+
+Mutated Feature: duration
+[1] "\nMAX_STEPS:"
+[1] 1
+
+Increment: -1.000000
+  age  sex job housing saving.accounts checking.account credit.amount duration purpose
+1  30 male   2     own          little           little          1602        6     car
+       good
+1 0.7654836
+Successful Steps: 1/1
+[1] "\n###########################################################\n"
+[1] "\nRESULTS: "
+An object of class "resilienceTestResults"
+Slot "resilience_df":
+  age sex job housing saving.accounts checking.account credit.amount duration purpose
+1 NaN NaN NaN     NaN             NaN              NaN           NaN        1     NaN
+
+Slot "resilience_feat":
+             age              sex              job          housing  saving.accounts checking.account 
+             NaN              NaN              NaN              NaN              NaN              NaN 
+   credit.amount         duration          purpose 
+             NaN                1              NaN 
+
+Slot "resilience_feat_avg":
+[1] 1
+
+Slot "resilience_feat_max":
+[1] 1
+
+Slot "resilience_feat_min":
+[1] 1
+
+Slot "resilience_cf":
+1 
+1 
+
+Slot "resilience_cf_avg":
+[1] 1
+
+Slot "resilience_cf_max":
+[1] 1
+
+Slot "resilience_cf_min":
+[1] 1
+
+Slot "feat_mut_frequency":
+             age              sex              job          housing  saving.accounts checking.account 
+               0                0                0                0                0                0 
+   credit.amount         duration          purpose 
+               0                1                0 
+
+Slot "feat_mut_total":
+[1] 1
+
+Slot "cf_total_count":
+[1] 8
+
+Slot "cf_valid_count":
+[1] 1
+
+Slot "cf_tested_count":
+[1] 1
+
+Slot "cf_invalid_count":
+[1] 7
+
+Slot "points_of_interest_tested":
+[1] 1
+
+Slot "points_of_interest_rejected":
+[1] 2
+
+Execution Time: 37.518698

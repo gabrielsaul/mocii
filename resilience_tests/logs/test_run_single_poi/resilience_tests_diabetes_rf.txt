@@ -1,0 +1,328 @@
+[1] 392
+[1] "\nMIN FEAT VALUES:"
+$pregnancies
+[1] 0
+
+$glucose
+[1] 56
+
+$bloodpressure
+[1] 24
+
+$skinthickness
+[1] 7
+
+$insulin
+[1] 14
+
+$bmi
+[1] 18.2
+
+$diabetespedigreefunction
+[1] 0.085
+
+$age
+[1] 21
+
+$outcome
+[1] "neg"
+
+[1] "\nMAX FEAT VALUES:"
+$pregnancies
+[1] 17
+
+$glucose
+[1] 198
+
+$bloodpressure
+[1] 110
+
+$skinthickness
+[1] 63
+
+$insulin
+[1] 846
+
+$bmi
+[1] 67.1
+
+$diabetespedigreefunction
+[1] 2.42
+
+$age
+[1] 81
+
+$outcome
+[1] "pos"
+
+    pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age outcome
+330           6     105            70            32      68 30.8                    0.122  37     neg
+   neg
+1 0.92
+    pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age outcome
+453           0      91            68            32     210 39.9                    0.381  25     neg
+    neg
+1 0.786
+    pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age outcome
+699           4     127            88            11     155 34.5                    0.598  28     neg
+    neg
+1 0.674
+    pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age outcome
+555           1      84            64            23     115 36.9                    0.471  28     neg
+    neg
+1 0.794
+    pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age outcome
+293           2     128            78            37     182 43.3                    1.224  31     pos
+    neg
+1 0.338
+[1] "\nPoint of Interest: "
+    pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age outcome
+293           2     128            78            37     182 43.3                    1.224  31     pos
+[1] "Counterfactuals: "
+   pregnancies glucose bloodpressure skinthickness insulin      bmi diabetespedigreefunction age dist.target
+1            2     128            78            37     182 43.30000                0.1483919  31       0.000
+2            2     128            78            37     198 43.30000                0.2537747  31       0.000
+3            2     128            78            37     195 43.30000                0.2275675  31       0.000
+4            2     128            78            37     556 43.30000                1.2240000  31       0.016
+5            2     128            78            12     182 43.30000                1.2240000  31       0.026
+6            2     128            78            37      32 43.30000                1.2240000  31       0.058
+7            2     128            78            37     262 43.30000                1.2240000  31       0.110
+8            2     128            78            37     182 40.28557                1.2240000  31       0.122
+9            2     128            78            37     182 43.30000                0.4986857  31       0.122
+10           2     128            78            37     194 43.30000                1.2240000  31       0.144
+11           2     128            78            37     182 43.30000                1.1632439  31       0.152
+12           2     128            78            37     182 43.30000                0.5974500  31       0.152
+13           2     128            78            37     182 43.30000                0.5770491  31       0.152
+15           2     128            78            44     182 43.30000                1.2240000  31       0.166
+16           2     128            87            45     182 43.30000                1.2240000  31       0.216
+17           2     128            78            37     182 43.30000                0.9244925  31       0.226
+18           2     128            78            37     182 43.30000                0.9480830  31       0.230
+   dist.x.interest nr.changed dist.train  pred
+1      0.057580732          1 0.03845260 0.536
+2      0.054343102          2 0.03936644 0.506
+3      0.055295339          2 0.03751276 0.510
+4      0.056189904          1 0.10931755 0.484
+5      0.055803571          1 0.09932613 0.474
+6      0.022536058          1 0.07689332 0.442
+7      0.012019231          1 0.06999358 0.390
+8      0.007705600          1 0.06828627 0.378
+9      0.038828386          1 0.05007346 0.378
+10     0.001802885          1 0.06758974 0.356
+11     0.003252469          1 0.06614015 0.348
+12     0.033541222          1 0.05536063 0.348
+13     0.034633345          1 0.05426850 0.348
+15     0.015625000          1 0.06433490 0.334
+16     0.030938538          2 0.06191159 0.284
+17     0.016033592          1 0.05335903 0.274
+18     0.014770719          1 0.05462190 0.270
+[1] "\nOriginal CF:"
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1           2     128            78            37     182 43.3                0.1483919  31
+    neg
+1 0.536
+
+Number of Mutated Features: 1
+[1] "\nMutated Features:"
+[1] "diabetespedigreefunction"
+
+Mutated Feature: diabetespedigreefunction
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: -0.006339
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1           2     128            78            37     182 43.3                0.1420527  31
+    neg
+1 0.538
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1           2     128            78            37     182 43.3                0.1357135  31
+    neg
+1 0.556
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1           2     128            78            37     182 43.3                0.1293744  31
+    neg
+1 0.552
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1           2     128            78            37     182 43.3                0.1230352  31
+    neg
+1 0.552
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1           2     128            78            37     182 43.3                 0.116696  31
+    neg
+1 0.552
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1           2     128            78            37     182 43.3                0.1103568  31
+    neg
+1 0.552
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1           2     128            78            37     182 43.3                0.1040176  31
+    neg
+1 0.554
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1           2     128            78            37     182 43.3               0.09767839  31
+    neg
+1 0.554
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1           2     128            78            37     182 43.3               0.09133919  31
+    neg
+1 0.554
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1           2     128            78            37     182 43.3                    0.085  31
+    neg
+1 0.554
+Successful Steps: 10/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+2           2     128            78            37     198 43.3                0.2537747  31
+    neg
+1 0.506
+
+Number of Mutated Features: 2
+[1] "\nMutated Features:"
+[1] "insulin"                  "diabetespedigreefunction"
+
+Mutated Feature: insulin
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 65.000000
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+2           2     128            78            37     263 43.3                0.2537747  31
+    neg
+1 0.508
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+2           2     128            78            37     328 43.3                0.2537747  31
+    neg
+1 0.496
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 1/9
+[1] "\n###########################################################\n"
+
+Mutated Feature: diabetespedigreefunction
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: -0.016877
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+2           2     128            78            37     328 43.3                0.2368972  31
+    neg
+1 0.494
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/10
+[1] "\n###########################################################\n"
+[1] "\nOriginal CF:"
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+3           2     128            78            37     195 43.3                0.2275675  31
+   neg
+1 0.51
+
+Number of Mutated Features: 2
+[1] "\nMutated Features:"
+[1] "insulin"                  "diabetespedigreefunction"
+
+Mutated Feature: insulin
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: 65.000000
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+3           2     128            78            37     260 43.3                0.2275675  31
+    neg
+1 0.504
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+3           2     128            78            37     325 43.3                0.2275675  31
+    neg
+1 0.504
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+3           2     128            78            37     390 43.3                0.2275675  31
+  neg
+1 0.5
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+3           2     128            78            37     455 43.3                0.2275675  31
+   neg
+1 0.51
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+3           2     128            78            37     520 43.3                0.2275675  31
+    neg
+1 0.494
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 4/10
+[1] "\n###########################################################\n"
+
+Mutated Feature: diabetespedigreefunction
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: -0.014257
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+3           2     128            78            37     520 43.3                0.2133107  31
+    neg
+1 0.496
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/9
+[1] "\n###########################################################\n"
+[1] "\nRESULTS: "
+An object of class "resilienceTestResults"
+Slot "resilience_df":
+  pregnancies glucose bloodpressure skinthickness   insulin bmi diabetespedigreefunction age
+1         NaN     NaN           NaN           NaN       NaN NaN                        1 NaN
+2         NaN     NaN           NaN           NaN 0.1111111 NaN                        0 NaN
+3         NaN     NaN           NaN           NaN 0.4000000 NaN                        0 NaN
+
+Slot "resilience_feat":
+             pregnancies                  glucose            bloodpressure            skinthickness 
+                     NaN                      NaN                      NaN                      NaN 
+                 insulin                      bmi diabetespedigreefunction                      age 
+               0.2555556                      NaN                0.3333333                      NaN 
+
+Slot "resilience_feat_avg":
+[1] 0.2944444
+
+Slot "resilience_feat_max":
+[1] 0.3333333
+
+Slot "resilience_feat_min":
+[1] 0.2555556
+
+Slot "resilience_cf":
+         1          2          3 
+1.00000000 0.05555556 0.20000000 
+
+Slot "resilience_cf_avg":
+[1] 0.4185185
+
+Slot "resilience_cf_max":
+[1] 1
+
+Slot "resilience_cf_min":
+[1] 0.05555556
+
+Slot "feat_mut_frequency":
+             pregnancies                  glucose            bloodpressure            skinthickness 
+                       0                        0                        0                        0 
+                 insulin                      bmi diabetespedigreefunction                      age 
+                       2                        0                        3                        0 
+
+Slot "feat_mut_total":
+[1] 5
+
+Slot "cf_total_count":
+[1] 17
+
+Slot "cf_valid_count":
+[1] 3
+
+Slot "cf_tested_count":
+[1] 3
+
+Slot "cf_invalid_count":
+[1] 14
+
+Slot "points_of_interest_tested":
+[1] 1
+
+Slot "points_of_interest_rejected":
+[1] 4
+
+Execution Time: 47.898544
