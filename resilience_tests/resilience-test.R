@@ -141,6 +141,10 @@ runResilienceTests <- function(data,
   
   # Count of unusable data samples.
   points_of_interest_rejected = 0
+  poi_pred_positive_class = 0
+  poi_returned_no_cfs = 0
+  poi_returned_no_valid_cfs = 0
+  poi_returned_fully_categ_cfs = 0
   
   # Minimum & maximum values for each numeric feature in the test data.
   min_feat_values = apply(data, 2, min)
@@ -188,7 +192,11 @@ runResilienceTests <- function(data,
                                                cf_test_count,
                                                cf_inv_count,
                                                points_of_interest_tested,
-                                               points_of_interest_rejected))
+                                               points_of_interest_rejected,
+                                               poi_pred_positive_class,
+                                               poi_returned_no_cfs,
+                                               poi_returned_no_valid_cfs,
+                                               poi_returned_fully_categ_cfs))
         }
         
         print("Retraining...")
@@ -233,8 +241,9 @@ runResilienceTests <- function(data,
         is_usable = TRUE
       }
       else {
-        # Data point unusable.
+        # Predicted positive class: Data point unusable.
         points_of_interest_rejected = points_of_interest_rejected + 1
+        poi_pred_positive_class = poi_pred_positive_class + 1
       }
     }
     
@@ -255,7 +264,10 @@ runResilienceTests <- function(data,
                                                p.rec.use.orig = best.params$p.rec.use.orig,
                                                fixed.features = naf)})
     
+    # No counterfactuals returned.
     if (is.null(data.cf)) {
+      points_of_interest_rejected = points_of_interest_rejected + 1
+      poi_returned_no_cfs = poi_returned_no_cfs + 1
       print("###############################")
       print("# No counterfactuals returned #")
       print("###############################")
@@ -289,6 +301,9 @@ runResilienceTests <- function(data,
       # Verification that at least one counterfactual has been tested.
       valid_cf_tested = FALSE
       
+      # Verification that a fully categorical counterfactual has been returned.
+      fully_categ_cf = FALSE
+      
       # For each valid counterfactual...
       j = 0
       while (j < nrow(valid_cfs)) {
@@ -310,16 +325,30 @@ runResilienceTests <- function(data,
                                          max_feat_values,
                                          min_feat_values,
                                          data_feat_types)
+        
+        # CF has mutated numerical features: Resilience testable. 
         if (!is.null(cf_resilience_df)) {
           valid_cf_tested = TRUE
           cf_test_count = cf_test_count + 1
           resilience_df[cf_test_count,] = cf_resilience_df
+        }
+        else {
+          # Rejected: Only mutated categorical features.
+          fully_categ_cf = TRUE
         }
       }
       
       # If at least one valid counterfactual underwent a resilience test...
       if (valid_cf_tested) {
         points_of_interest_tested = points_of_interest_tested + 1
+      }
+      else if (fully_categ_cf) {
+        points_of_interest_rejected = points_of_interest_rejected + 1
+        poi_returned_fully_categ_cfs = poi_returned_fully_categ_cfs + 1
+      }
+      else if (j == 0) {
+        points_of_interest_rejected = points_of_interest_rejected + 1
+        poi_returned_no_valid_cfs = poi_returned_no_valid_cfs + 1
       }
     }
   }
@@ -330,7 +359,11 @@ runResilienceTests <- function(data,
                                        cf_test_count,
                                        cf_inv_count,
                                        points_of_interest_tested,
-                                       points_of_interest_rejected))
+                                       points_of_interest_rejected,
+                                       poi_pred_positive_class,
+                                       poi_returned_no_cfs,
+                                       poi_returned_no_valid_cfs,
+                                       poi_returned_fully_categ_cfs))
 }
 
 # Test datasets x ML alg types.
@@ -351,7 +384,8 @@ for (ds in DATASETS) {
                                  ds@nonactionable,
                                  ml_alg@id,
                                  ml_alg@target_range,
-                                 n_points_of_interest = 10)
+                                 n_points_of_interest = 1,
+                                 TD_PADDING_MULTIPLIER = 5)
     end_time = Sys.time()
     print("\nRESULTS: ")
     print(results)

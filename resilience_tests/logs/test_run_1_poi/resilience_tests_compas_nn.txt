@@ -1,0 +1,225 @@
+[1] 961
+[1] "\nMIN FEAT VALUES:"
+$sex
+[1] "Female"
+
+$age
+[1] 19
+
+$age_cat
+[1] "25_45"
+
+$race
+[1] "African_American"
+
+$decile_score
+[1] 1
+
+$priors_count
+[1] 0
+
+$days_b_screening_arrest
+[1] -106
+
+$c_charge_degree
+[1] "F"
+
+$is_recid
+[1] 0
+
+$score_text
+[1] "High"
+
+$two_year_recid
+[1] "no"
+
+[1] "\nMAX FEAT VALUES:"
+$sex
+[1] "Male"
+
+$age
+[1] 83
+
+$age_cat
+[1] "Less_than_25"
+
+$race
+[1] "Other"
+
+$decile_score
+[1] 10
+
+$priors_count
+[1] 36
+
+$days_b_screening_arrest
+[1] 812
+
+$c_charge_degree
+[1] "M"
+
+$is_recid
+[1] 1
+
+$score_text
+[1] "Medium"
+
+$two_year_recid
+[1] "yes"
+
+# weights:  70
+initial  value 659.554457 
+iter  10 value 98.504470
+iter  20 value 97.252376
+iter  30 value 94.748387
+iter  40 value 94.233352
+iter  50 value 93.822591
+iter  60 value 93.753204
+iter  70 value 93.652741
+iter  80 value 93.648153
+final  value 93.648134 
+converged
+     sex age age_cat      race decile_score priors_count days_b_screening_arrest c_charge_degree is_recid
+493 Male  29   25_45 Caucasian            9            6                     -43               F        1
+    score_text two_year_recid
+493       High            yes
+          no
+1 0.04835167
+[1] "\nPoint of Interest: "
+     sex age age_cat      race decile_score priors_count days_b_screening_arrest c_charge_degree is_recid
+493 Male  29   25_45 Caucasian            9            6                     -43               F        1
+    score_text two_year_recid
+493       High            yes
+[1] "Counterfactuals: "
+   sex age age_cat      race decile_score priors_count days_b_screening_arrest c_charge_degree is_recid
+1 Male  29   25_45 Caucasian            9            6                     -43               F        0
+2 Male  29   25_45 Caucasian            9            6                     -43               M        0
+4 Male  29   25_45 Caucasian            9            6                     -39               F        1
+5 Male  29   25_45 Caucasian            8            0                     -43               F        1
+6 Male  29   25_45 Caucasian           10            0                     -43               F        1
+7 Male  29   25_45 Caucasian            7            0                     -43               F        1
+  score_text dist.target dist.x.interest nr.changed  dist.train       pred
+1       High   0.0000000    0.1000000000          1 0.106514433 1.00000000
+2       High   0.0000000    0.2000000000          2 0.009728401 1.00000000
+4       High   0.4516483    0.0003558719          1 0.013356935 0.04835167
+5       High   0.4516483    0.0277777778          2 0.006861655 0.04835167
+6       High   0.4516483    0.0277777778          2 0.006861655 0.04835167
+7     Medium   0.4516483    0.1388888889          3 0.005902778 0.04835167
+[1] "\nOriginal CF:"
+   sex age age_cat      race decile_score priors_count days_b_screening_arrest c_charge_degree is_recid
+1 Male  29   25_45 Caucasian            9            6                     -43               F        0
+  score_text
+1       High
+  no
+1  1
+
+Number of Mutated Features: 1
+[1] "\nMutated Features:"
+[1] "is_recid"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nOriginal CF:"
+   sex age age_cat      race decile_score priors_count days_b_screening_arrest c_charge_degree is_recid
+2 Male  29   25_45 Caucasian            9            6                     -43               M        0
+  score_text
+2       High
+  no
+1  1
+
+Number of Mutated Features: 1
+[1] "\nMutated Features:"
+[1] "is_recid"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nRESULTS: "
+An object of class "resilienceTestResults"
+Slot "resilience_df":
+  sex age age_cat race decile_score priors_count days_b_screening_arrest c_charge_degree is_recid score_text
+1 NaN NaN     NaN  NaN          NaN          NaN                     NaN             NaN        1        NaN
+2 NaN NaN     NaN  NaN          NaN          NaN                     NaN             NaN        1        NaN
+
+Slot "resilience_feat":
+resilience_df_redacted 
+                     1 
+
+Slot "resilience_feat_perfect_pct":
+resilience_df_redacted 
+                     1 
+
+Slot "resilience_feat_sd":
+resilience_df_redacted 
+                     0 
+
+Slot "resilience_feat_var":
+resilience_df_redacted 
+                     0 
+
+Slot "resilience_feat_max":
+resilience_df_redacted 
+                     1 
+
+Slot "resilience_feat_min":
+resilience_df_redacted 
+                     1 
+
+Slot "resilience_cf":
+1 2 
+1 1 
+
+Slot "resilience_cf_perfect_pct":
+1 
+1 
+
+Slot "resilience_cf_avg":
+[1] 1
+
+Slot "resilience_cf_sd":
+[1] 0
+
+Slot "resilience_cf_var":
+[1] 0
+
+Slot "resilience_cf_max":
+[1] 1
+
+Slot "resilience_cf_min":
+[1] 1
+
+Slot "feat_mut_frequency":
+resilience_df_redacted 
+                     2 
+
+Slot "feat_mut_total":
+[1] 2
+
+Slot "cf_total_count":
+[1] 6
+
+Slot "cf_valid_count":
+[1] 2
+
+Slot "cf_tested_count":
+[1] 2
+
+Slot "cf_invalid_count":
+[1] 4
+
+Slot "points_of_interest_tested":
+[1] 1
+
+Slot "points_of_interest_rejected":
+[1] 0
+
+Slot "poi_pred_positive_class":
+[1] 0
+
+Slot "poi_returned_no_cfs":
+[1] 0
+
+Slot "poi_returned_no_valid_cfs":
+[1] 0
+
+Slot "poi_returned_fully_categ_cfs":
+[1] 0
+
+Execution Time: 44.753597

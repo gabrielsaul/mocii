@@ -1,0 +1,93 @@
+[1] 922
+[1] "\nMIN FEAT VALUES:"
+$age
+[1] 17
+
+$workclass
+[1] "Federal_gov"
+
+$fnlwgt
+[1] 21174
+
+$education
+[1] "10th"
+
+$education_num
+[1] 1
+
+$marital_status
+[1] "Divorced"
+
+$occupation
+[1] "Adm_clerical"
+
+$relationship
+[1] "Husband"
+
+$race
+[1] "Amer_Indian_Eskimo"
+
+$sex
+[1] "Female"
+
+$capital_gain
+[1] 0
+
+$capital_loss
+[1] 0
+
+$hours_per_week
+[1] 1
+
+$native_country
+[1] "Cambodia"
+
+$class
+[1] "GT50K"
+
+[1] "\nMAX FEAT VALUES:"
+$age
+[1] 90
+
+$workclass
+[1] "State_gov"
+
+$fnlwgt
+[1] 1033222
+
+$education
+[1] "Some_college"
+
+$education_num
+[1] 16
+
+$marital_status
+[1] "Widowed"
+
+$occupation
+[1] "Transport_moving"
+
+$relationship
+[1] "Wife"
+
+$race
+[1] "White"
+
+$sex
+[1] "Male"
+
+$capital_gain
+[1] 25236
+
+$capital_loss
+[1] 2415
+
+$hours_per_week
+[1] 99
+
+$native_country
+[1] "United_States"
+
+$class
+[1] "LTE50K"
+

@@ -1,7 +1,6 @@
 # Load necessary library packages.
 library("mlr")
 library("mlrCPO")
-library("janitor")
 
 # Load IML.
 devtools::load_all("../iml", export_all = FALSE)
@@ -44,11 +43,16 @@ resilienceTestResults <- setClass(
   "resilienceTestResults",
   slots = c(resilience_df = "data.frame",
             resilience_feat = "numeric",
-            resilience_feat_avg = "numeric",
+            resilience_feat_perfect_pct = "numeric",
+            resilience_feat_sd = "numeric",
+            resilience_feat_var = "numeric",
             resilience_feat_max = "numeric",
             resilience_feat_min = "numeric",
             resilience_cf = "numeric",
+            resilience_cf_perfect_pct = "numeric",
             resilience_cf_avg = "numeric",
+            resilience_cf_sd = "numeric",
+            resilience_cf_var = "numeric",
             resilience_cf_max = "numeric",
             resilience_cf_min = "numeric",
             feat_mut_frequency = "numeric",
@@ -58,8 +62,106 @@ resilienceTestResults <- setClass(
             cf_tested_count = "numeric",
             cf_invalid_count = "numeric",
             points_of_interest_tested = "numeric",
-            points_of_interest_rejected = "numeric")
+            points_of_interest_rejected = "numeric",
+            poi_pred_positive_class = "numeric",
+            poi_returned_no_cfs = "numeric",
+            poi_returned_no_valid_cfs = "numeric",
+            poi_returned_fully_categ_cfs = "numeric")
 )
+
+
+
+# Generate a results object for a resilience test.
+generateResilienceTestResults <- function(resilience_df,
+                                          cf_count,
+                                          cf_valid_count,
+                                          cf_test_count,
+                                          cf_inv_count,
+                                          points_of_interest_tested,
+                                          points_of_interest_rejected,
+                                          poi_pred_positive_class,
+                                          poi_returned_no_cfs,
+                                          poi_returned_no_valid_cfs,
+                                          poi_returned_fully_categ_cfs) {
+  
+  # Redacted resilience dataframe for feature resilience metrics.
+  resilience_df_redacted = resilience_df[,colSums(is.na(resilience_df)) < nrow(resilience_df)]
+  if (!is.data.frame(resilience_df_redacted)) {
+    resilience_df_redacted = as.data.frame(resilience_df_redacted)
+  }
+  
+  # Feature resilience scores (column-wise mean).
+  resilience_feat = apply(resilience_df_redacted, 2, function(x) mean(na.omit(x)))
+  
+  # Percentage of perfectly resilient feature scores.
+  f = function(x) {
+    x = na.omit(x)
+    t = table(x)
+    return(t[names(t) == 1] / length(x))
+  }
+  resilience_feat_perfect_pct = setNames(as.numeric(apply(resilience_df_redacted, 2, f)),
+                                         names(resilience_df_redacted))
+  
+  # Standard deviation & variance of feature resilience.
+  resilience_feat_sd = apply(resilience_df_redacted, 2, function(x) sd(na.omit(x)))
+  resilience_feat_var = apply(resilience_df_redacted, 2, function(x) var(na.omit(x)))
+  
+  # Maximum & minimum feature resilience.
+  resilience_feat_max = apply(resilience_df_redacted, 2, function(x) max(na.omit(x)))
+  resilience_feat_min = apply(resilience_df_redacted, 2, function(x) min(na.omit(x)))
+  
+  # Counterfactual resilience scores (row-wise mean).
+  resilience_cf = apply(resilience_df, 1, function(x) mean(na.omit(x)))
+  
+  # Percentage of perfectly resilience counterfactuals.
+  cf_tbl = table(resilience_cf)
+  resilience_cf_perfect_pct = cf_tbl[names(cf_tbl) == 1] / length(resilience_cf)
+  
+  # Average counterfactual resilience.
+  resilience_cf_avg = mean(resilience_cf)
+  
+  # Standard deviation & variance of counterfactual resilience.
+  resilience_cf_sd = sd(resilience_cf)
+  resilience_cf_var = var(resilience_cf)
+  
+  # Maximum & minimum counterfactual resilience.
+  resilience_cf_max = max(resilience_cf)
+  resilience_cf_min = min(resilience_cf)
+  
+  # Count of mutation instances per feature.
+  feat_mut_frequency = apply(resilience_df_redacted, 2, function(x) length(na.omit(x)))
+  
+  # Total count of mutation instances across all features.
+  feat_mut_total = sum(na.omit(feat_mut_frequency))
+  
+  
+  return(resilienceTestResults("resilience_df" = resilience_df,
+                               "resilience_feat" = resilience_feat,
+                               "resilience_feat_perfect_pct" = resilience_feat_perfect_pct,
+                               "resilience_feat_sd" = resilience_feat_sd,
+                               "resilience_feat_var" = resilience_feat_var,
+                               "resilience_feat_max" = resilience_feat_max,
+                               "resilience_feat_min" = resilience_feat_min,
+                               "resilience_cf" = resilience_cf,
+                               "resilience_cf_perfect_pct" = resilience_cf_perfect_pct,
+                               "resilience_cf_avg" = resilience_cf_avg,
+                               "resilience_cf_sd" = resilience_cf_sd,
+                               "resilience_cf_var" = resilience_cf_var,
+                               "resilience_cf_max" = resilience_cf_max,
+                               "resilience_cf_min" = resilience_cf_min,
+                               "feat_mut_frequency" = feat_mut_frequency,
+                               "feat_mut_total" = feat_mut_total,
+                               "cf_total_count" = cf_count, 
+                               "cf_valid_count" = cf_valid_count,
+                               "cf_tested_count" = cf_test_count,
+                               "cf_invalid_count" = cf_inv_count,
+                               "points_of_interest_tested" = points_of_interest_tested,
+                               "points_of_interest_rejected" = points_of_interest_rejected,
+                               "poi_pred_positive_class" = poi_pred_positive_class,
+                               "poi_returned_no_cfs" = poi_returned_no_cfs,
+                               "poi_returned_no_valid_cfs" = poi_returned_no_valid_cfs,
+                               "poi_returned_fully_categ_cfs" = poi_returned_fully_categ_cfs))
+}
 
 # Given a point of interest & a counterfactual, return a data frame of the 
 # resilience scores of each feature. 
@@ -300,61 +402,6 @@ getPredictor <- function(ml_alg_id,
   return(pred)
 }
 
-
-# Generate a results object for a resilience test.
-generateResilienceTestResults <- function(resilience_df,
-                                          cf_count,
-                                          cf_valid_count,
-                                          cf_test_count,
-                                          cf_inv_count,
-                                          points_of_interest_tested,
-                                          points_of_interest_rejected) {
-  # Feature resilience scores.
-  resilience_feat = apply(resilience_df, 2, function(x) mean(na.omit(x)))
-  
-  # Average feature resilience.
-  resilience_feat_avg = mean(na.omit(resilience_feat))
-  
-  # Maximum & minimum feature resilience.
-  resilience_feat_max = max(na.omit(resilience_feat))
-  resilience_feat_min = min(na.omit(resilience_feat))
-  
-  # Counterfactual reslience scores.
-  resilience_cf = apply(resilience_df, 1, function(x) mean(na.omit(x)))
-  
-  # Average counterfactual resilience.
-  resilience_cf_avg = mean(resilience_cf)
-  
-  # Maximum & minimum counterfactual resilience.
-  resilience_cf_max = max(resilience_cf)
-  resilience_cf_min = min(resilience_cf)
-  
-  # Count of mutation instances per feature.
-  feat_mut_frequency = apply(resilience_df, 2, function(x) length(na.omit(x)))
-  
-  # Total count of mutation instances across all features.
-  feat_mut_total = sum(na.omit(feat_mut_frequency))
-  
-  
-  return(resilienceTestResults("resilience_df" = resilience_df,
-                               "resilience_feat" = resilience_feat,
-                               "resilience_feat_avg" = resilience_feat_avg,
-                               "resilience_feat_max" = resilience_feat_max,
-                               "resilience_feat_min" = resilience_feat_min,
-                               "resilience_cf" = resilience_cf,
-                               "resilience_cf_avg" = resilience_cf_avg,
-                               "resilience_cf_max" = resilience_cf_max,
-                               "resilience_cf_min" = resilience_cf_min,
-                               "feat_mut_frequency" = feat_mut_frequency,
-                               "feat_mut_total" = feat_mut_total,
-                               "cf_total_count" = cf_count, 
-                               "cf_valid_count" = cf_valid_count,
-                               "cf_tested_count" = cf_test_count,
-                               "cf_invalid_count" = cf_inv_count,
-                               "points_of_interest_tested" = points_of_interest_tested,
-                               "points_of_interest_rejected" = points_of_interest_rejected))
-}
-
 # Return the names of all columns with different numeric values in the given
 # counterfactual when compared to the other given data point.
 getMutNumericFeatures <- function(cf, orig) {
@@ -370,13 +417,6 @@ getMutNumericFeatures <- function(cf, orig) {
   }
   return(nms)
 }
-
-# Insert the given new row into the given data frame after the given row index.
-insertRow <- function(df, new_row, r) { 
-  df_new = rbind(df[1:r, ], new_row, df[- (1:r), ])         
-  rownames(df_new) = 1:nrow(df_new)     
-  return(df_new) 
-} 
 
 # Return TRUE if the given string is numeric, else FALSE.
 isNumericString <- function(s) {
