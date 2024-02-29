@@ -200,6 +200,13 @@
 NULL
 
 
+# Sentinel values for fitness objectives (in default order).
+OBJ_VALID     = 1
+OBJ_SIMILAR   = 2
+OBJ_SPARSE    = 3
+OBJ_PLAUSIBLE = 4
+
+
 #'@export
 Counterfactuals = R6::R6Class("Counterfactuals",
   inherit = InterpretationMethod,
@@ -209,6 +216,9 @@ Counterfactuals = R6::R6Class("Counterfactuals",
     target = NULL,
     epsilon = NULL,
     fixed.features   = NULL,
+    lexicographic.selection = NULL,
+    obj.ordering = NULL,
+    ext.resilience = NULL,
     max.changed  = NULL,
     mu  = NULL,
     generations  = NULL,
@@ -225,10 +235,14 @@ Counterfactuals = R6::R6Class("Counterfactuals",
     lower = NULL,
     upper = NULL,
     log = NULL,
+    n.generations = NULL,
+    runtime = NULL,
     initialize = function(predictor, x.interest = NULL, target = NULL,
-      epsilon = NULL, fixed.features = NULL, max.changed = NULL,
-      mu = 50, generations = 50, p.rec = 0.9, p.rec.gen = 0.7, p.rec.use.orig = 0.7,
-      p.mut = 0.2, p.mut.gen = 0.5, p.mut.use.orig = 0.2, k = 1L, weights = NULL,
+      epsilon = NULL, fixed.features = NULL, lexicographic.selection = FALSE,
+      obj.ordering = list(OBJ_VALID, OBJ_SIMILAR, OBJ_SPARSE, OBJ_PLAUSIBLE), 
+      ext.resilience = FALSE, max.changed = NULL, mu = 50, generations = 50, 
+      p.rec = 0.9, p.rec.gen = 0.7, p.rec.use.orig = 0.7, p.mut = 0.2, 
+      p.mut.gen = 0.5, p.mut.use.orig = 0.2, k = 1L, weights = NULL, 
       lower = NULL, upper = NULL, initialization = "random",
       track.infeas = TRUE) {
       
@@ -270,6 +284,9 @@ Counterfactuals = R6::R6Class("Counterfactuals",
       self$epsilon = epsilon
       self$max.changed = max.changed
       self$fixed.features = fixed.features
+      self$lexicographic.selection = lexicographic.selection
+      self$obj.ordering = obj.ordering
+      self$ext.resilience = ext.resilience
       self$mu = mu
       self$generations = generations
       self$p.mut = p.mut
@@ -562,7 +579,7 @@ Counterfactuals = R6::R6Class("Counterfactuals",
     },
     intervene = function() {
 
-      # Define reference point for hypervolumn computation
+      # Define reference point for hypervolume computation
       private$ref.point = c(min(abs(self$y.hat.interest - self$target)),
         1, ncol(self$x.interest))
       private$obj.names = c("dist.target", "dist.x.interest", "nr.changed")
@@ -586,7 +603,7 @@ Counterfactuals = R6::R6Class("Counterfactuals",
           fitness_fun(x, x.interest = self$x.interest, target = self$target,
             predictor = self$predictor, train.data = self$predictor$data$get.x(),
             range = private$range, track.infeas = self$track.infeas,
-            k = self$k, weights = self$weights)
+            k = self$k, weights = self$weights, ext.resilience = self$ext.resilience)
         })
 
       fn = mosmafs::setMosmafsVectorized(fn)
@@ -751,11 +768,21 @@ Counterfactuals = R6::R6Class("Counterfactuals",
         }))
       }, n.parents = 2, n.children = 2)
 
-      parent.selector = mosmafs::selTournamentMO
-
-      survival.selector = ecr::setup(select_nondom,
-        epsilon = self$epsilon,
-        extract.duplicates = TRUE)
+      parent.selector = NULL
+      survival.selector = NULL
+      if (self$lexicographic.selection) {
+        parent.selector = ecr::setup(selTournamentLX,
+                                     obj.ordering = self$obj.ordering,
+                                     k = 2,
+                                     theta = 0.01)
+        survival.selector = parent.selector
+      }
+      else {
+        parent.selector = mosmafs::selTournamentMO
+        survival.selector = ecr::setup(select_nondom,
+                                       epsilon = self$epsilon,
+                                       extract.duplicates = TRUE)
+      }
 
       # Extract algorithm information with a log object
       log.stats = list(fitness = lapply(
@@ -770,19 +797,26 @@ Counterfactuals = R6::R6Class("Counterfactuals",
           n.row = function(x) sum(ecr::nondominated(x))
         ))
 
-      # Compute counterfactuals
-      ecrresults = mosmafs::slickEcr(fn, lambda = self$mu, population = initial.pop,
-        mutator = mutator,
-        recombinator = overall.recombinator, generations = self$generations,
-        parent.selector = parent.selector,
-        survival.strategy = select_diverse,
-        survival.selector = survival.selector,
-        p.recomb = self$p.rec,
-        p.mut = self$p.mut, log.stats = log.stats)
+      # Compute counterfactuals.
+      ecrresults = mosmafs::slickEcr(fn, 
+                                     lambda = self$mu, 
+                                     population = initial.pop,
+                                     mutator = mutator,
+                                     recombinator = overall.recombinator, 
+                                     generations = self$generations,
+                                     parent.selector = parent.selector,
+                                     survival.strategy = select_diverse,
+                                     survival.selector = survival.selector,
+                                     p.recomb = self$p.rec,
+                                     p.mut = self$p.mut, 
+                                     log.stats = log.stats)
+      
       private$ecrresults = ecrresults
       private$evaluate(ecrresults)
     },
     evaluate = function(ecrresults) {
+      
+      browser()
 
       # Settings for either 3 or 4 objectives
       if (self$track.infeas) {
@@ -792,6 +826,9 @@ Counterfactuals = R6::R6Class("Counterfactuals",
         id.cols = 7L
         n.objectives = 3L
       }
+      
+      # Store results data frame.
+      results.df = mosmafs::collectResult(ecrresults)
 
       # Extract results
       # Only consider new candidates
@@ -822,12 +859,18 @@ Counterfactuals = R6::R6Class("Counterfactuals",
         c("min", "mean"), sep = ".")
       nam = c("generation", sum.nam)
       names(log)[1:id.cols] = nam
-      evals = mosmafs::collectResult(ecrresults)$evals
+      evals = results.df$evals
       log$evals = evals
 
       log = log[c("generation", "state", "evals", nam[2:id.cols], "fitness.domHV",
         "fitness.n.row")]
       self$log = log
+      
+      # Log number of generations.
+      self$n.generations = nrow(results.df)
+      
+      # Log total runtime.
+      self$runtime = results.df[nrow(results.df),"runtime"]
 
       # only return last population
       finalpop  =  tail(accpops, 1)[[1]]
