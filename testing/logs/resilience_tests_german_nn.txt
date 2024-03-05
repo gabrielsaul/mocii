@@ -62,151 +62,471 @@ $risk
 [1] "good"
 
 # weights:  79
-initial  value 362.825251 
-iter  10 value 324.982789
-iter  20 value 292.640024
-iter  30 value 262.149467
-iter  40 value 244.220559
-iter  50 value 231.476281
-iter  60 value 225.860169
-iter  70 value 225.544369
-iter  80 value 225.541544
-final  value 225.541536 
+initial  value 353.550913 
+iter  10 value 300.144077
+iter  20 value 276.974100
+iter  30 value 256.202131
+iter  40 value 241.260485
+iter  50 value 239.291699
+iter  60 value 239.173154
+final  value 239.172888 
 converged
-    age  sex job housing saving.accounts checking.account credit.amount duration purpose risk
-519  43 male   2     own        moderate           little          1203        6     car good
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose risk
+48  23 female   0    rent      quite rich           little          1352        6     car good
        good
-1 0.9027503
-    age  sex job housing saving.accounts checking.account credit.amount duration             purpose risk
-369  42 male   2     own          little           little          3446       36 furniture/equipment  bad
-       good
-1 0.3529568
+1 0.2735932
 [1] "\nPoint of Interest: "
-    age  sex job housing saving.accounts checking.account credit.amount duration             purpose risk
-369  42 male   2     own          little           little          3446       36 furniture/equipment  bad
-Called from: private$evaluate(ecrresults)
-Called from: run(ds@df, ds@id, ds@target, ds@target_values, ds@nonactionable, 
-    ml_alg@id, ml_alg@target_range, n_points_of_interest = 1, 
-    TD_PADDING_MULTIPLIER = 5)
-debug at #184: if (is.null(data.cf)) {
-    points_of_interest_rejected = points_of_interest_rejected + 
-        1
-    poi_returned_no_cfs = poi_returned_no_cfs + 1
-    print("###############################")
-    print("# No counterfactuals returned #")
-    print("###############################")
-} else {
-    browser()
-    num_cf = nrow(data.cf$results$counterfactuals)
-    cf_count = cf_count + num_cf
-    print("Counterfactuals: ")
-    print(data.cf$results$counterfactuals)
-    valid_cf_idx = data.cf$results$counterfactuals$dist.target == 
-        0
-    data.cf$results$counterfactuals = data.cf$results$counterfactuals[which(valid_cf_idx), 
-        ]
-    data.cf$results$counterfactuals.diff = data.cf$results$counterfactuals.diff[which(valid_cf_idx), 
-        ]
-    cf_valid_count = cf_valid_count + nrow(data.cf$results$counterfactuals)
-    cf_inv_count = cf_inv_count + (num_cf - nrow(data.cf$results$counterfactuals))
-    data.cf$get_frequency()
-    valid_cfs = data.cf$results$counterfactuals[, 1:(ncol(data.cf$results$counterfactuals[, 
-        ]) - NCOLS_CF_METADATA)]
-    valid_cf_tested = FALSE
-    fully_categ_cf = FALSE
-    j = 0
-    while (j < nrow(valid_cfs)) {
-        j = j + 1
-        cf = valid_cfs[j, ]
-        print("\nOriginal CF:")
-        print(cf)
-        result = pred$predict(cf)
-        print(result)
-        cf_resilience_df = getResilience(x.interest[, -which(names(x.interest) == 
-            target)], cf, pred, ml_alg_target_range, max_feat_values, 
-            min_feat_values, data_feat_types)
-        if (!is.null(cf_resilience_df)) {
-            valid_cf_tested = TRUE
-            cf_test_count = cf_test_count + 1
-            resilience_df[cf_test_count, ] = cf_resilience_df
-        }
-        else {
-            fully_categ_cf = TRUE
-        }
-    }
-    if (valid_cf_tested) {
-        points_of_interest_tested = points_of_interest_tested + 
-            1
-    }
-    else if (fully_categ_cf) {
-        points_of_interest_rejected = points_of_interest_rejected + 
-            1
-        poi_returned_fully_categ_cfs = poi_returned_fully_categ_cfs + 
-            1
-    }
-    else if (j == 0) {
-        points_of_interest_rejected = points_of_interest_rejected + 
-            1
-        poi_returned_no_valid_cfs = poi_returned_no_valid_cfs + 
-            1
-    }
-}
-Called from: run(ds@df, ds@id, ds@target, ds@target_values, ds@nonactionable, 
-    ml_alg@id, ml_alg@target_range, n_points_of_interest = 1, 
-    TD_PADDING_MULTIPLIER = 5)
-[1] "Counterfactuals: "
-  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
-1  42 male   2     own          little           little          3446        8 furniture/equipment
-2  42 male   2     own          little             rich          3446        6 furniture/equipment
-4  42 male   2     own          little           little          3189       36 furniture/equipment
-5  42 male   2     own          little           little          3052       36 furniture/equipment
-  dist.target dist.x.interest nr.changed  dist.train      pred
-1   0.0000000     0.047138047          1 0.012054458 0.9027503
-2   0.0000000     0.161616162          2 0.010127051 0.9027503
-4   0.1470432     0.001573482          1 0.004904559 0.3529568
-5   0.1470432     0.002412265          1 0.004065777 0.3529568
-[1] "\nOriginal CF:"
-  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
-1  42 male   2     own          little           little          3446        8 furniture/equipment
-       good
-1 0.9027503
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose risk
+48  23 female   0    rent      quite rich           little          1352        6     car good
+[1] "Counterfactuals (Pareto): "
+   age    sex job housing saving.accounts checking.account credit.amount duration purpose dist.target
+1   23 female   2    rent      quite rich           little          1352        6     car   0.0000000
+2   23 female   1    rent      quite rich           little          3597        6     car   0.0000000
+3   23 female   2    rent          little           little          1352        6     car   0.0000000
+4   23 female   1    rent          little           little           276        6     car   0.0000000
+6   23 female   0    rent      quite rich           little          1138        6     car   0.2264068
+7   23 female   0    rent          little           little          1352        6     car   0.2264068
+8   23 female   0    rent      quite rich           little           276       20     car   0.2264068
+9   23 female   0    rent          little           little          1352        9     car   0.2264068
+10  23 female   0    rent          little           little          1352       18     car   0.2264068
+11  23 female   0    rent          little           little          1352       19     car   0.2264068
+12  23 female   0    rent          little           little          1352       20     car   0.2264068
+   dist.x.interest nr.changed dist.train      pred
+1      0.074074074          1 0.13214579 0.7019577
+2      0.050782047          2 0.16994870 0.7300330
+3      0.185185185          2 0.02103468 0.7019577
+4      0.154735957          3 0.06299421 0.8665736
+6      0.001310215          1 0.15365564 0.2735932
+7      0.111111111          1 0.04318127 0.2735932
+8      0.030156832          2 0.13536421 0.2735932
+9      0.116161616          2 0.03813076 0.2735932
+10     0.131313131          2 0.02297925 0.2735932
+11     0.132996633          2 0.02129575 0.2735932
+12     0.134680135          2 0.01961225 0.2735932
+[1] "\n\nCounterfactuals (Lexicographic): "
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose dist.target
+1  23 female   2    rent      quite rich           little          1352        6     car           0
+  dist.x.interest nr.changed dist.train      pred
+1      0.07407407          1  0.1321458 0.7019577
 
 Number of Mutated Features: 1
 [1] "\nMutated Features:"
-[1] "duration"
+[1] "job"
 
-Mutated Feature: duration
+Mutated Feature: job
+[1] "\nMAX_STEPS:"
+[1] 1
+
+Increment: 1.000000
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1  23 female   3    rent      quite rich           little          1352        6     car
+       good
+1 0.7019577
+Successful Steps: 1/1
+[1] "\n###########################################################\n"
+
+Number of Mutated Features: 2
+[1] "\nMutated Features:"
+[1] "job"           "credit.amount"
+
+Mutated Feature: job
 [1] "\nMAX_STEPS:"
 [1] 2
 
-Increment: -1.000000
-  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
-1  42 male   2     own          little           little          3446        7 furniture/equipment
+Increment: 1.000000
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  23 female   2    rent      quite rich           little          3597        6     car
        good
-1 0.9027503
-  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
-1  42 male   2     own          little           little          3446        6 furniture/equipment
+1 0.7019577
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  23 female   3    rent      quite rich           little          3597        6     car
        good
-1 0.9027503
+1 0.7019577
 Successful Steps: 2/2
 [1] "\n###########################################################\n"
-[1] "\nOriginal CF:"
-  age  sex job housing saving.accounts checking.account credit.amount duration             purpose
-2  42 male   2     own          little             rich          3446        6 furniture/equipment
+
+Mutated Feature: credit.amount
+[1] "\nMAX_STEPS:"
+[1] 9
+
+Increment: 1483.000000
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  23 female   3    rent      quite rich           little          5080        6     car
        good
-1 0.9027503
+1 0.7019577
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  23 female   3    rent      quite rich           little          6563        6     car
+       good
+1 0.7019577
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  23 female   3    rent      quite rich           little          8046        6     car
+       good
+1 0.7019577
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  23 female   3    rent      quite rich           little          9529        6     car
+       good
+1 0.7019577
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  23 female   3    rent      quite rich           little         11012        6     car
+       good
+1 0.7019577
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  23 female   3    rent      quite rich           little         12495        6     car
+       good
+1 0.7019577
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  23 female   3    rent      quite rich           little         13978        6     car
+       good
+1 0.7019577
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  23 female   3    rent      quite rich           little         15461        6     car
+       good
+1 0.7019577
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+2  23 female   3    rent      quite rich           little         16944        6     car
+       good
+1 0.7019577
+Successful Steps: 9/9
+[1] "\n###########################################################\n"
 
 Number of Mutated Features: 1
 [1] "\nMutated Features:"
-[1] "duration"
+[1] "job"
+
+Mutated Feature: job
+[1] "\nMAX_STEPS:"
+[1] 1
+
+Increment: 1.000000
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+3  23 female   3    rent          little           little          1352        6     car
+       good
+1 0.7019577
+Successful Steps: 1/1
+[1] "\n###########################################################\n"
+
+Number of Mutated Features: 2
+[1] "\nMutated Features:"
+[1] "job"           "credit.amount"
+
+Mutated Feature: job
+[1] "\nMAX_STEPS:"
+[1] 2
+
+Increment: 1.000000
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+4  23 female   2    rent          little           little           276        6     car
+       good
+1 0.2470106
+[1] "!MV! -- MONOTONICITY VIOLATION"
+Successful Steps: 0/2
+[1] "\n###########################################################\n"
 [1] "Already at min/max."
 [1] "Full resilience."
+
+Number of Mutated Features: 1
+[1] "\nMutated Features:"
+[1] "job"
+
+Mutated Feature: job
+[1] "\nMAX_STEPS:"
+[1] 1
+
+Increment: 1.000000
+  age    sex job housing saving.accounts checking.account credit.amount duration purpose
+1  23 female   3    rent      quite rich           little          1352        6     car
+       good
+1 0.7019577
+Successful Steps: 1/1
+[1] "\n###########################################################\n"
 [1] "\nRESULTS: "
-An object of class "resilienceTestResults"
+[[1]]
+An object of class "algorithmTestResults"
+Slot "test_run_id":
+[1] "par_german_nn"
+
+Slot "runtime_total":
+[1] 4.56
+
+Slot "runtime_avg":
+[1] 4.56
+
+Slot "generations_total":
+[1] 38
+
+Slot "generations_avg":
+[1] 38
+
+Slot "points_of_interest_tested":
+[1] 1
+
+Slot "points_of_interest_tested_res":
+[1] 1
+
+Slot "points_of_interest_tested_vs":
+[1] 1
+
+Slot "points_of_interest_rejected":
+[1] 0
+
+Slot "cf_total":
+[1] 11
+
+Slot "cf_valid":
+[1] 4
+
+Slot "cf_valid_pct":
+[1] 0.3636364
+
+Slot "cf_invalid":
+[1] 7
+
+Slot "cf_all_invalid":
+[1] 0
+
+Slot "cf_null_returned":
+[1] 0
+
+Slot "cf_pred_avg":
+[1] 0.4468795
+
+Slot "cf_pred_sd":
+[1] 0.2442634
+
+Slot "cf_pred_var":
+[1] 0.05966459
+
+Slot "cf_pred_min":
+[1] 0.2735932
+
+Slot "cf_pred_max":
+[1] 0.8665736
+
+Slot "feat_mut_frequency":
+          job credit.amount 
+            4             2 
+
+Slot "feat_mut_total":
+[1] 6
+
+Slot "pd_comparisons":
+[1] 11
+
+Slot "pd_wlt_record":
+[1]  0  0 11
+
+Slot "pd_win_pct":
+[1] 0
+
+Slot "pd_loss_pct":
+[1] 0
+
+Slot "pd_tie_pct":
+[1] 1
+
+Slot "lx_comparisons":
+[1] 11
+
+Slot "lx_wlt_record":
+[1] 1 9 1
+
+Slot "lx_win_pct":
+[1] 0.09090909
+
+Slot "lx_loss_pct":
+[1] 0.8181818
+
+Slot "lx_tie_pct":
+[1] 0.09090909
+
 Slot "resilience_df":
   age sex job housing saving.accounts checking.account credit.amount duration purpose
-1 NaN NaN NaN     NaN             NaN              NaN           NaN        1     NaN
-2 NaN NaN NaN     NaN             NaN              NaN           NaN        1     NaN
+1 NaN NaN   1     NaN             NaN              NaN           NaN      NaN     NaN
+2 NaN NaN   1     NaN             NaN              NaN             1      NaN     NaN
+3 NaN NaN   1     NaN             NaN              NaN           NaN      NaN     NaN
+4 NaN NaN   0     NaN             NaN              NaN             1      NaN     NaN
+
+Slot "resilience_cf":
+[1] 1.0 1.0 1.0 0.5
+
+Slot "resilience_cf_perfect_pct":
+   1 
+0.75 
+
+Slot "resilience_cf_zero_pct":
+named numeric(0)
+
+Slot "resilience_cf_avg":
+[1] 0.875
+
+Slot "resilience_cf_sd":
+[1] 0.25
+
+Slot "resilience_cf_var":
+[1] 0.0625
+
+Slot "resilience_cf_min":
+[1] 0.5
+
+Slot "resilience_cf_max":
+[1] 1
+
+Slot "resilience_feat":
+          job credit.amount 
+         0.75          1.00 
+
+Slot "resilience_feat_perfect_pct":
+          job credit.amount 
+         0.75          1.00 
+
+Slot "resilience_feat_zero_pct":
+          job credit.amount 
+         0.25            NA 
+
+Slot "resilience_feat_sd":
+          job credit.amount 
+          0.5           0.0 
+
+Slot "resilience_feat_var":
+          job credit.amount 
+         0.25          0.00 
+
+Slot "resilience_feat_min":
+          job credit.amount 
+            0             1 
+
+Slot "resilience_feat_max":
+          job credit.amount 
+            1             1 
+
+
+[[2]]
+An object of class "algorithmTestResults"
+Slot "test_run_id":
+[1] "lex_german_nn"
+
+Slot "runtime_total":
+[1] 4.61
+
+Slot "runtime_avg":
+[1] 4.61
+
+Slot "generations_total":
+[1] 38
+
+Slot "generations_avg":
+[1] 38
+
+Slot "points_of_interest_tested":
+[1] 1
+
+Slot "points_of_interest_tested_res":
+[1] 1
+
+Slot "points_of_interest_tested_vs":
+[1] 1
+
+Slot "points_of_interest_rejected":
+[1] 0
+
+Slot "cf_total":
+[1] 1
+
+Slot "cf_valid":
+[1] 1
+
+Slot "cf_valid_pct":
+[1] 1
+
+Slot "cf_invalid":
+[1] 0
+
+Slot "cf_all_invalid":
+[1] 0
+
+Slot "cf_null_returned":
+[1] 0
+
+Slot "cf_pred_avg":
+[1] 0.7019577
+
+Slot "cf_pred_sd":
+[1] NA
+
+Slot "cf_pred_var":
+[1] NA
+
+Slot "cf_pred_min":
+[1] 0.7019577
+
+Slot "cf_pred_max":
+[1] 0.7019577
+
+Slot "feat_mut_frequency":
+resilience_df_redacted 
+                     1 
+
+Slot "feat_mut_total":
+[1] 1
+
+Slot "pd_comparisons":
+[1] 11
+
+Slot "pd_wlt_record":
+[1]  0  0 11
+
+Slot "pd_win_pct":
+[1] 0
+
+Slot "pd_loss_pct":
+[1] 0
+
+Slot "pd_tie_pct":
+[1] 1
+
+Slot "lx_comparisons":
+[1] 11
+
+Slot "lx_wlt_record":
+[1] 9 1 1
+
+Slot "lx_win_pct":
+[1] 0.8181818
+
+Slot "lx_loss_pct":
+[1] 0.09090909
+
+Slot "lx_tie_pct":
+[1] 0.09090909
+
+Slot "resilience_df":
+  age sex job housing saving.accounts checking.account credit.amount duration purpose
+1 NaN NaN   1     NaN             NaN              NaN           NaN      NaN     NaN
+
+Slot "resilience_cf":
+[1] 1
+
+Slot "resilience_cf_perfect_pct":
+1 
+1 
+
+Slot "resilience_cf_zero_pct":
+named numeric(0)
+
+Slot "resilience_cf_avg":
+[1] 1
+
+Slot "resilience_cf_sd":
+[1] NA
+
+Slot "resilience_cf_var":
+[1] NA
+
+Slot "resilience_cf_min":
+[1] 1
+
+Slot "resilience_cf_max":
+[1] 1
 
 Slot "resilience_feat":
 resilience_df_redacted 
@@ -216,80 +536,25 @@ Slot "resilience_feat_perfect_pct":
 resilience_df_redacted 
                      1 
 
-Slot "resilience_feat_sd":
+Slot "resilience_feat_zero_pct":
 resilience_df_redacted 
                      0 
+
+Slot "resilience_feat_sd":
+resilience_df_redacted 
+                    NA 
 
 Slot "resilience_feat_var":
 resilience_df_redacted 
-                     0 
-
-Slot "resilience_feat_max":
-resilience_df_redacted 
-                     1 
+                    NA 
 
 Slot "resilience_feat_min":
 resilience_df_redacted 
                      1 
 
-Slot "resilience_cf":
-1 2 
-1 1 
-
-Slot "resilience_cf_perfect_pct":
-1 
-1 
-
-Slot "resilience_cf_avg":
-[1] 1
-
-Slot "resilience_cf_sd":
-[1] 0
-
-Slot "resilience_cf_var":
-[1] 0
-
-Slot "resilience_cf_max":
-[1] 1
-
-Slot "resilience_cf_min":
-[1] 1
-
-Slot "feat_mut_frequency":
+Slot "resilience_feat_max":
 resilience_df_redacted 
-                     2 
+                     1 
 
-Slot "feat_mut_total":
-[1] 2
 
-Slot "cf_total_count":
-[1] 4
-
-Slot "cf_valid_count":
-[1] 2
-
-Slot "cf_tested_count":
-[1] 2
-
-Slot "cf_invalid_count":
-[1] 2
-
-Slot "points_of_interest_tested":
-[1] 1
-
-Slot "points_of_interest_rejected":
-[1] 1
-
-Slot "poi_pred_positive_class":
-[1] 1
-
-Slot "poi_returned_no_cfs":
-[1] 0
-
-Slot "poi_returned_no_valid_cfs":
-[1] 0
-
-Slot "poi_returned_fully_categ_cfs":
-[1] 0
-
-Execution Time: 48.377246
+Execution Time: 43.384105

@@ -199,14 +199,6 @@
 #' }
 NULL
 
-
-# Sentinel values for fitness objectives (in default order).
-OBJ_VALID     = 1
-OBJ_SIMILAR   = 2
-OBJ_SPARSE    = 3
-OBJ_PLAUSIBLE = 4
-
-
 #'@export
 Counterfactuals = R6::R6Class("Counterfactuals",
   inherit = InterpretationMethod,
@@ -217,7 +209,12 @@ Counterfactuals = R6::R6Class("Counterfactuals",
     epsilon = NULL,
     fixed.features   = NULL,
     lexicographic.selection = NULL,
+    obj.valid = NULL,
+    obj.similar = NULL,
+    obj.sparse = NULL,
+    obj.feasible = NULL,
     obj.ordering = NULL,
+    theta = NULL,
     ext.resilience = NULL,
     max.changed  = NULL,
     mu  = NULL,
@@ -239,11 +236,12 @@ Counterfactuals = R6::R6Class("Counterfactuals",
     runtime = NULL,
     initialize = function(predictor, x.interest = NULL, target = NULL,
       epsilon = NULL, fixed.features = NULL, lexicographic.selection = FALSE,
-      obj.ordering = list(OBJ_VALID, OBJ_SIMILAR, OBJ_SPARSE, OBJ_PLAUSIBLE), 
-      ext.resilience = FALSE, max.changed = NULL, mu = 50, generations = 50, 
-      p.rec = 0.9, p.rec.gen = 0.7, p.rec.use.orig = 0.7, p.mut = 0.2, 
-      p.mut.gen = 0.5, p.mut.use.orig = 0.2, k = 1L, weights = NULL, 
-      lower = NULL, upper = NULL, initialization = "random",
+      obj.valid = 1, obj.similar = 2, obj.sparse = 3, obj.plausible = 4,
+      obj.ordering = list(obj.valid, obj.similar, obj.sparse, obj.plausible),
+      theta = 0.01, ext.resilience = FALSE, max.changed = NULL, mu = 50, 
+      generations = 50, p.rec = 0.9, p.rec.gen = 0.7, p.rec.use.orig = 0.7, 
+      p.mut = 0.2, p.mut.gen = 0.5, p.mut.use.orig = 0.2, k = 1L, 
+      weights = NULL, lower = NULL, upper = NULL, initialization = "random",
       track.infeas = TRUE) {
       
       super$initialize(predictor = predictor)
@@ -286,6 +284,7 @@ Counterfactuals = R6::R6Class("Counterfactuals",
       self$fixed.features = fixed.features
       self$lexicographic.selection = lexicographic.selection
       self$obj.ordering = obj.ordering
+      self$theta = theta
       self$ext.resilience = ext.resilience
       self$mu = mu
       self$generations = generations
@@ -774,7 +773,7 @@ Counterfactuals = R6::R6Class("Counterfactuals",
         parent.selector = ecr::setup(selTournamentLX,
                                      obj.ordering = self$obj.ordering,
                                      k = 2,
-                                     theta = 0.01)
+                                     theta = self$theta)
         survival.selector = parent.selector
       }
       else {
@@ -796,7 +795,7 @@ Counterfactuals = R6::R6Class("Counterfactuals",
         list(
           n.row = function(x) sum(ecr::nondominated(x))
         ))
-
+      
       # Compute counterfactuals.
       ecrresults = mosmafs::slickEcr(fn, 
                                      lambda = self$mu, 
@@ -815,8 +814,6 @@ Counterfactuals = R6::R6Class("Counterfactuals",
       private$evaluate(ecrresults)
     },
     evaluate = function(ecrresults) {
-      
-      browser()
 
       # Settings for either 3 or 4 objectives
       if (self$track.infeas) {
@@ -867,7 +864,7 @@ Counterfactuals = R6::R6Class("Counterfactuals",
       self$log = log
       
       # Log number of generations.
-      self$n.generations = nrow(results.df)
+      self$n.generations = nrow(results.df) - 1
       
       # Log total runtime.
       self$runtime = results.df[nrow(results.df),"runtime"]
@@ -883,6 +880,18 @@ Counterfactuals = R6::R6Class("Counterfactuals",
       select.id = which(!duplicated(finalpop))
       fit = fit[select.id,]
       finalpop = finalpop[select.id, ]
+      
+      # Final tournament for lexicographic selection. 
+      if (self$lexicographic.selection) {
+        final.idxs = selTournamentLX(fitness = t(fit),
+                                     candidates = finalpop,
+                                     n.select = 1,
+                                     obj.ordering = self$obj.ordering,
+                                     k = nrow(finalpop),
+                                     theta = self$theta)
+        finalpop = finalpop[final.idxs,]
+        fit = fit[final.idxs,]
+      }
 
       result = cbind(finalpop, fit)
 

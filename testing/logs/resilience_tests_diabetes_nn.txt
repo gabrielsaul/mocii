@@ -1,0 +1,496 @@
+[1] 392
+[1] "\nMIN FEAT VALUES:"
+$pregnancies
+[1] 0
+
+$glucose
+[1] 56
+
+$bloodpressure
+[1] 24
+
+$skinthickness
+[1] 7
+
+$insulin
+[1] 14
+
+$bmi
+[1] 18.2
+
+$diabetespedigreefunction
+[1] 0.085
+
+$age
+[1] 21
+
+$outcome
+[1] "neg"
+
+[1] "\nMAX FEAT VALUES:"
+$pregnancies
+[1] 17
+
+$glucose
+[1] 198
+
+$bloodpressure
+[1] 110
+
+$skinthickness
+[1] 63
+
+$insulin
+[1] 846
+
+$bmi
+[1] 67.1
+
+$diabetespedigreefunction
+[1] 2.42
+
+$age
+[1] 81
+
+$outcome
+[1] "pos"
+
+# weights:  31
+initial  value 246.914781 
+iter  10 value 166.376751
+iter  20 value 149.878858
+iter  30 value 142.224981
+iter  40 value 136.113611
+iter  50 value 128.343395
+iter  60 value 124.827910
+iter  70 value 122.191799
+iter  80 value 120.044994
+iter  90 value 118.241639
+iter 100 value 116.405079
+final  value 116.405079 
+stopped after 100 iterations
+    pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+466           0     124            56            13     105 21.8                    0.452  21
+    outcome
+466     neg
+        neg
+1 0.9785818
+    pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+723           1     149            68            29     127 29.3                    0.349  42
+    outcome
+723     pos
+        neg
+1 0.9788971
+    pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+386           1     119            54            13      50 22.3                    0.205  24
+    outcome
+386     neg
+        neg
+1 0.9785818
+    pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+615          11     138            74            26     144 36.1                    0.557  50
+    outcome
+615     pos
+       neg
+1 0.293874
+[1] "\nPoint of Interest: "
+    pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+615          11     138            74            26     144 36.1                    0.557  50
+    outcome
+615     pos
+[1] "Counterfactuals (Pareto): "
+  pregnancies glucose bloodpressure skinthickness insulin      bmi diabetespedigreefunction age
+1          11     138            74            26     144 20.25758                0.5570000  50
+3          11     138            74            26     144 35.64986                0.5570000  50
+4          11     138            74            27     144 36.10000                0.5570000  50
+5          11     132            74            26     144 36.10000                0.5570000  50
+6          11     138            74            26     144 36.10000                0.3421938  50
+7          11     138            74            26     144 36.10000                0.2657173  50
+8          11     138            74            26     144 36.10000                1.3148969  50
+  dist.target dist.x.interest nr.changed dist.train     pred
+1    0.000000     0.040496987          1 0.05410480 0.978898
+3    0.206126     0.001150655          1 0.06409315 0.293874
+4    0.206126     0.002232143          1 0.06197649 0.293874
+5    0.206126     0.005281690          1 0.05892695 0.293874
+6    0.206126     0.011499261          1 0.05270937 0.293874
+7    0.206126     0.015593293          1 0.05014454 0.293874
+8    0.206126     0.040572639          1 0.03451807 0.293874
+[1] "\n\nCounterfactuals (Lexicographic): "
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1          11     138            74            26     144 18.2                    0.557  50
+  dist.target dist.x.interest nr.changed dist.train      pred
+1           0      0.04575665          1 0.05936446 0.9788989
+
+Number of Mutated Features: 1
+[1] "\nMutated Features:"
+[1] "bmi"
+
+Mutated Feature: bmi
+[1] "\nMAX_STEPS:"
+[1] 10
+
+Increment: -0.205758
+  pregnancies glucose bloodpressure skinthickness insulin      bmi diabetespedigreefunction age
+1          11     138            74            26     144 20.05182                    0.557  50
+        neg
+1 0.9788986
+  pregnancies glucose bloodpressure skinthickness insulin      bmi diabetespedigreefunction age
+1          11     138            74            26     144 19.84606                    0.557  50
+        neg
+1 0.9788988
+  pregnancies glucose bloodpressure skinthickness insulin      bmi diabetespedigreefunction age
+1          11     138            74            26     144 19.64031                    0.557  50
+        neg
+1 0.9788989
+  pregnancies glucose bloodpressure skinthickness insulin      bmi diabetespedigreefunction age
+1          11     138            74            26     144 19.43455                    0.557  50
+        neg
+1 0.9788989
+  pregnancies glucose bloodpressure skinthickness insulin      bmi diabetespedigreefunction age
+1          11     138            74            26     144 19.22879                    0.557  50
+        neg
+1 0.9788989
+  pregnancies glucose bloodpressure skinthickness insulin      bmi diabetespedigreefunction age
+1          11     138            74            26     144 19.02303                    0.557  50
+        neg
+1 0.9788989
+  pregnancies glucose bloodpressure skinthickness insulin      bmi diabetespedigreefunction age
+1          11     138            74            26     144 18.81727                    0.557  50
+        neg
+1 0.9788989
+  pregnancies glucose bloodpressure skinthickness insulin      bmi diabetespedigreefunction age
+1          11     138            74            26     144 18.61152                    0.557  50
+        neg
+1 0.9788989
+  pregnancies glucose bloodpressure skinthickness insulin      bmi diabetespedigreefunction age
+1          11     138            74            26     144 18.40576                    0.557  50
+        neg
+1 0.9788989
+  pregnancies glucose bloodpressure skinthickness insulin  bmi diabetespedigreefunction age
+1          11     138            74            26     144 18.2                    0.557  50
+        neg
+1 0.9788989
+Successful Steps: 10/10
+[1] "\n###########################################################\n"
+
+Number of Mutated Features: 1
+[1] "\nMutated Features:"
+[1] "bmi"
+[1] "Already at min/max."
+[1] "Full resilience."
+[1] "\nRESULTS: "
+[[1]]
+An object of class "algorithmTestResults"
+Slot "test_run_id":
+[1] "par_diabetes_nn"
+
+Slot "runtime_total":
+[1] 1.92
+
+Slot "runtime_avg":
+[1] 1.92
+
+Slot "generations_total":
+[1] 41
+
+Slot "generations_avg":
+[1] 41
+
+Slot "points_of_interest_tested":
+[1] 1
+
+Slot "points_of_interest_tested_res":
+[1] 1
+
+Slot "points_of_interest_tested_vs":
+[1] 1
+
+Slot "points_of_interest_rejected":
+[1] 3
+
+Slot "cf_total":
+[1] 7
+
+Slot "cf_valid":
+[1] 1
+
+Slot "cf_valid_pct":
+[1] 14.28571
+
+Slot "cf_invalid":
+[1] 6
+
+Slot "cf_all_invalid":
+[1] 0
+
+Slot "cf_null_returned":
+[1] 0
+
+Slot "cf_pred_avg":
+[1] 0.3917346
+
+Slot "cf_pred_sd":
+[1] 0.2589147
+
+Slot "cf_pred_var":
+[1] 0.06703683
+
+Slot "cf_pred_min":
+[1] 0.293874
+
+Slot "cf_pred_max":
+[1] 0.978898
+
+Slot "feat_mut_frequency":
+bmi 
+  1 
+
+Slot "feat_mut_total":
+[1] 1
+
+Slot "pd_comparisons":
+[1] 7
+
+Slot "pd_wlt_record":
+[1] 1 0 6
+
+Slot "pd_win_pct":
+[1] 14.28571
+
+Slot "pd_loss_pct":
+[1] 0
+
+Slot "pd_tie_pct":
+[1] 85.71429
+
+Slot "lx_comparisons":
+[1] 7
+
+Slot "lx_wlt_record":
+[1] 1 6 0
+
+Slot "lx_win_pct":
+[1] 14.28571
+
+Slot "lx_loss_pct":
+[1] 85.71429
+
+Slot "lx_tie_pct":
+[1] 0
+
+Slot "resilience_df":
+  pregnancies glucose bloodpressure skinthickness insulin bmi diabetespedigreefunction age
+1         NaN     NaN           NaN           NaN     NaN   1                      NaN NaN
+
+Slot "resilience_cf":
+[1] 1
+
+Slot "resilience_cf_perfect_pct":
+  1 
+100 
+
+Slot "resilience_cf_zero_pct":
+[1] 0
+
+Slot "resilience_cf_avg":
+[1] 1
+
+Slot "resilience_cf_sd":
+[1] NA
+
+Slot "resilience_cf_var":
+[1] NA
+
+Slot "resilience_cf_min":
+[1] 1
+
+Slot "resilience_cf_max":
+[1] 1
+
+Slot "resilience_feat":
+bmi 
+  1 
+
+Slot "resilience_feat_perfect_pct":
+bmi 
+100 
+
+Slot "resilience_feat_zero_pct":
+bmi 
+  0 
+
+Slot "resilience_feat_sd":
+bmi 
+ NA 
+
+Slot "resilience_feat_var":
+bmi 
+ NA 
+
+Slot "resilience_feat_min":
+bmi 
+  1 
+
+Slot "resilience_feat_max":
+bmi 
+  1 
+
+
+[[2]]
+An object of class "algorithmTestResults"
+Slot "test_run_id":
+[1] "lex_diabetes_nn"
+
+Slot "runtime_total":
+[1] 1.7
+
+Slot "runtime_avg":
+[1] 1.7
+
+Slot "generations_total":
+[1] 41
+
+Slot "generations_avg":
+[1] 41
+
+Slot "points_of_interest_tested":
+[1] 1
+
+Slot "points_of_interest_tested_res":
+[1] 1
+
+Slot "points_of_interest_tested_vs":
+[1] 1
+
+Slot "points_of_interest_rejected":
+[1] 3
+
+Slot "cf_total":
+[1] 1
+
+Slot "cf_valid":
+[1] 1
+
+Slot "cf_valid_pct":
+[1] 100
+
+Slot "cf_invalid":
+[1] 0
+
+Slot "cf_all_invalid":
+[1] 0
+
+Slot "cf_null_returned":
+[1] 0
+
+Slot "cf_pred_avg":
+[1] 0.9788989
+
+Slot "cf_pred_sd":
+[1] NA
+
+Slot "cf_pred_var":
+[1] NA
+
+Slot "cf_pred_min":
+[1] 0.9788989
+
+Slot "cf_pred_max":
+[1] 0.9788989
+
+Slot "feat_mut_frequency":
+bmi 
+  1 
+
+Slot "feat_mut_total":
+[1] 1
+
+Slot "pd_comparisons":
+[1] 7
+
+Slot "pd_wlt_record":
+[1] 0 1 6
+
+Slot "pd_win_pct":
+[1] 0
+
+Slot "pd_loss_pct":
+[1] 14.28571
+
+Slot "pd_tie_pct":
+[1] 85.71429
+
+Slot "lx_comparisons":
+[1] 7
+
+Slot "lx_wlt_record":
+[1] 6 1 0
+
+Slot "lx_win_pct":
+[1] 85.71429
+
+Slot "lx_loss_pct":
+[1] 14.28571
+
+Slot "lx_tie_pct":
+[1] 0
+
+Slot "resilience_df":
+  pregnancies glucose bloodpressure skinthickness insulin bmi diabetespedigreefunction age
+1         NaN     NaN           NaN           NaN     NaN   1                      NaN NaN
+
+Slot "resilience_cf":
+[1] 1
+
+Slot "resilience_cf_perfect_pct":
+  1 
+100 
+
+Slot "resilience_cf_zero_pct":
+[1] 0
+
+Slot "resilience_cf_avg":
+[1] 1
+
+Slot "resilience_cf_sd":
+[1] NA
+
+Slot "resilience_cf_var":
+[1] NA
+
+Slot "resilience_cf_min":
+[1] 1
+
+Slot "resilience_cf_max":
+[1] 1
+
+Slot "resilience_feat":
+bmi 
+  1 
+
+Slot "resilience_feat_perfect_pct":
+bmi 
+100 
+
+Slot "resilience_feat_zero_pct":
+bmi 
+  0 
+
+Slot "resilience_feat_sd":
+bmi 
+ NA 
+
+Slot "resilience_feat_var":
+bmi 
+ NA 
+
+Slot "resilience_feat_min":
+bmi 
+  1 
+
+Slot "resilience_feat_max":
+bmi 
+  1 
+
+
+Execution Time: 25.402990

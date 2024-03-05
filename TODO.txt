@@ -1,13 +1,30 @@
  + Output the number of generations for each test run of MOC
- - Configure IRACE for each alg x model pairing
- - Calculate average number of generations for a default run of MOC across 2250 data points (as part
-   of resilience tests): Use this for max generations in the lexicographic comparisons
- - Disable stopping condition for any runs with lexicographic selection
- - Final tournament for final population of lexicographic GA: Return a single CF
- - Restructure testing bed to include both resilience and lexicographic testing
+ ? Configure IRACE for each alg x model pairing
+ + Disable stopping condition for any runs with lexicographic selection
+ + Final tournament for final population of lexicographic GA: Return a single CF
+ + Restructure testing bed to include both resilience and lexicographic testing
  - Incorporate resilience into fitness function
 
 TESTS:
 
-Pareto vs. Lexicographic (default)
-Pareto vs. Lexicographic (+ Resilience)
+[1]
+{
+	OBJ ORDERING:
+	  1. Validity
+	  2. Similarity
+	  3. Sparsity
+	  4. Plausibility
+	Pareto vs. Lexicographic (default)
+	Pareto vs. Lexicographic (+ Resilience)
+}
+
+[2]
+{
+	OBJ ORDERING:
+	  1. Validity
+	  2. Sparsity
+	  3. Similarity
+	  4. Plausibility
+	Pareto vs. Lexicographic (default)
+	Pareto vs. Lexicographic (+ Resilience)
+}

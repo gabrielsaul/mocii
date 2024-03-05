@@ -289,19 +289,26 @@ selTournamentLX = ecr::makeSelector(
                       candidates,
                       obj.ordering,
                       k = 2,
-                      theta = Inf) {
+                      theta = 0.01) {
 
-    assert_number(n.select)
+    checkmate::assert_number(n.select)
     if (n.select > ncol(fitness)) {
       stop("'n.select' must be smaller than or equal to 'ncol(fitness)'")
     }
     
-    assert_number(k)
+    checkmate::assert_number(k)
     if (k < 2 | k > ncol(fitness)) {
       stop("Constraint: 2 <= 'k' <= 'ncol(fitness)'")
     }
     
-    assert_numeric(theta, null.ok = TRUE)
+    checkmate::assert_numeric(theta, null.ok = TRUE)
+    
+    # Consider only unique individuals if substantial.
+    pop.idxs = 1:ncol(fitness)
+    dupl.pop.idxs = which(duplicated(t(fitness)))
+    if ((ncol(fitness) - length(dupl.pop.idxs)) > n.select) {
+      pop.idxs = setdiff(pop.idxs, dupl.pop.idxs)
+    }
 
     # Indices of selected individuals. 
     new.pop.idxs = integer()
@@ -312,25 +319,25 @@ selTournamentLX = ecr::makeSelector(
       
       # Sample participants for current tournament.
       set.seed(as.numeric(Sys.time()))
-      p.idxs = sample(1:ncol(fitness), k)
+      participant.idxs = sample(pop.idxs, k)
       
       # Set tolerance threshold to default (theta).
       tolerance = theta
       
       # Lexicographic selection with ordered objectives.
-      while (tolerance >= 0 & length(p.idxs) > 1) {
+      while (tolerance >= 0 & length(participant.idxs) > 1) {
         for (obj in obj.ordering) {
           # Order participants by their fitness value for current objective.
-          ordered.participants.idxs = p.idxs[order(fitness[obj,p.idxs])]
+          ordered.participant.idxs = participant.idxs[order(fitness[obj,participant.idxs])]
           
           # Compare fittest participant with rest.
-          p1 = ordered.participants.idxs[1]
-          p.idxs = c(p1)
-          for (i in 2:length(ordered.participants.idxs)) {
-            p2 = ordered.participants.idxs[i]
+          p1 = ordered.participant.idxs[1]
+          participant.idxs = c(p1)
+          for (i in 2:length(ordered.participant.idxs)) {
+            p2 = ordered.participant.idxs[i]
             if (abs(fitness[obj,p1] - fitness[obj,p2]) <= theta) {
               # Retain all participants within threshold for next objective.
-              p.idxs[i] = p2
+              participant.idxs[i] = p2
             }
             else {
               # No more within threshold.
@@ -339,7 +346,7 @@ selTournamentLX = ecr::makeSelector(
           }
           
           # One participant remaining.  
-          if (length(p.idxs) <= 1) {
+          if (length(participant.idxs) <= 1) {
             break
           }
         }
@@ -349,16 +356,16 @@ selTournamentLX = ecr::makeSelector(
       # A victor will be selected by some means: Increment total.
       total = total + 1
     
-      if (length(p.idxs) == 1) {
+      if (length(participant.idxs) == 1) {
         # One victor found.
-        new.pop.idxs[total] = p.idxs[1]
+        new.pop.idxs[total] = participant.idxs[1]
       }
-      else if (length(p.idxs) < 1) {
+      else if (length(participant.idxs) < 1) {
         stop("Error: No participants remaining after tournament.")
       }
       else {
         # No outright victor: Select any from remaining participants. 
-        new.pop.idxs[total] = sample(p.idxs, 1)
+        new.pop.idxs[total] = sample(participant.idxs, 1)
       }
     }
     
