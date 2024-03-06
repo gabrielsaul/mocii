@@ -7,8 +7,8 @@ getResilience <- function(x.interest,
                           cfs,
                           pred,
                           ml_alg_target_range,
-                          max_feat_values,
                           min_feat_values,
+                          max_feat_values,
                           data_feat_types) {
   
   # No counterfactuals.
@@ -28,16 +28,11 @@ getResilience <- function(x.interest,
     # Empty resilience dataframe for counterfactual resilience dataframe.
     cf_resilience_df = setNames(data.frame(matrix(ncol = length(cf_nms), nrow = 0)), 
                                 cf_nms)
+    cf_resilience_df[1,] = rep(NaN, ncol(cf))
     
-    # Check if the counterfactual is testable: Mutated numeric features present.
+    # Get mutated numeric feature names.
     changed = getMutNumericFeatures(cf, x.interest)
-    if (length(changed) > 0) {
-      cf_resilience_df[1,] = rep(NaN, ncol(cf))
-    }
-    else {
-      return(NULL)
-    }
-    
+
     writeLines(sprintf("\nNumber of Mutated Features: %d", length(changed)))
     print("\nMutated Features:")
     print(changed)
@@ -45,7 +40,7 @@ getResilience <- function(x.interest,
     # For each mutated numeric feature...
     for (k in changed) {
       
-      # If between min/max of the feature value in dataset.
+      # If between min/max of the feature value in observed data.
       if (cf[[k]] > min_feat_values[[k]] & cf[[k]] < max_feat_values[[k]]) {
         writeLines(sprintf("\nMutated Feature: %s", k))
         

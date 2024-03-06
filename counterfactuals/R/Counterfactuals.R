@@ -216,6 +216,9 @@ Counterfactuals = R6::R6Class("Counterfactuals",
     obj.ordering = NULL,
     theta = NULL,
     ext.resilience = NULL,
+    min_feat_values = NULL,
+    max_feat_values = NULL,
+    data_feat_types = NULL,
     max.changed  = NULL,
     mu  = NULL,
     generations  = NULL,
@@ -241,7 +244,7 @@ Counterfactuals = R6::R6Class("Counterfactuals",
       theta = 0.01, ext.resilience = FALSE, max.changed = NULL, mu = 50, 
       generations = 50, p.rec = 0.9, p.rec.gen = 0.7, p.rec.use.orig = 0.7, 
       p.mut = 0.2, p.mut.gen = 0.5, p.mut.use.orig = 0.2, k = 1L, 
-      weights = NULL, lower = NULL, upper = NULL, initialization = "random",
+      weights = NULL, lower = NULL, upper = NULL, initialization = "random", 
       track.infeas = TRUE) {
       
       super$initialize(predictor = predictor)
@@ -299,6 +302,17 @@ Counterfactuals = R6::R6Class("Counterfactuals",
       self$upper = upper
       self$track.infeas = track.infeas
       self$initialization = initialization
+
+      # Calculate min/max feature values & feature data types.
+      pred.data = as.data.frame(predictor$data$X)
+      f <- function(x) {
+        suppressWarnings(return(!is.na(as.numeric(x))))
+      }
+      self$min_feat_values = apply(pred.data, 2, min)
+      self$min_feat_values = map_if(self$min_feat_values, f, as.numeric)
+      self$max_feat_values = apply(pred.data, 2, max)
+      self$max_feat_values = map_if(self$max_feat_values, f, as.numeric)
+      self$data_feat_types = sapply(type.convert(pred.data, as.is = TRUE), class)
       
       # Check if column names of x.interest and observed data are identical
       if(any(!(self$predictor$data$feature.names %in% colnames(x.interest)))) {
@@ -602,7 +616,9 @@ Counterfactuals = R6::R6Class("Counterfactuals",
           fitness_fun(x, x.interest = self$x.interest, target = self$target,
             predictor = self$predictor, train.data = self$predictor$data$get.x(),
             range = private$range, track.infeas = self$track.infeas,
-            k = self$k, weights = self$weights, ext.resilience = self$ext.resilience)
+            k = self$k, weights = self$weights, ext.resilience = self$ext.resilience,
+            min_feat_values = self$min_feat_values, max_feat_values = self$max_feat_values,
+            data_feat_types = self$data_feat_types)
         })
 
       fn = mosmafs::setMosmafsVectorized(fn)

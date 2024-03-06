@@ -21,7 +21,8 @@
 #' @return (matrix)
 fitness_fun = function(x, x.interest, target, predictor, train.data, range = NULL,
   track.infeas = TRUE, identical.strategy = FALSE, k = 1, weights = NULL,
-  ext.resilience = FALSE) {
+  ext.resilience = FALSE, min_feat_values = NULL, max_feat_values = NULL, 
+  data_feat_types = NULL) {
   assertIntegerish(k, null.ok = FALSE)
   assertDataFrame(x)
   assertDataFrame(x.interest, nrows = 1, any.missing = FALSE)
@@ -39,6 +40,13 @@ fitness_fun = function(x, x.interest, target, predictor, train.data, range = NUL
     x = x[, -grep("use.orig", x = names(x))]
   }
   assert_data_frame(x, ncols = ncol(x.interest))
+  
+  assert_logical(ext.resilience)
+  if (ext.resilience) {
+    assert_list(min_feat_values)
+    assert_list(max_feat_values)
+    assert_character(data_feat_types)
+  }
 
   if(!all(names(x) == names(x.interest))) {
     stop("x.interest and x need same column ordering and names")
@@ -49,14 +57,34 @@ fitness_fun = function(x, x.interest, target, predictor, train.data, range = NUL
     stop("x.interest and x need same feature types")
   }
 
-  # Objective Functions
+  # Calculate fitness values for each objective. 
+  
+  # Attain prediction for candidate.
   pred = predictor$predict(newdata = x)[[1]]
+  
+  # Objective 1: Validity
   q1 = vapply(pred, numeric(1), FUN =  function(x) min(abs(x - target)))
   q1 = ifelse(length(target) == 2 & (pred >= target[1]) & (pred <= target[2]),
     0, q1)
+  # Extend with resilience if flagged.
+  if (ext.resilience) {
+    res_df = getResilience(x.interest,
+                           x,
+                           predictor,
+                           target,
+                           min_feat_values,
+                           max_feat_values,
+                           data_feat_types)
+    res_cfs = lapply(apply(res_df, 1, function(x) mean(na.omit(x))),
+                     function(x) ifelse(is.nan(x), 0, x))
+    q1 = 0 - as.numeric(res_cfs)
+  }
+  
+  # Objective 2: Similarity.
   q2 = StatMatch::gower.dist(data.x = x.interest, data.y = x, rngs = range,
     KR.corr = FALSE)[1,]
 
+  # Objective 3: Sparsity.
   if (identical.strategy) {
     feature.types = predictor$data$feature.types
     x.interest.rep = x.interest[rep(row.names(x.interest), nrow(x)),]
@@ -69,6 +97,8 @@ fitness_fun = function(x, x.interest, target, predictor, train.data, range = NUL
   } else {
     q3 = rowSums(x != x.interest[rep(row.names(x.interest), nrow(x)),])
   }
+  
+  # Objective 4: Feasibility/Plausibility. 
   if (track.infeas) {
     q4 = apply(StatMatch::gower.dist(data.x = train.data, data.y = x, rngs = range,
       KR.corr = FALSE), MARGIN = 2, FUN = function(dist) {
@@ -308,6 +338,18 @@ selTournamentLX = ecr::makeSelector(
     dupl.pop.idxs = which(duplicated(t(fitness)))
     if ((ncol(fitness) - length(dupl.pop.idxs)) > n.select) {
       pop.idxs = setdiff(pop.idxs, dupl.pop.idxs)
+    }
+    
+    # Check population size. 
+    if (length(pop.idxs) == 1) {
+      return(pop.idxs[1])
+    }
+    else if (length(pop.idxs) <= 0) {
+      warning("Warning: Empty population passed to lexicographic selector")
+      return(NULL)
+    }
+    else if (length(pop.idxs) < k) {
+      k = length(pop.idxs)
     }
 
     # Indices of selected individuals. 

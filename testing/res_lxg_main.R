@@ -11,18 +11,6 @@
 ###                                                      ###
 ############################################################
 
-# Sentinel values for fitness objectives (in default order).
-OBJ_VALID     = 1
-OBJ_SIMILAR   = 2
-OBJ_SPARSE    = 3
-OBJ_PLAUSIBLE = 4
-
-# Number of fitness objectives.
-N_OBJ         = 4
-
-# Number of metadata columns in MOC results.
-NCOLS_CF_METADATA = 5
-
 #--- Setup ----
 # Set the working directory.
 wdir = "C:\\Users\\Owner\\OneDrive\\Documents\\Academic\\UKC\\CS\\3\\All\\COMP6200 Research Project\\MONOMOC\\monomoc\\testing"
@@ -101,10 +89,10 @@ svm_alg = mlAlgStruct(id = SVM_ALG_ID,
                       target_range = c(0.5, 1.0))
 
 # Full list of datasets.
-DATASETS = list(adult_data, compas_data, diabetes_data, fico_data, german_data)
+DATASETS = list(adult_data)
 
 # Full list of ML algorithm types.
-ML_ALGS = list(nn_alg, rf_alg, svm_alg)
+ML_ALGS = list(nn_alg)
 
 # Main test function for monotonicity constraint violation proximity (resilience)
 # and comparisons to the lexicographic selection function. 
@@ -117,11 +105,22 @@ run <- function(data,
                 ml_alg_target_range,
                 obj.ordering,
                 n_points_of_interest = 1,
-                data_feat_types = sapply(type.convert(data, as.is = TRUE), class),
-                TD_PADDING_MULTIPLIER = 5,
-                ext.resilience = FALSE,
+                TD_PADDING_MULTIPLIER = 3,
+                ext.resilience = TRUE,
                 best.params = readRDS("../saved_objects/best_configs.rds")) 
 {
+  checkmate::assert_data_frame(data)
+  checkmate::assert_character(data_id)
+  checkmate::assert_character(target)
+  checkmate::assert_character(target_values)
+  checkmate::assert_character(naf)
+  checkmate::assert_character(ml_alg_id)
+  checkmate::assert_numeric(ml_alg_target_range)
+  checkmate::assert_list(obj.ordering)
+  checkmate::assert_numeric(n_points_of_interest)
+  checkmate::assert_numeric(TD_PADDING_MULTIPLIER)
+  checkmate::assert_logical(ext.resilience)
+  checkmate::assert_data_frame(best.params)
   
   # Check parameters.
   if ((n_points_of_interest != round(n_points_of_interest))|
@@ -195,18 +194,6 @@ run <- function(data,
   # Resilience data frame for lexicographic counterfactuals.
   cf_nms = colnames(data[,-which(names(data) == target)])
   lex_resilience_df = setNames(data.frame(matrix(ncol = length(cf_nms), nrow = 0)), cf_nms)
-
-  
-  # Minimum & maximum values for each numeric feature in the test data.
-  min_feat_values = apply(data, 2, min)
-  min_feat_values = map_if(min_feat_values, isNumericString, as.numeric)
-  max_feat_values = apply(data, 2, max)
-  max_feat_values = map_if(max_feat_values, isNumericString, as.numeric)
-  
-  print("\nMIN FEAT VALUES:")
-  print(min_feat_values)
-  print("\nMAX FEAT VALUES:")
-  print(max_feat_values)
   
   # Select training & test data.
   set.seed(as.numeric(Sys.time()))
@@ -241,9 +228,14 @@ run <- function(data,
         if (length(test_data_idx) == 0) {
           warning("Warning: Terminated before full points of interest set was tested")
           
-          par_pd_wlt[c(1, 2)] = lex_pd_wlt[c(2, 1)]
-          par_lx_wlt[c(1, 2)] = lex_lx_wlt[c(2, 1)]
-          return(list(generateAlgorithmTestResults(test_run_id = sprintf("par_%s_%s", data_id, ml_alg_id),
+          par_pd_wlt[c(1, 2, 3)] = lex_pd_wlt[c(2, 1, 3)]
+          par_lx_wlt[c(1, 2, 3)] = lex_lx_wlt[c(2, 1, 3)]
+          return(list(generateAlgorithmTestResults(test_run_id = sprintf("par_%s_%s_%s", 
+                                                                         data_id, 
+                                                                         ml_alg_id,
+                                                                         ifelse(ext.resilience,
+                                                                                "res",
+                                                                                "nores")),
                                                    par_runtime_total,
                                                    par_gen_total,
                                                    par_runtime_total,
@@ -257,7 +249,12 @@ run <- function(data,
                                                    par_pd_wlt,
                                                    par_lx_wlt,
                                                    par_resilience_df),
-                      generateAlgorithmTestResults(test_run_id = sprintf("lex_%s_%s", data_id, ml_alg_id),
+                      generateAlgorithmTestResults(test_run_id = sprintf("lex_%s_%s_%s", 
+                                                                         data_id, 
+                                                                         ml_alg_id,
+                                                                         ifelse(ext.resilience,
+                                                                                "res",
+                                                                                "nores")),
                                                    lex_runtime_total,
                                                    lex_gen_total,
                                                    lex_runtime_total,
@@ -328,22 +325,22 @@ run <- function(data,
     # Compute counterfactuals for data point of interest (Pareto-based).
     set.seed(1000)
     system.time({pareto.cf = Counterfactuals$new(predictor = pred, 
-                                               x.interest = x.interest,
-                                               target = ml_alg_target_range, 
-                                               epsilon = 0, 
-                                               generations = list(mosmafs::mosmafsTermStagnationHV(10),
+                                                 x.interest = x.interest,
+                                                 target = ml_alg_target_range, 
+                                                 epsilon = 0, 
+                                                 generations = list(mosmafs::mosmafsTermStagnationHV(10),
                                                                   mosmafs::mosmafsTermGenerations(200)), 
-                                               mu = best.params$mu, 
-                                               p.mut = best.params$p.mut, 
-                                               p.rec = best.params$p.rec, 
-                                               p.mut.gen = best.params$p.mut.gen, 
-                                               p.mut.use.orig = best.params$p.mut.use.orig, 
-                                               p.rec.gen = best.params$p.rec.gen, 
-                                               initialization = "icecurve",
-                                               p.rec.use.orig = best.params$p.rec.use.orig,
-                                               fixed.features = naf,
-                                               lexicographic.selection = FALSE,
-                                               ext.resilience = ext.resilience)})
+                                                 mu = best.params$mu, 
+                                                 p.mut = best.params$p.mut, 
+                                                 p.rec = best.params$p.rec, 
+                                                 p.mut.gen = best.params$p.mut.gen, 
+                                                 p.mut.use.orig = best.params$p.mut.use.orig, 
+                                                 p.rec.gen = best.params$p.rec.gen, 
+                                                 initialization = "icecurve",
+                                                 p.rec.use.orig = best.params$p.rec.use.orig,
+                                                 fixed.features = naf,
+                                                 lexicographic.selection = FALSE,
+                                                 ext.resilience = ext.resilience)})
     
     # Log Pareto-based GA metrics.
     par_gen_total = par_gen_total + pareto.cf$n.generations
@@ -430,7 +427,7 @@ run <- function(data,
       }
       
       # Remove invalid counterfactuals & metadata.
-      valid_cf_idx = which(pareto.cf$results$counterfactuals$dist.target == 0)
+      valid_cf_idx = which(pareto.cf$results$counterfactuals$dist.target <= 0)
       par_valid_cfs = pareto.cf$results$counterfactuals[valid_cf_idx,
                                                         1:(ncols.cf - NCOLS_CF_METADATA)]
       pareto.cf$results$counterfactuals.diff = pareto.cf$results$counterfactuals.diff[valid_cf_idx, ]
@@ -446,7 +443,7 @@ run <- function(data,
         par_poi_rejected = par_poi_rejected + 1
         par_cf_all_invalid = par_cf_all_invalid + 1
       } 
-      if (lexico.cf$results$counterfactuals[1,]$dist.target != 0) {
+      if (lexico.cf$results$counterfactuals[1,]$dist.target > 0) {
         is_testable = FALSE
         lex_poi_rejected = lex_poi_rejected + 1
         lex_cf_all_invalid = lex_cf_all_invalid + 1
@@ -463,29 +460,49 @@ run <- function(data,
       # Both sets of counterfactuals are testable. 
       if (is_testable & (poi_tested_res < n_points_of_interest)) {
         
-        # Resilience tests: Expand resilience dataframes.
-        par_resilience_df = rbind(par_resilience_df, getResilience(x.interest,
-                                                                   par_valid_cfs,
-                                                                   pred,
-                                                                   ml_alg_target_range,
-                                                                   max_feat_values,
-                                                                   min_feat_values,
-                                                                   data_feat_types))
-        lex_resilience_df = rbind(lex_resilience_df, getResilience(x.interest,
-                                                                   lex_valid_cfs,
-                                                                   pred,
-                                                                   ml_alg_target_range,
-                                                                   max_feat_values,
-                                                                   min_feat_values,
-                                                                   data_feat_types))
-        poi_tested_res = poi_tested_res + 1
+        # Resilience tests.
+        par_res_df = getResilience(x.interest,
+                                   par_valid_cfs,
+                                   pred,
+                                   ml_alg_target_range,
+                                   pareto.cf$min_feat_values,
+                                   pareto.cf$max_feat_values,
+                                   pareto.cf$data_feat_types)
+        lex_res_df = getResilience(x.interest,
+                                   lex_valid_cfs,
+                                   pred,
+                                   ml_alg_target_range,
+                                   lexico.cf$min_feat_values,
+                                   lexico.cf$max_feat_values,
+                                   lexico.cf$data_feat_types)
+        
+        # Expand resilience dataframes if returned. 
+        if (nrow(par_res_df) > 0 & nrow(lex_res_df) > 0) {
+          poi_tested_res = poi_tested_res + 1
+          par_resilience_df = rbind(par_resilience_df, par_res_df)
+          lex_resilience_df = rbind(lex_resilience_df, lex_res_df)
+        }
+        else {
+          print("!EMTPYRESDF!")
+        }
+        if (nrow(par_res_df) <= 0) {
+          par_poi_rejected = par_poi_rejected + 1
+        }
+        if (nrow(lex_res_df) <= 0) {
+          lex_poi_rejected = lex_poi_rejected + 1
+        }
       }
     }
   }
 
   par_pd_wlt[c(1, 2, 3)] = lex_pd_wlt[c(2, 1, 3)]
   par_lx_wlt[c(1, 2, 3)] = lex_lx_wlt[c(2, 1, 3)]
-  return(list(generateAlgorithmTestResults(test_run_id = sprintf("par_%s_%s", data_id, ml_alg_id),
+  return(list(generateAlgorithmTestResults(test_run_id = sprintf("par_%s_%s_%s", 
+                                                                 data_id, 
+                                                                 ml_alg_id,
+                                                                 ifelse(ext.resilience,
+                                                                        "res",
+                                                                        "nores")),
                                            par_runtime_total,
                                            par_gen_total,
                                            points_of_interest_tested,
@@ -498,7 +515,12 @@ run <- function(data,
                                            par_pd_wlt,
                                            par_lx_wlt,
                                            par_resilience_df),
-              generateAlgorithmTestResults(test_run_id = sprintf("lex_%s_%s", data_id, ml_alg_id),
+              generateAlgorithmTestResults(test_run_id = sprintf("lex_%s_%s_%s", 
+                                                                 data_id, 
+                                                                 ml_alg_id,
+                                                                 ifelse(ext.resilience,
+                                                                        "res",
+                                                                        "nores")),
                                            lex_runtime_total,
                                            lex_gen_total,
                                            points_of_interest_tested,
@@ -517,31 +539,42 @@ run <- function(data,
 obj.ordering1 = list(OBJ_VALID, OBJ_SIMILAR, OBJ_SPARSE, OBJ_PLAUSIBLE)
 obj.ordering2 = list(OBJ_VALID, OBJ_SPARSE, OBJ_SIMILAR, OBJ_PLAUSIBLE)
 
-# Test datasets x ML alg types.
+# Test across all datasets.
 for (ds in DATASETS) {
   # Prepare data.
   names(ds@df) = tolower(names(ds@df))
   ds@df = na.omit(ds@df)
   ds@df[,ds@target] = as.factor(ds@df[,ds@target])
   
+  # Test across all ML algorithms.
   for (ml_alg in ML_ALGS) {
-    sink(sprintf("logs/resilience_tests_%s_%s.txt", ds@id, ml_alg@id))
-    print(nrow(ds@df))
-    start_time = Sys.time()
-    results = run(ds@df,
-                  ds@id,
-                  ds@target,
-                  ds@target_values,
-                  ds@nonactionable,
-                  ml_alg@id,
-                  ml_alg@target_range,
-                  obj.ordering = obj.ordering1,
-                  n_points_of_interest = 1,
-                  TD_PADDING_MULTIPLIER = 5)
-    end_time = Sys.time()
-    print("\nRESULTS: ")
-    print(results)
-    writeLines(sprintf("Execution Time: %f", (end_time - start_time)))
-    sink()
+    
+    # Test across two objective orderings.
+    oo = 1
+    for (obj.ordering in list(obj.ordering1, obj.ordering2)) {
+      # Test both without resilience and with resilience.
+      for (ext.resilience in list(FALSE, TRUE)) {
+        sink(sprintf("logs/tests_%s_%s_%s_oo%d.txt", ds@id, 
+                                                  ml_alg@id,
+                                                  ifelse(ext.resilience, "res", "nores"),
+                                                  oo))
+        print(nrow(ds@df))
+        results = run(ds@df,
+                      ds@id,
+                      ds@target,
+                      ds@target_values,
+                      ds@nonactionable,
+                      ml_alg@id,
+                      ml_alg@target_range,
+                      ext.resilience = ext.resilience,
+                      obj.ordering = obj.ordering,
+                      n_points_of_interest = 1,
+                      TD_PADDING_MULTIPLIER = 5)
+        print("\nRESULTS: ")
+        print(results)
+        sink()
+      }
+      oo = oo + 1
+    }
   }
 }

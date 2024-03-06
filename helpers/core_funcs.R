@@ -5,6 +5,18 @@ library("mlrCPO")
 # Load IML.
 devtools::load_all("../iml", export_all = FALSE)
 
+# Sentinel values for fitness objectives (in default order).
+OBJ_VALID     = 1
+OBJ_SIMILAR   = 2
+OBJ_SPARSE    = 3
+OBJ_PLAUSIBLE = 4
+
+# Number of fitness objectives.
+N_OBJ         = 4
+
+# Number of metadata columns in MOC results.
+NCOLS_CF_METADATA = 5
+
 # Indexing constants.
 POS_CLV_INDEX = 1
 NEG_CLV_INDEX = 2
@@ -56,11 +68,11 @@ algorithmTestResults <- setClass(
     cf_invalid = "integer",
     cf_all_invalid = "integer",
     cf_null_returned = "integer",
-    cf_pred_avg = "numeric",
-    cf_pred_sd = "numeric",
-    cf_pred_var = "numeric",
-    cf_pred_min = "numeric",
-    cf_pred_max = "numeric",
+    fit_avg = "numeric",
+    fit_sd = "numeric",
+    fit_var = "numeric",
+    fit_min = "numeric",
+    fit_max = "numeric",
     feat_mut_frequency = "numeric",
     feat_mut_total = "numeric",
     pd_comparisons = "integer",
@@ -124,16 +136,17 @@ generateAlgorithmTestResults <- function(test_run_id = "test",
   # Total number of invalid counterfactuals produced by the algorithm.
   cf_invalid = cf_total - cf_valid
   
-  # Average positive class prediction value.
-  cf_pred_avg = mean(cf_df$pred)
+  # Average objective fitness values (including prediction).
+  fit = cf_df[,((ncol(cf_df) - NCOLS_CF_METADATA) + 1):ncol(cf_df)]
+  fit_avg = apply(fit, 2, function(x) mean(na.omit(x)))
   
-  # Minimum & maximum positive class prediction value.
-  cf_pred_min = min(cf_df$pred)
-  cf_pred_max = max(cf_df$pred)
+  # Minimum & maximum fitness values (including prediction).
+  fit_min = apply(fit, 2, function(x) min(na.omit(x)))
+  fit_max = apply(fit, 2, function(x) max(na.omit(x)))
   
-  # Standard deviation & variance of positive class prediction value.
-  cf_pred_sd = sd(cf_df$pred)
-  cf_pred_var = var(cf_df$pred)
+  # Standard deviation & variance of fitness values (including prediction).
+  fit_sd = apply(fit, 2, function(x) sd(na.omit(x)))
+  fit_var = apply(fit, 2, function(x) var(na.omit(x)))
   
   # Count of Pareto-dominace comparisons.
   pd_comparisons = sum(pd_wlt)
@@ -206,7 +219,7 @@ generateAlgorithmTestResults <- function(test_run_id = "test",
   resilience_feat_max = apply(resilience_df_redacted, 2, function(x) max(na.omit(x)))
   
   # Counterfactual resilience scores (row-wise mean).
-  resilience_cf = apply(resilience_df, 1, function(x) mean(na.omit(x)))
+  resilience_cf = na.omit(apply(resilience_df, 1, function(x) mean(na.omit(x))))
   
   # Percentage of perfectly resilient counterfactuals.
   cf_tbl = table(resilience_cf)
@@ -254,11 +267,11 @@ generateAlgorithmTestResults <- function(test_run_id = "test",
                               "cf_invalid" = as.integer(cf_invalid),
                               "cf_all_invalid" = as.integer(cf_all_invalid),
                               "cf_null_returned" = as.integer(cf_null_returned),
-                              "cf_pred_avg" = cf_pred_avg,
-                              "cf_pred_sd" = cf_pred_sd,
-                              "cf_pred_var" = cf_pred_var,
-                              "cf_pred_min" = cf_pred_min,
-                              "cf_pred_max" = cf_pred_max,
+                              "fit_avg" = fit_avg,
+                              "fit_sd" = fit_sd,
+                              "fit_var" = fit_var,
+                              "fit_min" = fit_min,
+                              "fit_max" = fit_max,
                               "feat_mut_frequency" = feat_mut_frequency,
                               "feat_mut_total" = feat_mut_total,
                               "pd_comparisons" = as.integer(pd_comparisons),
@@ -456,11 +469,6 @@ containsMutNumericFeatures <- function(cfs, orig) {
     }
   }
   return(FALSE)
-}
-
-# Return TRUE if the given string is numeric, else FALSE.
-isNumericString <- function(s) {
-  suppressWarnings(return(!is.na(as.numeric(s))))
 }
 
 # Return TRUE if the given result equates to a negative class prediction,
