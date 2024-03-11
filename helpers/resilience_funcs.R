@@ -32,17 +32,12 @@ getResilience <- function(x.interest,
     
     # Get mutated numeric feature names.
     changed = getMutNumericFeatures(cf, x.interest)
-
-    writeLines(sprintf("\nNumber of Mutated Features: %d", length(changed)))
-    print("\nMutated Features:")
-    print(changed)
     
     # For each mutated numeric feature...
     for (k in changed) {
       
       # If between min/max of the feature value in observed data.
       if (cf[[k]] > min_feat_values[[k]] & cf[[k]] < max_feat_values[[k]]) {
-        writeLines(sprintf("\nMutated Feature: %s", k))
         
         # Set limit & direction of the MV search.
         limit = 0
@@ -71,21 +66,14 @@ getResilience <- function(x.interest,
         
         # Set maximum number of steps for MV search.
         max_steps = abs(limit - cf[[k]]) %/% abs(inc)
-        print("\nMAX_STEPS:")
-        print(max_steps)
-        
-        writeLines(sprintf("\nIncrement: %f", inc))
         
         # Mutate feature to search for closest MV.
         successful_steps = 0
         while (successful_steps < max_steps) {
           cf[[k]] = cf[[k]] + inc
-          print(cf)
           
-          result = pred$predict(cf)
-          print(result)
-          if (isNegativeClass(result, ml_alg_target_range)) {
-            print("!MV! -- MONOTONICITY VIOLATION")
+          class.predicted = isNegativeClass(pred$predict(cf), ml_alg_target_range)
+          if (is.na(class.predicted) | class.predicted) {
             break;
           }
           
@@ -94,14 +82,9 @@ getResilience <- function(x.interest,
         
         # Log step ratio for feature.
         cf_resilience_df[[k]] = successful_steps / max_steps
-        
-        writeLines(sprintf("Successful Steps: %d/%d", successful_steps, max_steps))
-        print("\n###########################################################\n")
       }
       else {
         # Feature is already at min/max: Assume full resilience.
-        print("Already at min/max.")
-        print("Full resilience.")
         cf_resilience_df[[k]] = 1.0
       }
     }

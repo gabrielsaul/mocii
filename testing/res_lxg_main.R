@@ -1,6 +1,10 @@
 ############################################################
 ### Counterfactual Resilience & Lexicographic Selection: ###
 ###                                                      ###
+###   AUTHOR:      Gabriel Doyle-Finch                   ###
+###   SUPERVISOR:  Alex Freitas                          ###
+###   INSTITUTION: University of Kent                    ###
+###                                                      ###
 ###  + Testing counterfactuals' proximity to violations  ###
 ###    of monotonicity constraints                       ###
 ###  + Adjusting the fitness function to consider        ###
@@ -92,7 +96,7 @@ svm_alg = mlAlgStruct(id = SVM_ALG_ID,
 DATASETS = list(adult_data)
 
 # Full list of ML algorithm types.
-ML_ALGS = list(nn_alg)
+ML_ALGS = list(rf_alg)
 
 # Main test function for monotonicity constraint violation proximity (resilience)
 # and comparisons to the lexicographic selection function. 
@@ -204,6 +208,9 @@ run <- function(data,
   # Remaining test data idx.
   test_data_idx = 1:nrow(data)[-test_data_idx]
   
+  train_data_levels = sapply(train_data, levels)
+  test_data_levels = sapply(test_data, levels)
+  
   # Create predictor.
   pred = getPredictor(ml_alg_id = ml_alg_id, 
                       data = train_data,
@@ -211,119 +218,79 @@ run <- function(data,
                       target = target,
                       target_values = target_values)
   
+  # Prune test data.
+  test_data = pruneTestData(test_data,
+                            train_data,
+                            pred, 
+                            ml_alg_target_range,
+                            size_req = n_points_of_interest,
+                            SUBSET_FACTORS = TRUE)
+  
   # Operate on points of interest.
   poi_tested_res = 0
   poi_tested_vs = 0
   while (poi_tested_res < n_points_of_interest | 
-         poi_tested_vs < n_points_of_interest) {
-
-    # Randomly sample a usable data point.
-    is_usable = FALSE
-    while (!is_usable) {
-
-      # No more usable points of interest in current test data segment.
-      if (nrow(test_data) == 0) {
-        
-        # Terminate early, or...
-        if (length(test_data_idx) == 0) {
-          warning("Warning: Terminated before full points of interest set was tested")
-          
-          par_pd_wlt[c(1, 2, 3)] = lex_pd_wlt[c(2, 1, 3)]
-          par_lx_wlt[c(1, 2, 3)] = lex_lx_wlt[c(2, 1, 3)]
-          return(list(generateAlgorithmTestResults(test_run_id = sprintf("par_%s_%s_%s", 
-                                                                         data_id, 
-                                                                         ml_alg_id,
-                                                                         ifelse(ext.resilience,
-                                                                                "res",
-                                                                                "nores")),
-                                                   par_runtime_total,
-                                                   par_gen_total,
-                                                   par_runtime_total,
-                                                   points_of_interest_tested,
-                                                   poi_tested_res,
-                                                   poi_tested_vs,
-                                                   par_poi_rejected,
-                                                   par_cf_df,
-                                                   par_cf_all_invalid,
-                                                   par_cf_null_returned,
-                                                   par_pd_wlt,
-                                                   par_lx_wlt,
-                                                   par_resilience_df),
-                      generateAlgorithmTestResults(test_run_id = sprintf("lex_%s_%s_%s", 
-                                                                         data_id, 
-                                                                         ml_alg_id,
-                                                                         ifelse(ext.resilience,
-                                                                                "res",
-                                                                                "nores")),
-                                                   lex_runtime_total,
-                                                   lex_gen_total,
-                                                   lex_runtime_total,
-                                                   points_of_interest_tested,
-                                                   poi_tested_res,
-                                                   poi_tested_vs,
-                                                   lex_poi_rejected,
-                                                   lex_cf_df,
-                                                   lex_cf_all_invalid,
-                                                   lex_cf_null_returned,
-                                                   lex_pd_wlt,
-                                                   lex_lx_wlt,
-                                                   lex_resilience_df)))
-        }
-        
-        print("Retraining...")
-        
-        # Set new test data segment size.
-        td_segment_size = n_points_of_interest * TD_PADDING_MULTIPLIER
-        if (length(test_data_idx) < td_segment_size) {
-          td_segment_size = length(test_data_idx)
-        }
-        
-        # Re-segment data into training & test.
-        set.seed(as.numeric(Sys.time()))
-        new_test_data_idx = sample(length(test_data_idx), td_segment_size)
-        test_data = data[test_data_idx[new_test_data_idx],]
-        train_data = data[-test_data_idx[new_test_data_idx],]
-        
-        # Remove new test data idx from remaining test data idx.
-        test_data_idx = test_data_idx[-new_test_data_idx]
-        
-        # Train new predictor.
-        pred = getPredictor(ml_alg_id,
-                            train_data,
-                            data_id,
-                            target,
-                            target_values)
-      }
+        poi_tested_vs < n_points_of_interest) {
+    
+    # Terminate early if test data is exhausted.
+    if (nrow(test_data) <= 0) {
+      warning("Warning: Terminated before full points of interest set was tested")
       
-      # Select point of interest.
-      set.seed(as.numeric(Sys.time()))
-      sample_i = sample(1:nrow(test_data), 1)
-      x.interest = test_data[sample_i,]
-      
-      # Remove point of interest from test data.
-      test_data = test_data[-sample_i,]
-      
-      # Verify that the point of interest is predicted as negative class.
-      print(x.interest)
-      result = pred$predict(x.interest)
-      print(result)
-      
-      if (isNegativeClass(result, ml_alg_target_range)) {
-        is_usable = TRUE
-      }
-      else {
-        # Predicted positive class: Data point unusable.
-        par_poi_rejected = par_poi_rejected + 1
-        lex_poi_rejected = lex_poi_rejected + 1
-      }
+      par_pd_wlt[c(1, 2, 3)] = lex_pd_wlt[c(2, 1, 3)]
+      par_lx_wlt[c(1, 2, 3)] = lex_lx_wlt[c(2, 1, 3)]
+      return(list(generateAlgorithmTestResults(test_run_id = sprintf("par_%s_%s_%s", 
+                                                                     data_id, 
+                                                                     ml_alg_id,
+                                                                     ifelse(ext.resilience,
+                                                                            "res",
+                                                                            "nores")),
+                                               par_runtime_total,
+                                               par_gen_total,
+                                               par_runtime_total,
+                                               points_of_interest_tested,
+                                               poi_tested_res,
+                                               poi_tested_vs,
+                                               par_poi_rejected,
+                                               par_cf_df,
+                                               par_cf_all_invalid,
+                                               par_cf_null_returned,
+                                               par_pd_wlt,
+                                               par_lx_wlt,
+                                               par_resilience_df),
+                  generateAlgorithmTestResults(test_run_id = sprintf("lex_%s_%s_%s", 
+                                                                     data_id, 
+                                                                     ml_alg_id,
+                                                                     ifelse(ext.resilience,
+                                                                            "res",
+                                                                            "nores")),
+                                               lex_runtime_total,
+                                               lex_gen_total,
+                                               lex_runtime_total,
+                                               points_of_interest_tested,
+                                               poi_tested_res,
+                                               poi_tested_vs,
+                                               lex_poi_rejected,
+                                               lex_cf_df,
+                                               lex_cf_all_invalid,
+                                               lex_cf_null_returned,
+                                               lex_pd_wlt,
+                                               lex_lx_wlt,
+                                               lex_resilience_df)))
     }
+    writeLines(sprintf("points_of_interest_tested   %d", points_of_interest_tested))
+    writeLines(sprintf("poi_tested_res              %d", poi_tested_res))
+    writeLines(sprintf("poi_tested_vs               %d", poi_tested_vs))
     
-    print("\nPoint of Interest: ")
-    print(x.interest)
+    # Sample a usable test data point as a point of interest.
+    set.seed(as.numeric(Sys.time()))
+    x.interest.id = sample(1:nrow(test_data), 1)
+    x.interest = test_data[x.interest.id,]
     x.interest = x.interest[,-which(names(x.interest) == target)]
+    test_data = test_data[-x.interest.id,]
     
-    # Compute counterfactuals for data point of interest (Pareto-based).
-    set.seed(1000)
+    # Compute counterfactuals for point of interest (Pareto-based).
+    writeLines("Generating Pareto counterfactuals...")
+    set.seed(as.numeric(Sys.time()))
     system.time({pareto.cf = Counterfactuals$new(predictor = pred, 
                                                  x.interest = x.interest,
                                                  target = ml_alg_target_range, 
@@ -346,6 +313,9 @@ run <- function(data,
     par_gen_total = par_gen_total + pareto.cf$n.generations
     par_runtime_total = par_runtime_total + pareto.cf$runtime
     
+    # Compute counterfactuals for point of interest (lexicographic).
+    writeLines("Generating lexicographic counterfactuals...")
+    set.seed(as.numeric(Sys.time()))
     system.time({lexico.cf = Counterfactuals$new(predictor = pred, 
                                                  x.interest = x.interest,
                                                  target = ml_alg_target_range, 
@@ -382,9 +352,6 @@ run <- function(data,
         lex_poi_rejected = lex_poi_rejected + 1
         lex_cf_null_returned = lex_cf_null_returned + 1
       }
-      print("###############################")
-      print("# No counterfactuals returned #")
-      print("###############################")
     }
     else {
       
@@ -402,12 +369,6 @@ run <- function(data,
       }
       lex_cf_df = rbind(lex_cf_df, lexico.cf$results$counterfactuals)
       
-      print("Counterfactuals (Pareto): ")
-      print(pareto.cf$results$counterfactuals)
-      
-      print("\n\nCounterfactuals (Lexicographic): ")
-      print(lexico.cf$results$counterfactuals)
-      
       # Comparison testing: Pareto vs. Lexicographic.
       if (poi_tested_vs < n_points_of_interest) {
         # Extract fitness data frames.
@@ -417,9 +378,11 @@ run <- function(data,
         lexico.fit = lexico.cf$results$counterfactuals[,fit.col.idxs]
         
         # Compete in two arenas: Lexicographic selection and Pareto dominance.
+        writeLines("Competing... (lexicographic selection)")
         lex_lx_wlt = lex_lx_wlt + competeLX(lexico.set = lexico.fit, 
                                             pareto.set = pareto.fit,
                                             obj.ordering = obj.ordering)
+        writeLines("Competing... (Pareto-dominance)")
         lex_pd_wlt = lex_pd_wlt + competePD(lexico.set = lexico.fit, 
                                             pareto.set = pareto.fit)
         
@@ -461,6 +424,7 @@ run <- function(data,
       if (is_testable & (poi_tested_res < n_points_of_interest)) {
         
         # Resilience tests.
+        writeLines("Calculating Pareto counterfactuals' resilience...")
         par_res_df = getResilience(x.interest,
                                    par_valid_cfs,
                                    pred,
@@ -468,6 +432,7 @@ run <- function(data,
                                    pareto.cf$min_feat_values,
                                    pareto.cf$max_feat_values,
                                    pareto.cf$data_feat_types)
+        writeLines("Calculating lexicographic counterfactuals' resilience...")
         lex_res_df = getResilience(x.interest,
                                    lex_valid_cfs,
                                    pred,
@@ -482,9 +447,7 @@ run <- function(data,
           par_resilience_df = rbind(par_resilience_df, par_res_df)
           lex_resilience_df = rbind(lex_resilience_df, lex_res_df)
         }
-        else {
-          print("!EMTPYRESDF!")
-        }
+
         if (nrow(par_res_df) <= 0) {
           par_poi_rejected = par_poi_rejected + 1
         }
@@ -493,7 +456,9 @@ run <- function(data,
         }
       }
     }
+    writeLines("Done.")
   }
+  writeLines("Generating results...")
 
   par_pd_wlt[c(1, 2, 3)] = lex_pd_wlt[c(2, 1, 3)]
   par_lx_wlt[c(1, 2, 3)] = lex_lx_wlt[c(2, 1, 3)]
@@ -540,6 +505,7 @@ obj.ordering1 = list(OBJ_VALID, OBJ_SIMILAR, OBJ_SPARSE, OBJ_PLAUSIBLE)
 obj.ordering2 = list(OBJ_VALID, OBJ_SPARSE, OBJ_SIMILAR, OBJ_PLAUSIBLE)
 
 # Test across all datasets.
+sink("logs/progress.txt")
 for (ds in DATASETS) {
   # Prepare data.
   names(ds@df) = tolower(names(ds@df))
@@ -554,11 +520,12 @@ for (ds in DATASETS) {
     for (obj.ordering in list(obj.ordering1, obj.ordering2)) {
       # Test both without resilience and with resilience.
       for (ext.resilience in list(FALSE, TRUE)) {
-        sink(sprintf("logs/tests_%s_%s_%s_oo%d.txt", ds@id, 
-                                                  ml_alg@id,
-                                                  ifelse(ext.resilience, "res", "nores"),
-                                                  oo))
-        print(nrow(ds@df))
+        rds.filename = sprintf("logs/test_%s_%s_%s_oo%d.rds", 
+                               ds@id, 
+                               ml_alg@id,
+                               ifelse(ext.resilience, "res", "nores"),
+                               oo)
+        print(rds.filename)
         results = run(ds@df,
                       ds@id,
                       ds@target,
@@ -568,13 +535,12 @@ for (ds in DATASETS) {
                       ml_alg@target_range,
                       ext.resilience = ext.resilience,
                       obj.ordering = obj.ordering,
-                      n_points_of_interest = 1,
-                      TD_PADDING_MULTIPLIER = 5)
-        print("\nRESULTS: ")
-        print(results)
-        sink()
+                      n_points_of_interest = 20,
+                      TD_PADDING_MULTIPLIER = 1)
+        saveRDS(results, file = rds.filename)
       }
       oo = oo + 1
     }
   }
 }
+sink()

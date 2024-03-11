@@ -1,6 +1,7 @@
 # Load necessary library packages.
 library("mlr")
 library("mlrCPO")
+library("janitor")
 
 # Load IML.
 devtools::load_all("../iml", export_all = FALSE)
@@ -62,6 +63,7 @@ algorithmTestResults <- setClass(
     points_of_interest_tested_res = "integer",
     points_of_interest_tested_vs = "integer",
     points_of_interest_rejected = "integer",
+    cf_df = "data.frame",
     cf_total = "integer",
     cf_valid = "integer",
     cf_valid_pct = "numeric",
@@ -261,6 +263,7 @@ generateAlgorithmTestResults <- function(test_run_id = "test",
                               "points_of_interest_tested_res" = as.integer(points_of_interest_tested_res),
                               "points_of_interest_tested_vs" = as.integer(points_of_interest_tested_vs),
                               "points_of_interest_rejected" = as.integer(points_of_interest_rejected),
+                              "cf_df" = cf_df,
                               "cf_total" = as.integer(cf_total),
                               "cf_valid" = as.integer(cf_valid),
                               "cf_valid_pct" = cf_valid_pct,
@@ -341,7 +344,7 @@ getPredictor <- function(ml_alg_id,
     data.lrn = cpoScale() %>>% cpoDummyEncode() %>>% lrn
     
     # Parameters for tuning.
-    param_grid = makeParamSet(
+    param.set = makeParamSet(
       makeIntegerParam("size", lower = 1, upper = 10),
       makeNumericParam("decay", lower = 0.1, upper = 0.9)
     )
@@ -353,7 +356,7 @@ getPredictor <- function(ml_alg_id,
     data.lrn.tuned = tuneParams(data.lrn, 
                                 task = data.task, 
                                 resampling = RESAMPLING, 
-                                par.set = param_grid, 
+                                par.set = param.set, 
                                 control = tune_control)
     
     # Train the model.
@@ -372,7 +375,7 @@ getPredictor <- function(ml_alg_id,
                       fix.factors.prediction = TRUE)
     
     # Parameters for tuning.
-    param_grid = makeParamSet(
+    param.set = makeParamSet(
       makeIntegerParam("ntree", lower = 50, upper = 500),
       makeIntegerParam("mtry", lower = 1, upper = ncol(data) - 1)
     )
@@ -384,7 +387,7 @@ getPredictor <- function(ml_alg_id,
     data.lrn.tuned = tuneParams(lrn, 
                                 task = data.task, 
                                 resampling = cv10, 
-                                par.set = param_grid, 
+                                par.set = param.set, 
                                 control = tune_control)
     
     # Train the model.
@@ -473,8 +476,69 @@ containsMutNumericFeatures <- function(cfs, orig) {
 
 # Return TRUE if the given result equates to a negative class prediction,
 # else return FALSE.
-isNegativeClass <- function(result, ml_alg_target_range) {
-  lower = ml_alg_target_range[LOW_TARG_RANGE]
-  upper = ml_alg_target_range[UPP_TARG_RANGE]
+isNegativeClass <- function(result, target_range) {
+  if (is.null(result)) {
+    stop("error: Null result passed to isNegativeClass()")
+  }
+  lower = target_range[LOW_TARG_RANGE]
+  upper = target_range[UPP_TARG_RANGE]
   return(!(result >= lower & result <= upper))
+}
+
+# Given a set of test data and a set of training data, return the test data
+# such that it only contains instances that comprise a subset of the training
+# data's factors.
+subsetFactors <- function(test_data,
+                          train_data) {
+  if (!compare_df_cols_same(test_data, train_data)) {
+    stop("Error: Non-identical test data & training data sets passed to subsetFactors")
+  }
+  
+  browser()
+  
+  tdu = setNames(lapply(train_data, unique), names(df))
+  isf = which(as.logical(lapply(tdu, is.factor)))
+  rem.idxs = c()
+  i = 0
+  for (c in isf) {
+    for (r in 1:length(test_data[,c])) {
+      val = test_data[[r,c]]
+      if (!(test_data[r,c] %in% tdu[[c]])) {
+        rem.idxs[i] = r
+        i = i + 1
+      }
+    }
+  }
+  
+  return(test_data[-rem.idxs,])
+}
+
+# Given a data set and a predictor, return a pruned data set containing
+# only usable data points for base testing. If the size of the data set is not
+# sufficient, throw an error.
+#
+# If SUBSET_FACTORS = TRUE, ensure the test data set contains only the same
+# set or a subset of the factors of the training data.
+#
+pruneTestData <- function(test_data,
+                          train_data,
+                          pred, 
+                          target_range,
+                          size_req = nrow(test_data) %/% 2,
+                          SUBSET_FACTORS = FALSE) {
+  
+  if (SUBSET_FACTORS) {
+    test_data = subsetFactors(test_data, train_data)
+  }
+  
+  is.neg.idxs = sapply(pred$predict(test_data), 
+                       isNegativeClass, target_range = target_range)
+  is.neg.idxs[is.na(is.neg.idxs)] = FALSE
+  
+  test_data = test_data[is.neg.idxs,]
+  
+  if (nrow(test_data) < size_req) {
+    stop("Error: Insufficient test data size - increase TD_PADDING_MULTIPLIER")
+  }
+  return(test_data)
 }
