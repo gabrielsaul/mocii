@@ -401,7 +401,8 @@ getPredictor <- function(ml_alg_id,
   else if (ml_alg_id == SVM_ALG_ID) {
     
     # Learner: Support Vector Machine.
-    lrn = makeLearner("classif.svm", predict.type = "prob")
+    lrn = makeLearner("classif.svm", 
+                      predict.type = "prob")
     
     # Normalisation/dummy encoding preprocessing.
     data.lrn = cpoScale() %>>% cpoDummyEncode() %>>% lrn
@@ -493,24 +494,26 @@ subsetFactors <- function(test_data,
   if (!compare_df_cols_same(test_data, train_data)) {
     stop("Error: Non-identical test data & training data sets passed to subsetFactors")
   }
-  
-  browser()
-  
-  tdu = setNames(lapply(train_data, unique), names(df))
-  isf = which(as.logical(lapply(tdu, is.factor)))
-  rem.idxs = c()
-  i = 0
-  for (c in isf) {
+
+  train_data.uniq = setNames(lapply(train_data, unique), names(df))
+  isf.idxs = which(as.logical(lapply(train_data.uniq, is.factor)))
+  rem.idxs = integer()
+  i = 1
+  for (c in isf.idxs) {
     for (r in 1:length(test_data[,c])) {
-      val = test_data[[r,c]]
-      if (!(test_data[r,c] %in% tdu[[c]])) {
+      val = test_data[r,c]
+      if (!(test_data[r,c] %in% train_data.uniq[[c]])) {
         rem.idxs[i] = r
         i = i + 1
       }
     }
   }
-  
-  return(test_data[-rem.idxs,])
+  rem.idxs = unique(rem.idxs)
+
+  if (length(rem.idxs) > 0) {
+    test_data = test_data[-rem.idxs,]
+  }
+  return(test_data)
 }
 
 # Given a data set and a predictor, return a pruned data set containing
@@ -530,13 +533,13 @@ pruneTestData <- function(test_data,
   if (SUBSET_FACTORS) {
     test_data = subsetFactors(test_data, train_data)
   }
-  
+
   is.neg.idxs = sapply(pred$predict(test_data), 
-                       isNegativeClass, target_range = target_range)
+                       isNegativeClass, 
+                       target_range = target_range)
   is.neg.idxs[is.na(is.neg.idxs)] = FALSE
   
   test_data = test_data[is.neg.idxs,]
-  
   if (nrow(test_data) < size_req) {
     stop("Error: Insufficient test data size - increase TD_PADDING_MULTIPLIER")
   }

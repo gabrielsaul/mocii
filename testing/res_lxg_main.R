@@ -96,7 +96,7 @@ svm_alg = mlAlgStruct(id = SVM_ALG_ID,
 DATASETS = list(adult_data)
 
 # Full list of ML algorithm types.
-ML_ALGS = list(rf_alg)
+ML_ALGS = list(svm_alg)
 
 # Main test function for monotonicity constraint violation proximity (resilience)
 # and comparisons to the lexicographic selection function. 
@@ -204,12 +204,6 @@ run <- function(data,
   test_data_idx = sample(1:nrow(data), n_points_of_interest * TD_PADDING_MULTIPLIER)
   train_data = data[-test_data_idx,]
   test_data = data[test_data_idx,]
-  
-  # Remaining test data idx.
-  test_data_idx = 1:nrow(data)[-test_data_idx]
-  
-  train_data_levels = sapply(train_data, levels)
-  test_data_levels = sapply(test_data, levels)
   
   # Create predictor.
   pred = getPredictor(ml_alg_id = ml_alg_id, 
@@ -536,7 +530,7 @@ for (ds in DATASETS) {
                       ext.resilience = ext.resilience,
                       obj.ordering = obj.ordering,
                       n_points_of_interest = 20,
-                      TD_PADDING_MULTIPLIER = 1)
+                      TD_PADDING_MULTIPLIER = 3)
         saveRDS(results, file = rds.filename)
       }
       oo = oo + 1
