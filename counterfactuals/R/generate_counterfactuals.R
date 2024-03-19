@@ -321,6 +321,14 @@ selTournamentLX = ecr::makeSelector(
                       k = 2,
                       theta = 0.01) {
 
+    # Check for edge cases.
+    if (ncol(fitness) == 1) {
+      return(1)
+    }
+    else if (ncol(fitness) == 0) {
+      return(NULL)
+    }
+    
     checkmate::assert_number(n.select)
     if (n.select > ncol(fitness)) {
       stop("'n.select' must be smaller than or equal to 'ncol(fitness)'")
@@ -343,10 +351,6 @@ selTournamentLX = ecr::makeSelector(
     # Check population size. 
     if (length(pop.idxs) == 1) {
       return(pop.idxs[1])
-    }
-    else if (length(pop.idxs) <= 0) {
-      warning("Warning: Empty population passed to lexicographic selector")
-      return(NULL)
     }
     else if (length(pop.idxs) < k) {
       k = length(pop.idxs)

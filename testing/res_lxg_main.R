@@ -18,7 +18,7 @@
 #--- Setup ----
 # Set the working directory.
 wdir = "C:\\Users\\Owner\\OneDrive\\Documents\\Academic\\UKC\\CS\\3\\All\\COMP6200 Research Project\\MONOMOC\\monomoc\\testing"
-setwd(wdir)
+# setwd(wdir)
 
 # Load necessary library packages.
 library("purrr")
@@ -93,10 +93,14 @@ svm_alg = mlAlgStruct(id = SVM_ALG_ID,
                       target_range = c(0.5, 1.0))
 
 # Full list of datasets.
-DATASETS = list(adult_data)
+DATASETS = list(adult_data, compas_data, diabetes_data, fico_data, german_data)
 
 # Full list of ML algorithm types.
-ML_ALGS = list(svm_alg)
+ML_ALGS = list(nn_alg, rf_alg, svm_alg)
+
+# Objective orderings for tests.
+obj.ordering1 = list(OBJ_VALID, OBJ_SIMILAR, OBJ_SPARSE, OBJ_PLAUSIBLE)
+obj.ordering2 = list(OBJ_VALID, OBJ_SPARSE, OBJ_SIMILAR, OBJ_PLAUSIBLE)
 
 # Main test function for monotonicity constraint violation proximity (resilience)
 # and comparisons to the lexicographic selection function. 
@@ -108,8 +112,12 @@ run <- function(data,
                 ml_alg_id,
                 ml_alg_target_range,
                 obj.ordering,
+                test_data = NULL,
+                poi_idxs = NULL,
+                predictor = NULL,
                 n_points_of_interest = 1,
                 TD_PADDING_MULTIPLIER = 3,
+                TD_PADDING_ADDEND = 1,
                 ext.resilience = TRUE,
                 best.params = readRDS("../saved_objects/best_configs.rds")) 
 {
@@ -200,31 +208,61 @@ run <- function(data,
   lex_resilience_df = setNames(data.frame(matrix(ncol = length(cf_nms), nrow = 0)), cf_nms)
   
   # Select training & test data.
-  set.seed(as.numeric(Sys.time()))
-  test_data_idx = sample(1:nrow(data), n_points_of_interest * TD_PADDING_MULTIPLIER)
-  train_data = data[-test_data_idx,]
-  test_data = data[test_data_idx,]
+  mult = TD_PADDING_MULTIPLIER
+  while(is.null(predictor) | is.null(test_data)) {
+    
+    # Check if padding multiplier has grown too large.
+    if ((n_points_of_interest * mult) > (nrow(data) %/% 2)) {
+      stop("Error: Padding multiplier for test data is too large")
+    }
+    
+    # Sample test data set.
+    set.seed(as.numeric(Sys.time()))
+    test_data_idx = sample(1:nrow(data), as.integer(round(n_points_of_interest * mult)))
+    train_data = data[-test_data_idx,]
+    test_data = data[test_data_idx,]
+    
+    # Increment padding multiplier.
+    mult = mult + 0.1
+    
+    # Create predictor.
+    writeLines("Training new predictor...")
+    predictor = getPredictor(ml_alg_id = ml_alg_id, 
+                        data = train_data,
+                        data_id = data_id,
+                        target = target,
+                        target_values = target_values)
+    
+    # Filter test data.
+    writeLines("Filtering test data...")
+    test_data = filterTestData(test_data,
+                               train_data,
+                               predictor, 
+                               ml_alg_target_range,
+                               size_req = n_points_of_interest + TD_PADDING_ADDEND,
+                               SUBSET_FACTORS = TRUE)
+  }
+  test_data_size = nrow(test_data)
+  test_data_full = test_data
+  writeLines(sprintf("Test data size: %d", test_data_size))
   
-  # Create predictor.
-  pred = getPredictor(ml_alg_id = ml_alg_id, 
-                      data = train_data,
-                      data_id = data_id,
-                      target = target,
-                      target_values = target_values)
-  
-  # Prune test data.
-  test_data = pruneTestData(test_data,
-                            train_data,
-                            pred, 
-                            ml_alg_target_range,
-                            size_req = n_points_of_interest,
-                            SUBSET_FACTORS = TRUE)
+  # Vectors of test point indices.
+  poi_tested_idxs = integer(0L)
+  poi_vs_idxs = integer(0L)
+  poi_res_idxs = integer(0L)
   
   # Operate on points of interest.
   poi_tested_res = 0
   poi_tested_vs = 0
   while (poi_tested_res < n_points_of_interest | 
-        poi_tested_vs < n_points_of_interest) {
+         poi_tested_vs < n_points_of_interest) {
+    
+    # Output progress data.
+    writeLines(sprintf("Time:                       %s", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")))
+    writeLines(sprintf("Test data points remaining: %d", test_data_size - points_of_interest_tested))
+    writeLines(sprintf("points_of_interest_tested   %d", points_of_interest_tested))
+    writeLines(sprintf("poi_tested_vs               %d", poi_tested_vs))
+    writeLines(sprintf("poi_tested_res              %d", poi_tested_res))
     
     # Terminate early if test data is exhausted.
     if (nrow(test_data) <= 0) {
@@ -238,54 +276,59 @@ run <- function(data,
                                                                      ifelse(ext.resilience,
                                                                             "res",
                                                                             "nores")),
-                                               par_runtime_total,
-                                               par_gen_total,
-                                               par_runtime_total,
-                                               points_of_interest_tested,
-                                               poi_tested_res,
-                                               poi_tested_vs,
-                                               par_poi_rejected,
-                                               par_cf_df,
-                                               par_cf_all_invalid,
-                                               par_cf_null_returned,
-                                               par_pd_wlt,
-                                               par_lx_wlt,
-                                               par_resilience_df),
+                                               runtime_total = par_runtime_total,
+                                               generations_total = par_gen_total,
+                                               predictor = predictor,
+                                               test_df = test_data_full,
+                                               poi_tested_idxs = poi_tested_idxs,
+                                               poi_vs_idxs = poi_vs_idxs,
+                                               poi_res_idxs = poi_res_idxs,
+                                               poi_rejected_count = par_poi_rejected,
+                                               cf_df = par_cf_df,
+                                               cf_all_invalid = par_cf_all_invalid,
+                                               cf_null_returned = par_cf_null_returned,
+                                               pd_wlt = par_pd_wlt,
+                                               lx_wlt = par_lx_wlt,
+                                               resilience_df = par_resilience_df),
                   generateAlgorithmTestResults(test_run_id = sprintf("lex_%s_%s_%s", 
                                                                      data_id, 
                                                                      ml_alg_id,
                                                                      ifelse(ext.resilience,
                                                                             "res",
                                                                             "nores")),
-                                               lex_runtime_total,
-                                               lex_gen_total,
-                                               lex_runtime_total,
-                                               points_of_interest_tested,
-                                               poi_tested_res,
-                                               poi_tested_vs,
-                                               lex_poi_rejected,
-                                               lex_cf_df,
-                                               lex_cf_all_invalid,
-                                               lex_cf_null_returned,
-                                               lex_pd_wlt,
-                                               lex_lx_wlt,
-                                               lex_resilience_df)))
+                                               runtime_total = lex_runtime_total,
+                                               generations_total = lex_gen_total,
+                                               predictor = predictor,
+                                               test_df = test_data_full,
+                                               poi_tested_idxs = poi_tested_idxs,
+                                               poi_vs_idxs = poi_vs_idxs,
+                                               poi_res_idxs = poi_res_idxs,
+                                               poi_rejected_count = lex_poi_rejected,
+                                               cf_df = lex_cf_df,
+                                               cf_all_invalid = lex_cf_all_invalid,
+                                               cf_null_returned = lex_cf_null_returned,
+                                               pd_wlt = lex_pd_wlt,
+                                               lx_wlt = lex_lx_wlt,
+                                               resilience_df = lex_resilience_df)))
     }
-    writeLines(sprintf("points_of_interest_tested   %d", points_of_interest_tested))
-    writeLines(sprintf("poi_tested_res              %d", poi_tested_res))
-    writeLines(sprintf("poi_tested_vs               %d", poi_tested_vs))
-    
+
     # Sample a usable test data point as a point of interest.
-    set.seed(as.numeric(Sys.time()))
-    x.interest.id = sample(1:nrow(test_data), 1)
-    x.interest = test_data[x.interest.id,]
+    x.interest.idx = integer(0L)
+    if (!is.null(poi_idxs) & points_of_interest_tested < length(poi_idxs)) {
+      x.interest.idx = poi_idxs[points_of_interest_tested + 1]
+    }
+    else {
+      set.seed(as.numeric(Sys.time()))
+      x.interest.idx = sample(1:nrow(test_data), 1)
+    }
+    x.interest = test_data[x.interest.idx,]
     x.interest = x.interest[,-which(names(x.interest) == target)]
-    test_data = test_data[-x.interest.id,]
+    test_data = test_data[-x.interest.idx,]
     
     # Compute counterfactuals for point of interest (Pareto-based).
     writeLines("Generating Pareto counterfactuals...")
     set.seed(as.numeric(Sys.time()))
-    system.time({pareto.cf = Counterfactuals$new(predictor = pred, 
+    system.time({pareto.cf = Counterfactuals$new(predictor = predictor, 
                                                  x.interest = x.interest,
                                                  target = ml_alg_target_range, 
                                                  epsilon = 0, 
@@ -310,7 +353,7 @@ run <- function(data,
     # Compute counterfactuals for point of interest (lexicographic).
     writeLines("Generating lexicographic counterfactuals...")
     set.seed(as.numeric(Sys.time()))
-    system.time({lexico.cf = Counterfactuals$new(predictor = pred, 
+    system.time({lexico.cf = Counterfactuals$new(predictor = predictor, 
                                                  x.interest = x.interest,
                                                  target = ml_alg_target_range, 
                                                  epsilon = 0, 
@@ -334,6 +377,7 @@ run <- function(data,
     
     # Increment points of interest tested on any MOC runs.
     points_of_interest_tested = points_of_interest_tested + 1
+    poi_tested_idxs[points_of_interest_tested] = x.interest.idx
     
     # No counterfactuals returned.
     if (is.null(pareto.cf) | is.null(lexico.cf)) {
@@ -348,7 +392,6 @@ run <- function(data,
       }
     }
     else {
-      
       # Store Pareto counterfactuals.
       if (!is.null(pareto.cf) & is.null(par_cf_df)) {
         par_cf_nms = colnames(pareto.cf$results$counterfactuals)
@@ -381,6 +424,7 @@ run <- function(data,
                                             pareto.set = pareto.fit)
         
         poi_tested_vs = poi_tested_vs + 1
+        poi_vs_idxs[length(poi_vs_idxs) + 1] = x.interest.idx
       }
       
       # Remove invalid counterfactuals & metadata.
@@ -388,10 +432,6 @@ run <- function(data,
       par_valid_cfs = pareto.cf$results$counterfactuals[valid_cf_idx,
                                                         1:(ncols.cf - NCOLS_CF_METADATA)]
       pareto.cf$results$counterfactuals.diff = pareto.cf$results$counterfactuals.diff[valid_cf_idx, ]
-      
-      # Get relative frequency of feature changes.
-      par_rel_freq = pareto.cf$get_frequency()
-      lex_rel_freq = lexico.cf$get_frequency()
       
       # Check for at least one valid counterfactual in both sets.
       is_testable = TRUE
@@ -421,7 +461,7 @@ run <- function(data,
         writeLines("Calculating Pareto counterfactuals' resilience...")
         par_res_df = getResilience(x.interest,
                                    par_valid_cfs,
-                                   pred,
+                                   predictor,
                                    ml_alg_target_range,
                                    pareto.cf$min_feat_values,
                                    pareto.cf$max_feat_values,
@@ -429,7 +469,7 @@ run <- function(data,
         writeLines("Calculating lexicographic counterfactuals' resilience...")
         lex_res_df = getResilience(x.interest,
                                    lex_valid_cfs,
-                                   pred,
+                                   predictor,
                                    ml_alg_target_range,
                                    lexico.cf$min_feat_values,
                                    lexico.cf$max_feat_values,
@@ -438,6 +478,7 @@ run <- function(data,
         # Expand resilience dataframes if returned. 
         if (nrow(par_res_df) > 0 & nrow(lex_res_df) > 0) {
           poi_tested_res = poi_tested_res + 1
+          poi_res_idxs[length(poi_res_idxs) + 1] = x.interest.idx
           par_resilience_df = rbind(par_resilience_df, par_res_df)
           lex_resilience_df = rbind(lex_resilience_df, lex_res_df)
         }
@@ -452,6 +493,11 @@ run <- function(data,
     }
     writeLines("Done.")
   }
+  writeLines(sprintf("Time:                       %s", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")))
+  writeLines(sprintf("Test data points remaining: %d", test_data_size - points_of_interest_tested))
+  writeLines(sprintf("points_of_interest_tested   %d", points_of_interest_tested))
+  writeLines(sprintf("poi_tested_vs               %d", poi_tested_vs))
+  writeLines(sprintf("poi_tested_res              %d", poi_tested_res))
   writeLines("Generating results...")
 
   par_pd_wlt[c(1, 2, 3)] = lex_pd_wlt[c(2, 1, 3)]
@@ -462,53 +508,59 @@ run <- function(data,
                                                                  ifelse(ext.resilience,
                                                                         "res",
                                                                         "nores")),
-                                           par_runtime_total,
-                                           par_gen_total,
-                                           points_of_interest_tested,
-                                           poi_tested_res,
-                                           poi_tested_vs,
-                                           par_poi_rejected,
-                                           par_cf_df,
-                                           par_cf_all_invalid,
-                                           par_cf_null_returned,
-                                           par_pd_wlt,
-                                           par_lx_wlt,
-                                           par_resilience_df),
+                                           runtime_total = par_runtime_total,
+                                           generations_total = par_gen_total,
+                                           predictor = predictor,
+                                           test_df = test_data_full,
+                                           poi_tested_idxs = poi_tested_idxs,
+                                           poi_vs_idxs = poi_vs_idxs,
+                                           poi_res_idxs = poi_res_idxs,
+                                           poi_rejected_count = par_poi_rejected,
+                                           cf_df = par_cf_df,
+                                           cf_all_invalid = par_cf_all_invalid,
+                                           cf_null_returned = par_cf_null_returned,
+                                           pd_wlt = par_pd_wlt,
+                                           lx_wlt = par_lx_wlt,
+                                           resilience_df = par_resilience_df),
               generateAlgorithmTestResults(test_run_id = sprintf("lex_%s_%s_%s", 
                                                                  data_id, 
                                                                  ml_alg_id,
                                                                  ifelse(ext.resilience,
                                                                         "res",
                                                                         "nores")),
-                                           lex_runtime_total,
-                                           lex_gen_total,
-                                           points_of_interest_tested,
-                                           poi_tested_res,
-                                           poi_tested_vs,
-                                           lex_poi_rejected,
-                                           lex_cf_df,
-                                           lex_cf_all_invalid,
-                                           lex_cf_null_returned,
-                                           lex_pd_wlt,
-                                           lex_lx_wlt,
-                                           lex_resilience_df)))
+                                           runtime_total = lex_runtime_total,
+                                           generations_total = lex_gen_total,
+                                           predictor = predictor,
+                                           test_df = test_data_full,
+                                           poi_tested_idxs = poi_tested_idxs,
+                                           poi_vs_idxs = poi_vs_idxs,
+                                           poi_res_idxs = poi_res_idxs,
+                                           poi_rejected_count = lex_poi_rejected,
+                                           cf_df = lex_cf_df,
+                                           cf_all_invalid = lex_cf_all_invalid,
+                                           cf_null_returned = lex_cf_null_returned,
+                                           pd_wlt = lex_pd_wlt,
+                                           lx_wlt = lex_lx_wlt,
+                                           resilience_df = lex_resilience_df)))
 }
 
-# Objective ordering for tests.
-obj.ordering1 = list(OBJ_VALID, OBJ_SIMILAR, OBJ_SPARSE, OBJ_PLAUSIBLE)
-obj.ordering2 = list(OBJ_VALID, OBJ_SPARSE, OBJ_SIMILAR, OBJ_PLAUSIBLE)
 
-# Test across all datasets.
-sink("logs/progress.txt")
-for (ds in DATASETS) {
-  # Prepare data.
-  names(ds@df) = tolower(names(ds@df))
-  ds@df = na.omit(ds@df)
-  ds@df[,ds@target] = as.factor(ds@df[,ds@target])
+sink("logs/progress.txt", append = TRUE)
+# Test across all ML algorithms.
+for (ml_alg in ML_ALGS) {
   
-  # Test across all ML algorithms.
-  for (ml_alg in ML_ALGS) {
+  # Test across all datasets.
+  for (ds in DATASETS) {
+    # Placeholder for re-used data.
+    test_data = NULL
+    poi_idxs = NULL
+    predictor = NULL
     
+    # Prepare data.
+    names(ds@df) = tolower(names(ds@df))
+    ds@df = na.omit(ds@df)
+    ds@df[,ds@target] = as.factor(ds@df[,ds@target])
+  
     # Test across two objective orderings.
     oo = 1
     for (obj.ordering in list(obj.ordering1, obj.ordering2)) {
@@ -519,19 +571,33 @@ for (ds in DATASETS) {
                                ml_alg@id,
                                ifelse(ext.resilience, "res", "nores"),
                                oo)
-        print(rds.filename)
-        results = run(ds@df,
-                      ds@id,
-                      ds@target,
-                      ds@target_values,
-                      ds@nonactionable,
-                      ml_alg@id,
-                      ml_alg@target_range,
-                      ext.resilience = ext.resilience,
-                      obj.ordering = obj.ordering,
-                      n_points_of_interest = 20,
-                      TD_PADDING_MULTIPLIER = 3)
-        saveRDS(results, file = rds.filename)
+        # To avoid overwrite.
+        if (!file.exists(rds.filename)) {
+          writeLines(sprintf("Test ID:                    %s", rds.filename))
+          writeLines(sprintf("Start time:                 %s", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")))
+          results = run(ds@df,
+                        ds@id,
+                        ds@target,
+                        ds@target_values,
+                        ds@nonactionable,
+                        ml_alg@id,
+                        ml_alg@target_range,
+                        ext.resilience = ext.resilience,
+                        obj.ordering = obj.ordering,
+                        test_data = test_data,
+                        poi_idxs = poi_idxs,
+                        predictor = predictor,
+                        n_points_of_interest = 32,
+                        TD_PADDING_MULTIPLIER = 3,
+                        TD_PADDING_ADDEND = 10)
+          saveRDS(results, file = rds.filename)
+          writeLines(sprintf("End time:                   %s", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")))
+          writeLines("--------------------------------------")
+          
+          test_data = results[[1]]@test_df
+          poi_idxs = results[[1]]@poi_tested_idxs
+          predictor = results[[1]]@predictor
+        }
       }
       oo = oo + 1
     }

@@ -59,10 +59,15 @@ algorithmTestResults <- setClass(
     runtime_avg = "numeric",
     generations_total = "integer",
     generations_avg = "numeric",
-    points_of_interest_tested = "integer",
-    points_of_interest_tested_res = "integer",
-    points_of_interest_tested_vs = "integer",
-    points_of_interest_rejected = "integer",
+    predictor = "ANY",
+    test_df = "data.frame",
+    poi_tested_idxs = "integer",
+    poi_tested_count = "integer",
+    poi_vs_idxs = "integer",
+    poi_vs_count = "integer",
+    poi_res_idxs = "integer",
+    poi_res_count = "integer",
+    poi_rejected_count = "integer",
     cf_df = "data.frame",
     cf_total = "integer",
     cf_valid = "integer",
@@ -109,10 +114,12 @@ algorithmTestResults <- setClass(
 generateAlgorithmTestResults <- function(test_run_id = "test",
                                          runtime_total,
                                          generations_total,
-                                         points_of_interest_tested,
-                                         points_of_interest_tested_res,
-                                         points_of_interest_tested_vs,
-                                         points_of_interest_rejected,
+                                         predictor,
+                                         test_df,
+                                         poi_tested_idxs,
+                                         poi_vs_idxs,
+                                         poi_res_idxs,
+                                         poi_rejected_count,
                                          cf_df,
                                          cf_all_invalid,
                                          cf_null_returned,
@@ -120,11 +127,16 @@ generateAlgorithmTestResults <- function(test_run_id = "test",
                                          lx_wlt,
                                          resilience_df)
 {
+  # Nunber of points of interest tested.
+  poi_tested_count = length(poi_tested_idxs)
+  poi_vs_count = length(poi_vs_idxs)
+  poi_res_count = length(poi_res_idxs)
+  
   # Average runtime of the algorithm.
-  runtime_avg = runtime_total / points_of_interest_tested
+  runtime_avg = runtime_total / poi_tested_count
   
   # Average generations of the algorithm.
-  generations_avg = generations_total / points_of_interest_tested
+  generations_avg = generations_total / poi_tested_count
   
   # Total number of counterfactuals produced by the algorithm.
   cf_total = nrow(cf_df)
@@ -259,10 +271,15 @@ generateAlgorithmTestResults <- function(test_run_id = "test",
                               "runtime_avg" = runtime_avg,
                               "generations_total" = as.integer(generations_total),
                               "generations_avg" = generations_avg,
-                              "points_of_interest_tested" = as.integer(points_of_interest_tested),
-                              "points_of_interest_tested_res" = as.integer(points_of_interest_tested_res),
-                              "points_of_interest_tested_vs" = as.integer(points_of_interest_tested_vs),
-                              "points_of_interest_rejected" = as.integer(points_of_interest_rejected),
+                              "predictor" = predictor,
+                              "test_df" = test_df,
+                              "poi_tested_idxs" = as.integer(poi_tested_idxs),
+                              "poi_tested_count" = as.integer(poi_tested_count),
+                              "poi_vs_idxs" = as.integer(poi_vs_idxs),
+                              "poi_vs_count" = as.integer(poi_vs_count),
+                              "poi_res_idxs" = as.integer(poi_res_idxs),
+                              "poi_res_count" = as.integer(poi_res_count),
+                              "poi_rejected_count" = as.integer(poi_rejected_count),
                               "cf_df" = cf_df,
                               "cf_total" = as.integer(cf_total),
                               "cf_valid" = as.integer(cf_valid),
@@ -516,20 +533,20 @@ subsetFactors <- function(test_data,
   return(test_data)
 }
 
-# Given a data set and a predictor, return a pruned data set containing
+# Given a data set and a predictor, return a filtered data set containing
 # only usable data points for base testing. If the size of the data set is not
-# sufficient, throw an error.
+# sufficient, return NULL.
 #
 # If SUBSET_FACTORS = TRUE, ensure the test data set contains only the same
 # set or a subset of the factors of the training data.
 #
-pruneTestData <- function(test_data,
-                          train_data,
-                          pred, 
-                          target_range,
-                          size_req = nrow(test_data) %/% 2,
-                          SUBSET_FACTORS = FALSE) {
-  
+filterTestData <- function(test_data,
+                           train_data,
+                           pred, 
+                           target_range,
+                           size_req = nrow(test_data) %/% 2,
+                           SUBSET_FACTORS = FALSE) {
+
   if (SUBSET_FACTORS) {
     test_data = subsetFactors(test_data, train_data)
   }
@@ -541,7 +558,7 @@ pruneTestData <- function(test_data,
   
   test_data = test_data[is.neg.idxs,]
   if (nrow(test_data) < size_req) {
-    stop("Error: Insufficient test data size - increase TD_PADDING_MULTIPLIER")
+    return(NULL)
   }
   return(test_data)
 }
