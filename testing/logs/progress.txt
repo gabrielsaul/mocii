@@ -1,24 +1,24 @@
 Test ID:                    logs/test_compas_nn_nores.rds
-Start time:                 2024-03-26 11:23:13 GMT
+Start time:                 2024-03-26 12:34:17 GMT
 Training new predictor...
 # weights:  70
-initial  value 5057.135435 
-iter  10 value 776.049055
-iter  20 value 761.132703
-iter  30 value 748.060014
-iter  40 value 741.895172
-iter  50 value 736.936367
-iter  60 value 733.880978
-iter  70 value 732.573209
-iter  80 value 731.389012
-iter  90 value 730.323556
-iter 100 value 730.205823
-final  value 730.205823 
+initial  value 4954.465855 
+iter  10 value 728.980100
+iter  20 value 696.777302
+iter  30 value 681.917542
+iter  40 value 673.726368
+iter  50 value 667.274194
+iter  60 value 661.027276
+iter  70 value 656.992014
+iter  80 value 656.085980
+iter  90 value 655.758542
+iter 100 value 655.404376
+final  value 655.404376 
 stopped after 100 iterations
 Filtering test data...
-Test data size: 8
-Time:                       2024-03-26 11:23:57 GMT
-Test data points remaining: 8
+Test data size: 254
+Time:                       2024-03-26 12:34:47 GMT
+Test data points remaining: 254
 points_of_interest_tested   0
 poi_tested_vs               0
 poi_tested_res              0
@@ -31,22 +31,11 @@ Calculating Pareto counterfactuals' resilience...
 Calculating lexicographic (oo1) counterfactuals' resilience...
 Calculating lexicographic (oo2) counterfactuals' resilience...
 Done.
-Time:                       2024-03-26 11:25:22 GMT
-Test data points remaining: 7
+Time:                       2024-03-26 12:35:02 GMT
+Test data points remaining: 253
 points_of_interest_tested   1
 poi_tested_vs               1
 poi_tested_res              1
-Generating results...
-End time:                   2024-03-26 11:25:22 GMT
---------------------------------------
-Test ID:                    logs/test_compas_nn_res.rds
-Start time:                 2024-03-26 11:25:22 GMT
-Test data size: 8
-Time:                       2024-03-26 11:25:22 GMT
-Test data points remaining: 8
-points_of_interest_tested   0
-poi_tested_vs               0
-poi_tested_res              0
 Generating Pareto counterfactuals...
 Generating lexicographic counterfactuals (oo1)...
 Generating lexicographic counterfactuals (oo2)...
@@ -56,38 +45,11 @@ Calculating Pareto counterfactuals' resilience...
 Calculating lexicographic (oo1) counterfactuals' resilience...
 Calculating lexicographic (oo2) counterfactuals' resilience...
 Done.
-Time:                       2024-03-26 11:25:38 GMT
-Test data points remaining: 7
-points_of_interest_tested   1
-poi_tested_vs               1
-poi_tested_res              1
-Generating results...
-End time:                   2024-03-26 11:25:38 GMT
---------------------------------------
-Test ID:                    logs/test_fico_nn_nores.rds
-Start time:                 2024-03-26 11:25:38 GMT
-Training new predictor...
-# weights:  76
-initial  value 7796.217732 
-iter  10 value 5584.099794
-iter  20 value 5393.105603
-iter  30 value 5346.317511
-iter  40 value 5325.961666
-iter  50 value 5312.400416
-iter  60 value 5307.713443
-iter  70 value 5302.247815
-iter  80 value 5287.077745
-iter  90 value 5271.021888
-iter 100 value 5263.796975
-final  value 5263.796975 
-stopped after 100 iterations
-Filtering test data...
-Test data size: 11
-Time:                       2024-03-26 11:26:58 GMT
-Test data points remaining: 11
-points_of_interest_tested   0
-poi_tested_vs               0
-poi_tested_res              0
+Time:                       2024-03-26 12:35:33 GMT
+Test data points remaining: 252
+points_of_interest_tested   2
+poi_tested_vs               2
+poi_tested_res              2
 Generating Pareto counterfactuals...
 Generating lexicographic counterfactuals (oo1)...
 Generating lexicographic counterfactuals (oo2)...
@@ -97,22 +59,11 @@ Calculating Pareto counterfactuals' resilience...
 Calculating lexicographic (oo1) counterfactuals' resilience...
 Calculating lexicographic (oo2) counterfactuals' resilience...
 Done.
-Time:                       2024-03-26 11:28:21 GMT
-Test data points remaining: 10
-points_of_interest_tested   1
-poi_tested_vs               1
-poi_tested_res              1
-Generating results...
-End time:                   2024-03-26 11:28:21 GMT
---------------------------------------
-Test ID:                    logs/test_fico_nn_res.rds
-Start time:                 2024-03-26 11:28:21 GMT
-Test data size: 11
-Time:                       2024-03-26 11:28:21 GMT
-Test data points remaining: 11
-points_of_interest_tested   0
-poi_tested_vs               0
-poi_tested_res              0
+Time:                       2024-03-26 12:37:11 GMT
+Test data points remaining: 251
+points_of_interest_tested   3
+poi_tested_vs               3
+poi_tested_res              3
 Generating Pareto counterfactuals...
 Generating lexicographic counterfactuals (oo1)...
 Generating lexicographic counterfactuals (oo2)...
@@ -122,41 +73,11 @@ Calculating Pareto counterfactuals' resilience...
 Calculating lexicographic (oo1) counterfactuals' resilience...
 Calculating lexicographic (oo2) counterfactuals' resilience...
 Done.
-Time:                       2024-03-26 11:30:05 GMT
-Test data points remaining: 10
-points_of_interest_tested   1
-poi_tested_vs               1
-poi_tested_res              1
-Generating results...
-End time:                   2024-03-26 11:30:06 GMT
---------------------------------------
-Test ID:                    logs/test_adult_nn_nores.rds
-Start time:                 2024-03-26 11:30:06 GMT
-Training new predictor...
-Test ID:                    logs/test_adult_nn_nores.rds
-Start time:                 2024-03-26 11:41:33 GMT
-Training new predictor...
-# weights:  319
-initial  value 24891.806612 
-iter  10 value 10245.251510
-iter  20 value 9865.382497
-iter  30 value 9579.451784
-iter  40 value 9470.492172
-iter  50 value 9394.962113
-iter  60 value 9354.608010
-iter  70 value 9332.812372
-iter  80 value 9311.011467
-iter  90 value 9294.822975
-iter 100 value 9286.035013
-final  value 9286.035013 
-stopped after 100 iterations
-Filtering test data...
-Test data size: 14
-Time:                       2024-03-26 11:47:50 GMT
-Test data points remaining: 14
-points_of_interest_tested   0
-poi_tested_vs               0
-poi_tested_res              0
+Time:                       2024-03-26 12:37:23 GMT
+Test data points remaining: 250
+points_of_interest_tested   4
+poi_tested_vs               4
+poi_tested_res              4
 Generating Pareto counterfactuals...
 Generating lexicographic counterfactuals (oo1)...
 Generating lexicographic counterfactuals (oo2)...
@@ -166,22 +87,9 @@ Calculating Pareto counterfactuals' resilience...
 Calculating lexicographic (oo1) counterfactuals' resilience...
 Calculating lexicographic (oo2) counterfactuals' resilience...
 Done.
-Time:                       2024-03-26 11:49:39 GMT
-Test data points remaining: 13
-points_of_interest_tested   1
-poi_tested_vs               1
-poi_tested_res              1
-Generating results...
-End time:                   2024-03-26 11:49:40 GMT
---------------------------------------
-Test ID:                    logs/test_adult_nn_res.rds
-Start time:                 2024-03-26 11:49:40 GMT
-Test data size: 14
-Time:                       2024-03-26 11:49:40 GMT
-Test data points remaining: 14
-points_of_interest_tested   0
-poi_tested_vs               0
-poi_tested_res              0
+Time:                       2024-03-26 12:38:53 GMT
+Test data points remaining: 249
+points_of_interest_tested   5
+poi_tested_vs               5
+poi_tested_res              5
 Generating Pareto counterfactuals...
-Generating lexicographic counterfactuals (oo1)...
-Generating lexicographic counterfactuals (oo2)...

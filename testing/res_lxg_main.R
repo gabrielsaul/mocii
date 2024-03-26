@@ -93,7 +93,7 @@ svm_alg = mlAlgStruct(id = SVM_ALG_ID,
                       target_range = c(0.5, 1.0))
 
 # Full list of datasets.
-DATASETS = list(adult_data)
+DATASETS = list(compas_data, fico_data, adult_data)
 
 # Full list of ML algorithm types.
 ML_ALGS = list(nn_alg, rf_alg, svm_alg)
@@ -692,9 +692,9 @@ for (ml_alg in ML_ALGS) {
                       test_data = test_data,
                       poi_idxs = poi_idxs,
                       predictor = predictor,
-                      n_points_of_interest = 1,
-                      TD_PADDING_MULTIPLIER = 20,
-                      TD_PADDING_ADDEND = 4)
+                      n_points_of_interest = 50,
+                      TD_PADDING_MULTIPLIER = 10,
+                      TD_PADDING_ADDEND = 50)
         saveRDS(results, file = rds.filename)
         writeLines(sprintf("End time:                   %s", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")))
         writeLines("--------------------------------------")
