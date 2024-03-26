@@ -362,7 +362,7 @@ getPredictor <- function(ml_alg_id,
     
     # Parameters for tuning.
     param.set = makeParamSet(
-      makeIntegerParam("size", lower = 1, upper = 10),
+      makeIntegerParam("size", lower = 1, upper = 5),
       makeNumericParam("decay", lower = 0.1, upper = 0.9)
     )
     

@@ -34,7 +34,7 @@ devtools::load_all("../counterfactuals", export_all = FALSE)
 
 # Data structs.
 # Adult Income Census.
-adult_data = dataStruct(df = read.csv("datasets/processed/adult_data_less.csv", 
+adult_data = dataStruct(df = read.csv("datasets/processed/adult_data.csv", 
                                       stringsAsFactors = TRUE),
                         id = "adult",
                         target = "class",
@@ -48,7 +48,7 @@ adult_data = dataStruct(df = read.csv("datasets/processed/adult_data_less.csv",
                                           "native_country"))
 
 # COMPAS Recidivism Racial Bias.
-compas_data = dataStruct(df = read.csv("datasets/processed/compas_data_less.csv", 
+compas_data = dataStruct(df = read.csv("datasets/processed/compas_data.csv", 
                                        stringsAsFactors = TRUE),
                          id = "compas",
                          target = "two_year_recid",
@@ -64,7 +64,7 @@ diabetes_data = dataStruct(df = read.csv("datasets/processed/diabetes_data.csv",
                            nonactionable = c("age", "pregnancies"))
 
 # HELOC (FICO 2018).
-fico_data = dataStruct(df = read.csv("datasets/processed/fico_data_less.csv", 
+fico_data = dataStruct(df = read.csv("datasets/processed/fico_data.csv", 
                                      stringsAsFactors = TRUE),
                        id = "fico",
                        target = "riskperformance",
@@ -93,7 +93,7 @@ svm_alg = mlAlgStruct(id = SVM_ALG_ID,
                       target_range = c(0.5, 1.0))
 
 # Full list of datasets.
-DATASETS = list(adult_data, compas_data, diabetes_data, fico_data, german_data)
+DATASETS = list(adult_data)
 
 # Full list of ML algorithm types.
 ML_ALGS = list(nn_alg, rf_alg, svm_alg)
@@ -111,7 +111,8 @@ run <- function(data,
                 naf,
                 ml_alg_id,
                 ml_alg_target_range,
-                obj.ordering,
+                obj.ordering1,
+                obj.ordering2,
                 test_data = NULL,
                 poi_idxs = NULL,
                 predictor = NULL,
@@ -128,16 +129,15 @@ run <- function(data,
   checkmate::assert_character(naf)
   checkmate::assert_character(ml_alg_id)
   checkmate::assert_numeric(ml_alg_target_range)
-  checkmate::assert_list(obj.ordering)
+  checkmate::assert_list(obj.ordering1)
   checkmate::assert_numeric(n_points_of_interest)
   checkmate::assert_numeric(TD_PADDING_MULTIPLIER)
   checkmate::assert_logical(ext.resilience)
   checkmate::assert_data_frame(best.params)
   
   # Check parameters.
-  if ((n_points_of_interest != round(n_points_of_interest))|
-      (TD_PADDING_MULTIPLIER != round(TD_PADDING_MULTIPLIER))) {
-    stop("Error: n_points_of_interest & TD_PADDING_MULTIPLIER must be integers")
+  if ((n_points_of_interest != round(n_points_of_interest))) {
+    stop("Error: n_points_of_interest must be an integer")
   }
   if (n_points_of_interest < 1) {
     warning("Warning: Setting n_points_of_interest to at least 1")
@@ -182,30 +182,38 @@ run <- function(data,
   par_resilience_df = setNames(data.frame(matrix(ncol = length(cf_nms), nrow = 0)), cf_nms)
   
   # Algorithm metrics for lexicographic GA (number of generations, runtime).
-  lex_gen_total = 0
-  lex_runtime_total = 0
+  lex1_gen_total = 0
+  lex1_runtime_total = 0
+  lex2_gen_total = 0
+  lex2_runtime_total = 0
   
   # Count of rejected points of interest for lexicographic CF tests.
-  lex_poi_rejected = 0
+  lex1_poi_rejected = 0
+  lex2_poi_rejected = 0
   
   # Aggregated data frame of lexicographic counterfactuals.
-  lex_cf_df = NULL
+  lex1_cf_df = NULL
+  lex2_cf_df = NULL
   
   # Count of a full set of invalid lexicographic counterfactuals being returned.
-  lex_cf_all_invalid = 0
+  lex1_cf_all_invalid = 0
+  lex2_cf_all_invalid = 0
   
   # Count of a null set of lexicographic counterfactuals being returned.
-  lex_cf_null_returned = 0
+  lex1_cf_null_returned = 0
+  lex2_cf_null_returned = 0
   
   # Pareto dominance WLT record for lexicographic counterfactuals.
-  lex_pd_wlt = c(0, 0, 0)
+  lex1_pd_wlt = c(0, 0, 0)
+  lex2_pd_wlt = c(0, 0, 0)
   
   # Lexicographic WLT record for lexicographic counterfactuals.
-  lex_lx_wlt = c(0, 0, 0)
+  lex1_lx_wlt = c(0, 0, 0)
+  lex2_lx_wlt = c(0, 0, 0)
   
   # Resilience data frame for lexicographic counterfactuals.
-  cf_nms = colnames(data[,-which(names(data) == target)])
-  lex_resilience_df = setNames(data.frame(matrix(ncol = length(cf_nms), nrow = 0)), cf_nms)
+  lex1_resilience_df = setNames(data.frame(matrix(ncol = length(cf_nms), nrow = 0)), cf_nms)
+  lex2_resilience_df = setNames(data.frame(matrix(ncol = length(cf_nms), nrow = 0)), cf_nms)
   
   # Select training & test data.
   mult = TD_PADDING_MULTIPLIER
@@ -223,7 +231,7 @@ run <- function(data,
     test_data = data[test_data_idx,]
     
     # Increment padding multiplier.
-    mult = mult + 0.1
+    mult = mult + 0.025
     
     # Create predictor.
     writeLines("Training new predictor...")
@@ -268,8 +276,8 @@ run <- function(data,
     if (nrow(test_data) <= 0) {
       warning("Warning: Terminated before full points of interest set was tested")
       
-      par_pd_wlt[c(1, 2, 3)] = lex_pd_wlt[c(2, 1, 3)]
-      par_lx_wlt[c(1, 2, 3)] = lex_lx_wlt[c(2, 1, 3)]
+      par_pd_wlt[c(1, 2, 3)] = lex1_pd_wlt[c(2, 1, 3)] + lex1_pd_wlt[c(2, 1, 3)]
+      par_lx_wlt[c(1, 2, 3)] = lex1_lx_wlt[c(2, 1, 3)] + lex2_lx_wlt[c(2, 1, 3)]
       return(list(generateAlgorithmTestResults(test_run_id = sprintf("par_%s_%s_%s", 
                                                                      data_id, 
                                                                      ml_alg_id,
@@ -290,26 +298,46 @@ run <- function(data,
                                                pd_wlt = par_pd_wlt,
                                                lx_wlt = par_lx_wlt,
                                                resilience_df = par_resilience_df),
-                  generateAlgorithmTestResults(test_run_id = sprintf("lex_%s_%s_%s", 
+                  generateAlgorithmTestResults(test_run_id = sprintf("lex1_%s_%s_%s", 
                                                                      data_id, 
                                                                      ml_alg_id,
                                                                      ifelse(ext.resilience,
                                                                             "res",
                                                                             "nores")),
-                                               runtime_total = lex_runtime_total,
-                                               generations_total = lex_gen_total,
+                                               runtime_total = lex1_runtime_total,
+                                               generations_total = lex1_gen_total,
                                                predictor = predictor,
                                                test_df = test_data_full,
                                                poi_tested_idxs = poi_tested_idxs,
                                                poi_vs_idxs = poi_vs_idxs,
                                                poi_res_idxs = poi_res_idxs,
-                                               poi_rejected_count = lex_poi_rejected,
-                                               cf_df = lex_cf_df,
-                                               cf_all_invalid = lex_cf_all_invalid,
-                                               cf_null_returned = lex_cf_null_returned,
-                                               pd_wlt = lex_pd_wlt,
-                                               lx_wlt = lex_lx_wlt,
-                                               resilience_df = lex_resilience_df)))
+                                               poi_rejected_count = lex1_poi_rejected,
+                                               cf_df = lex1_cf_df,
+                                               cf_all_invalid = lex1_cf_all_invalid,
+                                               cf_null_returned = lex1_cf_null_returned,
+                                               pd_wlt = lex1_pd_wlt,
+                                               lx_wlt = lex1_lx_wlt,
+                                               resilience_df = lex1_resilience_df),
+                  generateAlgorithmTestResults(test_run_id = sprintf("lex2_%s_%s_%s", 
+                                                                     data_id, 
+                                                                     ml_alg_id,
+                                                                     ifelse(ext.resilience,
+                                                                            "res",
+                                                                            "nores")),
+                                               runtime_total = lex2_runtime_total,
+                                               generations_total = lex2_gen_total,
+                                               predictor = predictor,
+                                               test_df = test_data_full,
+                                               poi_tested_idxs = poi_tested_idxs,
+                                               poi_vs_idxs = poi_vs_idxs,
+                                               poi_res_idxs = poi_res_idxs,
+                                               poi_rejected_count = lex2_poi_rejected,
+                                               cf_df = lex2_cf_df,
+                                               cf_all_invalid = lex2_cf_all_invalid,
+                                               cf_null_returned = lex2_cf_null_returned,
+                                               pd_wlt = lex2_pd_wlt,
+                                               lx_wlt = lex2_lx_wlt,
+                                               resilience_df = lex2_resilience_df)))
     }
 
     # Sample a usable test data point as a point of interest.
@@ -350,10 +378,10 @@ run <- function(data,
     par_gen_total = par_gen_total + pareto.cf$n.generations
     par_runtime_total = par_runtime_total + pareto.cf$runtime
     
-    # Compute counterfactuals for point of interest (lexicographic).
-    writeLines("Generating lexicographic counterfactuals...")
+    # Compute counterfactuals for point of interest (lexicographic oo1).
+    writeLines("Generating lexicographic counterfactuals (oo1)...")
     set.seed(as.numeric(Sys.time()))
-    system.time({lexico.cf = Counterfactuals$new(predictor = predictor, 
+    system.time({lexico1.cf = Counterfactuals$new(predictor = predictor, 
                                                  x.interest = x.interest,
                                                  target = ml_alg_target_range, 
                                                  epsilon = 0, 
@@ -368,27 +396,58 @@ run <- function(data,
                                                  p.rec.use.orig = best.params$p.rec.use.orig,
                                                  fixed.features = naf,
                                                  lexicographic.selection = TRUE,
-                                                 obj.ordering = obj.ordering,
+                                                 obj.ordering = obj.ordering1,
                                                  ext.resilience = ext.resilience)})
     
     # Log lexicographic algorithm metrics.
-    lex_gen_total = lex_gen_total + lexico.cf$n.generations
-    lex_runtime_total = lex_runtime_total + lexico.cf$runtime
+    lex1_gen_total = lex1_gen_total + lexico1.cf$n.generations
+    lex1_runtime_total = lex1_runtime_total + lexico1.cf$runtime
+    
+    # Compute counterfactuals for point of interest (lexicographic oo1).
+    writeLines("Generating lexicographic counterfactuals (oo2)...")
+    set.seed(as.numeric(Sys.time()))
+    system.time({lexico2.cf = Counterfactuals$new(predictor = predictor, 
+                                                  x.interest = x.interest,
+                                                  target = ml_alg_target_range, 
+                                                  epsilon = 0, 
+                                                  generations = pareto.cf$n.generations, 
+                                                  mu = best.params$mu, 
+                                                  p.mut = best.params$p.mut, 
+                                                  p.rec = best.params$p.rec, 
+                                                  p.mut.gen = best.params$p.mut.gen, 
+                                                  p.mut.use.orig = best.params$p.mut.use.orig, 
+                                                  p.rec.gen = best.params$p.rec.gen, 
+                                                  initialization = "icecurve",
+                                                  p.rec.use.orig = best.params$p.rec.use.orig,
+                                                  fixed.features = naf,
+                                                  lexicographic.selection = TRUE,
+                                                  obj.ordering = obj.ordering2,
+                                                  ext.resilience = ext.resilience)})
+    
+    # Log lexicographic algorithm metrics.
+    lex2_gen_total = lex2_gen_total + lexico2.cf$n.generations
+    lex2_runtime_total = lex2_runtime_total + lexico2.cf$runtime
+
     
     # Increment points of interest tested on any MOC runs.
     points_of_interest_tested = points_of_interest_tested + 1
     poi_tested_idxs[points_of_interest_tested] = x.interest.idx
     
     # No counterfactuals returned.
-    if (is.null(pareto.cf) | is.null(lexico.cf)) {
+    if (is.null(pareto.cf) | is.null(lexico1.cf) | is.null(lexico2.cf)) {
       if (is.null(pareto.cf)) {
         par_poi_rejected = par_poi_rejected + 1
         par_cf_null_returned = par_cf_null_returned + 1
       }
       
-      if (is.null(lexico.cf)) {
-        lex_poi_rejected = lex_poi_rejected + 1
-        lex_cf_null_returned = lex_cf_null_returned + 1
+      if (is.null(lexico1.cf)) {
+        lex1_poi_rejected = lex1_poi_rejected + 1
+        lex1_cf_null_returned = lex1_cf_null_returned + 1
+      }
+      
+      if (is.null(lexico2.cf)) {
+        lex2_poi_rejected = lex2_poi_rejected + 1
+        lex2_cf_null_returned = lex2_cf_null_returned + 1
       }
     }
     else {
@@ -400,11 +459,16 @@ run <- function(data,
       par_cf_df = rbind(par_cf_df, pareto.cf$results$counterfactuals)
       
       # Store lexicographic counterfactuals.
-      if (!is.null(lexico.cf) & is.null(lex_cf_df)) {
-        lex_cf_nms = colnames(lexico.cf$results$counterfactuals)
-        lex_cf_df = setNames(data.frame(matrix(ncol = length(lex_cf_nms), nrow = 0)), lex_cf_nms)
+      if (!is.null(lexico1.cf) & is.null(lex1_cf_df)) {
+        lex1_cf_nms = colnames(lexico1.cf$results$counterfactuals)
+        lex1_cf_df = setNames(data.frame(matrix(ncol = length(lex1_cf_nms), nrow = 0)), lex1_cf_nms)
       }
-      lex_cf_df = rbind(lex_cf_df, lexico.cf$results$counterfactuals)
+      if (!is.null(lexico2.cf) & is.null(lex2_cf_df)) {
+        lex2_cf_nms = colnames(lexico2.cf$results$counterfactuals)
+        lex2_cf_df = setNames(data.frame(matrix(ncol = length(lex2_cf_nms), nrow = 0)), lex2_cf_nms)
+      }
+      lex1_cf_df = rbind(lex1_cf_df, lexico1.cf$results$counterfactuals)
+      lex2_cf_df = rbind(lex2_cf_df, lexico2.cf$results$counterfactuals)
       
       # Comparison testing: Pareto vs. Lexicographic.
       if (poi_tested_vs < n_points_of_interest) {
@@ -412,16 +476,22 @@ run <- function(data,
         ncols.cf = ncol(pareto.cf$results$counterfactuals)
         fit.col.idxs = (ncols.cf - NCOLS_CF_METADATA + 1):(ncols.cf - 1)
         pareto.fit = pareto.cf$results$counterfactuals[,fit.col.idxs]
-        lexico.fit = lexico.cf$results$counterfactuals[,fit.col.idxs]
+        lexico1.fit = lexico1.cf$results$counterfactuals[,fit.col.idxs]
+        lexico2.fit = lexico2.cf$results$counterfactuals[,fit.col.idxs]
         
         # Compete in two arenas: Lexicographic selection and Pareto dominance.
         writeLines("Competing... (lexicographic selection)")
-        lex_lx_wlt = lex_lx_wlt + competeLX(lexico.set = lexico.fit, 
-                                            pareto.set = pareto.fit,
-                                            obj.ordering = obj.ordering)
+        lex1_lx_wlt = lex1_lx_wlt + competeLX(lexico.set = lexico1.fit, 
+                                              pareto.set = pareto.fit,
+                                              obj.ordering = obj.ordering1)
+        lex2_lx_wlt = lex2_lx_wlt + competeLX(lexico.set = lexico2.fit, 
+                                              pareto.set = pareto.fit,
+                                              obj.ordering = obj.ordering2)
         writeLines("Competing... (Pareto-dominance)")
-        lex_pd_wlt = lex_pd_wlt + competePD(lexico.set = lexico.fit, 
-                                            pareto.set = pareto.fit)
+        lex1_pd_wlt = lex1_pd_wlt + competePD(lexico.set = lexico1.fit, 
+                                              pareto.set = pareto.fit)
+        lex2_pd_wlt = lex2_pd_wlt + competePD(lexico.set = lexico2.fit, 
+                                              pareto.set = pareto.fit)
         
         poi_tested_vs = poi_tested_vs + 1
         poi_vs_idxs[length(poi_vs_idxs) + 1] = x.interest.idx
@@ -433,28 +503,34 @@ run <- function(data,
                                                         1:(ncols.cf - NCOLS_CF_METADATA)]
       pareto.cf$results$counterfactuals.diff = pareto.cf$results$counterfactuals.diff[valid_cf_idx, ]
       
-      # Check for at least one valid counterfactual in both sets.
+      # Check for at least one valid counterfactual in all sets.
       is_testable = TRUE
-      if (nrow(par_valid_cfs) <= 0) {
+      if (nrow(par_valid_cfs) == 0) {
         is_testable = FALSE
         par_poi_rejected = par_poi_rejected + 1
         par_cf_all_invalid = par_cf_all_invalid + 1
       } 
-      if (lexico.cf$results$counterfactuals[1,]$dist.target > 0) {
+      if (lexico1.cf$results$counterfactuals[1,]$dist.target > 0) {
         is_testable = FALSE
-        lex_poi_rejected = lex_poi_rejected + 1
-        lex_cf_all_invalid = lex_cf_all_invalid + 1
+        lex1_poi_rejected = lex1_poi_rejected + 1
+        lex1_cf_all_invalid = lex1_cf_all_invalid + 1
       }
-      lex_valid_cfs = lexico.cf$results$counterfactuals[1,1:(ncols.cf - NCOLS_CF_METADATA)]
+      if (lexico2.cf$results$counterfactuals[1,]$dist.target > 0) {
+        is_testable = FALSE
+        lex2_poi_rejected = lex2_poi_rejected + 1
+        lex2_cf_all_invalid = lex2_cf_all_invalid + 1
+      }
+      lex1_valid_cfs = lexico1.cf$results$counterfactuals[1,1:(ncols.cf - NCOLS_CF_METADATA)]
+      lex2_valid_cfs = lexico2.cf$results$counterfactuals[1,1:(ncols.cf - NCOLS_CF_METADATA)]
       
       # Check for at least one counterfactual with mutated numerical values in
-      # both sets.
+      # all sets.
       if (is_testable & (!containsMutNumericFeatures(par_valid_cfs, x.interest) | 
-                         !containsMutNumericFeatures(lex_valid_cfs, x.interest))) {
+                         !containsMutNumericFeatures(lex1_valid_cfs, x.interest))) {
         is_testable = FALSE
       }
       
-      # Both sets of counterfactuals are testable. 
+      # All sets of counterfactuals are resilience-testable. 
       if (is_testable & (poi_tested_res < n_points_of_interest)) {
         
         # Resilience tests.
@@ -466,28 +542,40 @@ run <- function(data,
                                    pareto.cf$min_feat_values,
                                    pareto.cf$max_feat_values,
                                    pareto.cf$data_feat_types)
-        writeLines("Calculating lexicographic counterfactuals' resilience...")
-        lex_res_df = getResilience(x.interest,
-                                   lex_valid_cfs,
+        writeLines("Calculating lexicographic (oo1) counterfactuals' resilience...")
+        lex1_res_df = getResilience(x.interest,
+                                   lex1_valid_cfs,
                                    predictor,
                                    ml_alg_target_range,
-                                   lexico.cf$min_feat_values,
-                                   lexico.cf$max_feat_values,
-                                   lexico.cf$data_feat_types)
+                                   lexico1.cf$min_feat_values,
+                                   lexico1.cf$max_feat_values,
+                                   lexico1.cf$data_feat_types)
+        writeLines("Calculating lexicographic (oo2) counterfactuals' resilience...")
+        lex2_res_df = getResilience(x.interest,
+                                    lex2_valid_cfs,
+                                    predictor,
+                                    ml_alg_target_range,
+                                    lexico2.cf$min_feat_values,
+                                    lexico2.cf$max_feat_values,
+                                    lexico2.cf$data_feat_types)
         
         # Expand resilience dataframes if returned. 
-        if (nrow(par_res_df) > 0 & nrow(lex_res_df) > 0) {
+        if (nrow(par_res_df) > 0 & nrow(lex1_res_df) > 0 & nrow(lex2_res_df) > 0) {
           poi_tested_res = poi_tested_res + 1
           poi_res_idxs[length(poi_res_idxs) + 1] = x.interest.idx
           par_resilience_df = rbind(par_resilience_df, par_res_df)
-          lex_resilience_df = rbind(lex_resilience_df, lex_res_df)
+          lex1_resilience_df = rbind(lex1_resilience_df, lex1_res_df)
+          lex2_resilience_df = rbind(lex2_resilience_df, lex2_res_df)
         }
 
-        if (nrow(par_res_df) <= 0) {
+        if (nrow(par_res_df) == 0) {
           par_poi_rejected = par_poi_rejected + 1
         }
-        if (nrow(lex_res_df) <= 0) {
-          lex_poi_rejected = lex_poi_rejected + 1
+        if (nrow(lex1_res_df) == 0) {
+          lex1_poi_rejected = lex1_poi_rejected + 1
+        }
+        if (nrow(lex2_res_df) == 0) {
+          lex2_poi_rejected = lex2_poi_rejected + 1
         }
       }
     }
@@ -500,8 +588,8 @@ run <- function(data,
   writeLines(sprintf("poi_tested_res              %d", poi_tested_res))
   writeLines("Generating results...")
 
-  par_pd_wlt[c(1, 2, 3)] = lex_pd_wlt[c(2, 1, 3)]
-  par_lx_wlt[c(1, 2, 3)] = lex_lx_wlt[c(2, 1, 3)]
+  par_pd_wlt[c(1, 2, 3)] = lex1_pd_wlt[c(2, 1, 3)] + lex2_pd_wlt[c(2, 1, 3)]
+  par_lx_wlt[c(1, 2, 3)] = lex1_lx_wlt[c(2, 1, 3)] + lex2_lx_wlt[c(2, 1, 3)]
   return(list(generateAlgorithmTestResults(test_run_id = sprintf("par_%s_%s_%s", 
                                                                  data_id, 
                                                                  ml_alg_id,
@@ -522,26 +610,46 @@ run <- function(data,
                                            pd_wlt = par_pd_wlt,
                                            lx_wlt = par_lx_wlt,
                                            resilience_df = par_resilience_df),
-              generateAlgorithmTestResults(test_run_id = sprintf("lex_%s_%s_%s", 
+              generateAlgorithmTestResults(test_run_id = sprintf("lex1_%s_%s_%s", 
                                                                  data_id, 
                                                                  ml_alg_id,
                                                                  ifelse(ext.resilience,
                                                                         "res",
                                                                         "nores")),
-                                           runtime_total = lex_runtime_total,
-                                           generations_total = lex_gen_total,
+                                           runtime_total = lex1_runtime_total,
+                                           generations_total = lex1_gen_total,
                                            predictor = predictor,
                                            test_df = test_data_full,
                                            poi_tested_idxs = poi_tested_idxs,
                                            poi_vs_idxs = poi_vs_idxs,
                                            poi_res_idxs = poi_res_idxs,
-                                           poi_rejected_count = lex_poi_rejected,
-                                           cf_df = lex_cf_df,
-                                           cf_all_invalid = lex_cf_all_invalid,
-                                           cf_null_returned = lex_cf_null_returned,
-                                           pd_wlt = lex_pd_wlt,
-                                           lx_wlt = lex_lx_wlt,
-                                           resilience_df = lex_resilience_df)))
+                                           poi_rejected_count = lex1_poi_rejected,
+                                           cf_df = lex1_cf_df,
+                                           cf_all_invalid = lex1_cf_all_invalid,
+                                           cf_null_returned = lex1_cf_null_returned,
+                                           pd_wlt = lex1_pd_wlt,
+                                           lx_wlt = lex1_lx_wlt,
+                                           resilience_df = lex1_resilience_df),
+              generateAlgorithmTestResults(test_run_id = sprintf("lex2_%s_%s_%s", 
+                                                                 data_id, 
+                                                                 ml_alg_id,
+                                                                 ifelse(ext.resilience,
+                                                                        "res",
+                                                                        "nores")),
+                                           runtime_total = lex2_runtime_total,
+                                           generations_total = lex2_gen_total,
+                                           predictor = predictor,
+                                           test_df = test_data_full,
+                                           poi_tested_idxs = poi_tested_idxs,
+                                           poi_vs_idxs = poi_vs_idxs,
+                                           poi_res_idxs = poi_res_idxs,
+                                           poi_rejected_count = lex2_poi_rejected,
+                                           cf_df = lex2_cf_df,
+                                           cf_all_invalid = lex2_cf_all_invalid,
+                                           cf_null_returned = lex2_cf_null_returned,
+                                           pd_wlt = lex2_pd_wlt,
+                                           lx_wlt = lex2_lx_wlt,
+                                           resilience_df = lex2_resilience_df)))
 }
 
 
@@ -560,46 +668,41 @@ for (ml_alg in ML_ALGS) {
     names(ds@df) = tolower(names(ds@df))
     ds@df = na.omit(ds@df)
     ds@df[,ds@target] = as.factor(ds@df[,ds@target])
-  
-    # Test across two objective orderings.
-    oo = 1
-    for (obj.ordering in list(obj.ordering1, obj.ordering2)) {
-      # Test both without resilience and with resilience.
-      for (ext.resilience in list(FALSE, TRUE)) {
-        rds.filename = sprintf("logs/test_%s_%s_%s_oo%d.rds", 
-                               ds@id, 
-                               ml_alg@id,
-                               ifelse(ext.resilience, "res", "nores"),
-                               oo)
-        # To avoid overwrite.
-        if (!file.exists(rds.filename)) {
-          writeLines(sprintf("Test ID:                    %s", rds.filename))
-          writeLines(sprintf("Start time:                 %s", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")))
-          results = run(ds@df,
-                        ds@id,
-                        ds@target,
-                        ds@target_values,
-                        ds@nonactionable,
-                        ml_alg@id,
-                        ml_alg@target_range,
-                        ext.resilience = ext.resilience,
-                        obj.ordering = obj.ordering,
-                        test_data = test_data,
-                        poi_idxs = poi_idxs,
-                        predictor = predictor,
-                        n_points_of_interest = 32,
-                        TD_PADDING_MULTIPLIER = 3,
-                        TD_PADDING_ADDEND = 10)
-          saveRDS(results, file = rds.filename)
-          writeLines(sprintf("End time:                   %s", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")))
-          writeLines("--------------------------------------")
-          
-          test_data = results[[1]]@test_df
-          poi_idxs = results[[1]]@poi_tested_idxs
-          predictor = results[[1]]@predictor
-        }
+
+    # Test both without resilience and with resilience.
+    for (ext.resilience in list(FALSE, TRUE)) {
+      rds.filename = sprintf("logs/test_%s_%s_%s.rds", 
+                             ds@id, 
+                             ml_alg@id,
+                             ifelse(ext.resilience, "res", "nores"))
+      # To avoid overwrite.
+      if (!file.exists(rds.filename)) {
+        writeLines(sprintf("Test ID:                    %s", rds.filename))
+        writeLines(sprintf("Start time:                 %s", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")))
+        results = run(ds@df,
+                      ds@id,
+                      ds@target,
+                      ds@target_values,
+                      ds@nonactionable,
+                      ml_alg@id,
+                      ml_alg@target_range,
+                      ext.resilience = ext.resilience,
+                      obj.ordering1 = obj.ordering1,
+                      obj.ordering2 = obj.ordering2,
+                      test_data = test_data,
+                      poi_idxs = poi_idxs,
+                      predictor = predictor,
+                      n_points_of_interest = 1,
+                      TD_PADDING_MULTIPLIER = 20,
+                      TD_PADDING_ADDEND = 4)
+        saveRDS(results, file = rds.filename)
+        writeLines(sprintf("End time:                   %s", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")))
+        writeLines("--------------------------------------")
+        
+        test_data = results[[1]]@test_df
+        poi_idxs = results[[1]]@poi_tested_idxs
+        predictor = results[[1]]@predictor
       }
-      oo = oo + 1
     }
   }
 }

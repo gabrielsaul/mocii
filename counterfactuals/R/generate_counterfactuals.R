@@ -67,9 +67,9 @@ fitness_fun = function(x, x.interest, target, predictor, train.data, range = NUL
   q1 = ifelse(length(target) == 2 & (pred >= target[1]) & (pred <= target[2]),
     0, q1)
   # Extend with resilience if flagged.
-  if (ext.resilience) {
+  if (ext.resilience & any(q1 == 0)) {
     res_df = getResilience(x.interest,
-                           x,
+                           x[which(q1 == 0),],
                            predictor,
                            target,
                            min_feat_values,
@@ -77,7 +77,7 @@ fitness_fun = function(x, x.interest, target, predictor, train.data, range = NUL
                            data_feat_types)
     res_cfs = lapply(apply(res_df, 1, function(x) mean(na.omit(x))),
                      function(x) ifelse(is.nan(x), 0, x))
-    q1 = 0 - as.numeric(res_cfs)
+    q1[q1 == 0] = q1[q1 == 0] - as.numeric(res_cfs)
   }
   
   # Objective 2: Similarity.
