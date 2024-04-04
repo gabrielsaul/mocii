@@ -93,3 +93,6 @@ points_of_interest_tested   5
 poi_tested_vs               5
 poi_tested_res              5
 Generating Pareto counterfactuals...
+Test ID:                    logs/test_compas_nn_nores.rds
+Start time:                 2024-04-04 20:59:01 BST
+Training new predictor...

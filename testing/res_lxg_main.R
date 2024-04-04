@@ -17,8 +17,8 @@
 
 #--- Setup ----
 # Set the working directory.
-wdir = "C:\\Users\\Owner\\OneDrive\\Documents\\Academic\\UKC\\CS\\3\\All\\COMP6200 Research Project\\MONOMOC\\monomoc\\testing"
-# setwd(wdir)
+wdir = "C:\\Users\\Owner\\OneDrive\\Documents\\Academic\\UKC\\CS\\3\\All\\COMP6200 Research Project\\MOC-II\\mocii\\testing"
+setwd(wdir)
 
 # Load necessary library packages.
 library("purrr")
@@ -702,6 +702,7 @@ for (ml_alg in ML_ALGS) {
         test_data = results[[1]]@test_df
         poi_idxs = results[[1]]@poi_tested_idxs
         predictor = results[[1]]@predictor
+      }
       else if (!ext.resilience) {
         rds_obj = readRDS(rds.filename)
         test_data = rds_obj[[1]]@test_df
