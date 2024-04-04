@@ -702,6 +702,12 @@ for (ml_alg in ML_ALGS) {
         test_data = results[[1]]@test_df
         poi_idxs = results[[1]]@poi_tested_idxs
         predictor = results[[1]]@predictor
+      else if (!ext.resilience) {
+        rds_obj = readRDS(rds.filename)
+        test_data = rds_obj[[1]]@test_df
+        poi_idxs = rds_obj[[1]]@poi_tested_idxs
+        predictor = rds_obj[[1]]@predictor
+        }
       }
     }
   }

@@ -59,8 +59,9 @@ fitness_fun = function(x, x.interest, target, predictor, train.data, range = NUL
 
   # Calculate fitness values for each objective. 
   
-  # Attain prediction for candidate.
+  # Attain prediction for candidate. Map NA to 0.
   pred = predictor$predict(newdata = x)[[1]]
+  pred[is.na(pred)] = 0 
   
   # Objective 1: Validity
   q1 = vapply(pred, numeric(1), FUN =  function(x) min(abs(x - target)))
